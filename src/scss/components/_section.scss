@@ -1,0 +1,48 @@
+@use "./mixins/breakpoint" as *;
+.section {
+  &--default {
+    padding: 5rem 0;
+  }
+  &--big {
+    padding: 10rem 0;
+  }
+  &--dark {
+    background: #101114;
+  }
+}
+
+.section-head {
+  &--default-margin {
+    margin-bottom: 2.5rem;
+  }
+  &--big-margin {
+    margin-bottom: 4rem;
+  }
+  &__title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 140%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 133%;
+    }
+  }
+  &__desc {
+    margin-top: 1rem;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #5e6573;
+    @include small-tablet {
+      margin-top: 0.5rem;
+      font-size: 14px;
+    }
+  }
+}

@@ -19,6 +19,7 @@
   min-height: 100%;
   font-size: 16px;
   overflow-x: hidden;
+  background: #141517;
   &.lock-scroll {
     overflow: hidden;
   }
@@ -85,7 +86,7 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
-
+  width: 100%;
   &--relative {
     position: relative;
   }

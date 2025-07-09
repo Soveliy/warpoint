@@ -1,21 +1,30 @@
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-Swiper.use(Navigation);
-var swiper = new Swiper(".slider-default", {
-  slidesPerView: 1.1,
+import { Navigation, Pagination } from "swiper/modules";
+Swiper.use([Navigation, Pagination]);
+var swiper = new Swiper(".news__slider", {
+  slidesPerView: 1,
   spaceBetween: 12,
+
   navigation: {
-    nextEl: ".slider-default__arrow--next",
-    prevEl: ".slider-default__arrow--prev",
+    nextEl: ".news__slider .slider__arrow--next",
+    prevEl: ".news__slider .slider__arrow--prev",
   },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2.05,
-      spaceBetween: 20,
-    },
+  pagination: {
+    el: ".news__slider-pagination",
+    clickable: 1,
+  },
+});
+
+var swiper = new Swiper(".formats__slider", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+
+  navigation: {
+    nextEl: ".formats__slider .slider__arrow--next",
+    prevEl: ".formats__slider .slider__arrow--prev",
+  },
+  pagination: {
+    el: ".formats__slider-pagination",
+    clickable: 1,
   },
 });

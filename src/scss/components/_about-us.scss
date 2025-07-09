@@ -1,0 +1,126 @@
+@use "./mixins/breakpoint" as *;
+.about-us {
+  padding: 5rem 0;
+  position: relative;
+  counter-reset: list;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(600px, 746px));
+    justify-content: space-between;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  &__path {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+.about-us-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 13.25rem;
+  box-sizing: border-box;
+  @include tablet {
+    &:not(:first-child) {
+      margin-top: 54px;
+    }
+  }
+  @include small-tablet {
+    max-width: 358px;
+    padding-left: 102px;
+  }
+  &:nth-child(2n) {
+    margin-top: 15rem;
+    @include tablet {
+      margin-top: 54px;
+    }
+  }
+  &__picture {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    height: 31.4375rem;
+    @include small-tablet {
+      height: 232px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        360deg,
+        rgba(20, 21, 23, 0.25) 2.4%,
+        rgba(20, 21, 23, 0.85) 25.48%,
+        rgba(20, 21, 23, 0) 100%
+      );
+    }
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 21.875rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #ececee;
+    @include small-tablet {
+      font-size: 16px;
+      line-height: 150%;
+      top: 8.25rem;
+    }
+  }
+  &__desc {
+    position: relative;
+    margin-top: 1.25rem;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 21px;
+    color: #8f96a3;
+    @include small-tablet {
+      font-size: 12px;
+    }
+    &:before {
+      content: "0" counter(list);
+      counter-increment: list;
+      position: absolute;
+      left: -13.25rem;
+      top: -22px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 9.1875rem;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: rgba(236, 236, 238, 0.05);
+      @include small-tablet {
+        font-size: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -6.5rem;
+      }
+    }
+  }
+}

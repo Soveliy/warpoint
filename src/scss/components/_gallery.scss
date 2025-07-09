@@ -1,0 +1,19 @@
+.gallery {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -4px;
+  }
+  &__item-container {
+    padding: 4px;
+    box-sizing: border-box;
+    width: 33.3%;
+  }
+  &__item {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border-radius: 16px;
+  }
+}

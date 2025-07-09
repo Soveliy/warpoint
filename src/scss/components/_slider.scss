@@ -1,85 +1,45 @@
 @use "mixins" as mixins;
 @use "./mixins/breakpoint" as *;
-.slider-default {
-  overflow: visible;
-  &__slide {
-    height: auto;
-    padding: clamp(1.25rem, 0.8673rem + 1.6327vw, 2.5rem);
-    border-radius: clamp(1.25rem, 0.8673rem + 1.6327vw, 2.5rem);
-    background: var(--white);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    @include mobile {
-      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
-    }
-  }
-  &__name {
-    font-size: clamp(1rem, 0.6939rem + 1.3061vw, 2rem);
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 4px;
-    &--margin {
-      margin-bottom: 20px;
-      @include mobile {
-        margin-bottom: 12px;
-      }
-    }
-  }
-  &__desc {
-    font-size: clamp(0.875rem, 0.6837rem + 0.8163vw, 1.5rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  &__showmore {
-    margin-top: 20px;
-    background: transparent;
-    outline: 0;
-    border: 0;
-    padding: 0;
-
-    color: var(--gray-dark);
-    /* Desktop/Body/S */
-    font-size: clamp(0.875rem, 0.6837rem + 0.8163vw, 1.5rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  &__arrows {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    margin-top: 32px;
-    @include mobile {
-      display: none;
-    }
-  }
-  &__footer {
-    margin-top: 27px;
-  }
-  &__pos {
-    font-size: clamp(0.875rem, 0.6837rem + 0.8163vw, 1.5rem);
-    line-height: normal;
-    color: var(--gray-dark);
-  }
+.slider {
   &__arrow {
-    height: 3.625rem;
-    width: 3.625rem;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: 1px solid #0554f8;
+    border-radius: 0.75rem;
+
+    &--lit {
+      height: 3rem;
+      width: 3rem;
+    }
+    &--big {
+      height: 4.5rem;
+      width: 4.5rem;
+    }
     &.swiper-button-disabled {
       pointer-events: none;
+    }
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      right: 0;
       svg {
-        fill: var(--gray-light);
+        transform: rotate(180deg);
       }
     }
     svg {
-      height: 100%;
-      width: 100%;
-      fill: var(--green-dark);
+      height: 1.5rem;
+      width: 1.5rem;
       transition: 0.4s;
+      fill: none;
+      stroke-width: 1.5px;
+      stroke: #adc4fc;
     }
     @include mixins.hover {
       svg {

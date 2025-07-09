@@ -1,0 +1,17 @@
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__link {
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+  }
+  &__icon {
+    height: 100%;
+    width: 100%;
+    fill: var(--light-grey);
+  }
+}
