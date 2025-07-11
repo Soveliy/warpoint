@@ -12,6 +12,10 @@
     cursor: pointer;
     border: 1px solid #0554f8;
     border-radius: 0.75rem;
+    margin-top: -2.5rem;
+    @include tablet {
+      display: none;
+    }
 
     &--lit {
       height: 3rem;

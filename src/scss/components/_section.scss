@@ -2,9 +2,15 @@
 .section {
   &--default {
     padding: 5rem 0;
+    @include tablet {
+      padding: 4rem 0;
+    }
   }
   &--big {
     padding: 10rem 0;
+    @include tablet {
+      padding: 8rem 0;
+    }
   }
   &--dark {
     background: #101114;
@@ -17,6 +23,9 @@
   }
   &--big-margin {
     margin-bottom: 4rem;
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
   &__title {
     margin: 0;

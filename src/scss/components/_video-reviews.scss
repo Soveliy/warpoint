@@ -1,3 +1,16 @@
+@use "./mixins/breakpoint" as *;
+.video-reviews {
+  &__wrap {
+    position: relative;
+    padding: 0 6rem 2.5rem;
+    @include tablet {
+      padding: 0 0 2.5rem;
+    }
+  }
+  &__slider {
+    overflow: hidden;
+  }
+}
 .video-reviews-item {
   position: relative;
   overflow: hidden;

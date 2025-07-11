@@ -1,19 +1,36 @@
+@use "./mixins/breakpoint" as *;
 .gallery {
   &__grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: -4px;
+    @include small-tablet {
+      margin: -12px;
+    }
   }
   &__item-container {
     padding: 4px;
     box-sizing: border-box;
     width: 33.3%;
+    @include tablet {
+      width: 50%;
+    }
+    @include small-tablet {
+      padding: 12px;
+      &:first-child,
+      &:nth-child(4n) {
+        width: 100%;
+      }
+    }
   }
   &__item {
     position: relative;
     overflow: hidden;
     display: block;
     border-radius: 16px;
+    @include small-tablet {
+      border-radius: 10px;
+    }
   }
 }
