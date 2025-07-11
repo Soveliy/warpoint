@@ -1,38 +1,105 @@
 @use "./mixins/breakpoint" as *;
 .footer {
-  padding: 50px 0;
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 28.75rem 28.75rem 26.3125rem;
-    gap: 20px;
-    justify-content: space-between;
-    @include big-desktop {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-    @include small-tablet {
-      grid-template-columns: 1fr;
-    }
+  padding: 5rem 0;
+  background-color: #141517;
+  &__contacts-list {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    gap: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-  &__item {
+  &__contact-title {
+    margin-bottom: 4px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: #474c57;
+  }
+  &__contact-value {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: #8f96a3;
+  }
+  &__copy {
+    display: flex;
+    gap: 64px;
+    margin: 24px 0;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 121%;
+    color: #5e6573;
+  }
+  &__copy-item {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    font-size: clamp(0.875rem, 0.7602rem + 0.4898vw, 1.25rem);
-    &--links {
-      @include big-desktop {
-        grid-column: span 2;
-        display: flex;
-        flex-direction: row;
-      }
-      @include small-tablet {
-        flex-direction: column;
-        grid-column: inherit;
-      }
+  }
+  &__skolkovo {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 121%;
+    color: #5e6573;
+    p {
+      margin: 0;
+    }
+    img {
+      max-width: 122px;
+      flex-shrink: 0;
     }
   }
+  &__allert {
+    margin-top: 20px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 121%;
+    color: #474c57;
+  }
+  &__report-link {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: #8f96a3;
+  }
+}
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
   &__link {
-    color: var(--black);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #8f96a3;
+  }
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 5rem;
+  &__left {
+    width: 100%;
+  }
+  &__right {
+    flex-shrink: 0;
+    max-width: 448px;
   }
 }

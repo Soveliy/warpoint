@@ -28,3 +28,17 @@ var swiper = new Swiper(".formats__slider", {
     clickable: 1,
   },
 });
+
+var swiper = new Swiper(".games__slider", {
+  slidesPerView: 2,
+  spaceBetween: 24,
+
+  navigation: {
+    nextEl: ".games__slider .slider__arrow--next",
+    prevEl: ".games__slider .slider__arrow--prev",
+  },
+  pagination: {
+    el: ".games__slider-pagination",
+    clickable: 1,
+  },
+});

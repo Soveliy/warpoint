@@ -11360,6 +11360,18 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slide
     clickable: 1
   }
 });
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".games__slider", {
+  slidesPerView: 2,
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".games__slider .slider__arrow--next",
+    prevEl: ".games__slider .slider__arrow--prev"
+  },
+  pagination: {
+    el: ".games__slider-pagination",
+    clickable: 1
+  }
+});
 
 /***/ })
 

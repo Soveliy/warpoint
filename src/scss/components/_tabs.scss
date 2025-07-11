@@ -1,0 +1,31 @@
+.tabs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &--center {
+      justify-content: center;
+    }
+  }
+  &__item {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ececee;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    background: #25272d;
+    border-radius: 12px;
+    transition: 0.3s;
+    &--active {
+      background: #0554f8;
+    }
+  }
+}

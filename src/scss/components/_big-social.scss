@@ -1,0 +1,17 @@
+.big-social {
+  padding: 24px 0 160px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 40px;
+  }
+  &__link {
+    svg {
+      height: 64px;
+      width: 64px;
+    }
+  }
+}

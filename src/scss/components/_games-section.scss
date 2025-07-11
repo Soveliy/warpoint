@@ -1,0 +1,237 @@
+@use "./mixins/breakpoint" as *;
+.games-section {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 104px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: games;
+  }
+}
+.games-section-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #1c1e22;
+  &:before {
+    content: "0" counter(games);
+    counter-increment: games;
+    position: absolute;
+    top: 1.5rem;
+    left: 2.5rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 129%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #474c57;
+    @include tablet() {
+      top: 24px;
+      left: auto;
+      right: 44px;
+    }
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 133%;
+    }
+  }
+  &__row {
+    display: flex;
+    gap: 80px;
+    @include big-desktop() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "one three"
+        "two three";
+    }
+    @include tablet() {
+      display: flex;
+      flex-direction: column;
+      padding: 56px 20px 20px;
+    }
+    @include small-tablet {
+      gap: 16px;
+    }
+  }
+  &__options {
+    flex-shrink: 0;
+    padding-left: 2.5rem;
+    padding-top: 11.25rem;
+    @include big-desktop() {
+      grid-area: one;
+      padding-top: 80px;
+    }
+    @include tablet() {
+      padding: 0 24px;
+      order: -1;
+      display: flex;
+      gap: 8px;
+    }
+  }
+  &__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 0.75rem;
+    box-sizing: border-box;
+    min-width: 9rem;
+    width: max-content;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 4px;
+    @include small-tablet {
+      padding: 11px 22px;
+      font-size: 14px;
+      min-width: inherit;
+    }
+    &--blue {
+      border-color: rgba(57, 112, 246, 0.5);
+      color: #3970f6;
+      .games-section-item__option-icon {
+        fill: #3970f6;
+      }
+    }
+    &--white {
+      color: var(--white);
+      border-color: #474c57;
+    }
+
+    & + & {
+      margin-top: 0.5rem;
+      @include small-tablet {
+        margin-top: 0;
+      }
+    }
+  }
+  &__about {
+    padding-top: 11.25rem;
+    @include big-desktop() {
+      grid-area: two;
+      padding: 0 0 2rem 2.5rem;
+    }
+    @include tablet() {
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+    @include small-tablet {
+      order: -2;
+    }
+  }
+  &__option-icon {
+    height: 24px;
+    width: 24px;
+    @include tablet {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--white);
+    @include small-tablet {
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    margin: 0.5rem 0 2.5rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 109%;
+    text-transform: uppercase;
+    color: #5e6573;
+    @include small-tablet {
+      margin: 4px 0 20px;
+      font-family: var(--font-family);
+
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__desc {
+    min-height: 140px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 121%;
+    color: #c4c8cf;
+    @include tablet {
+      min-height: inherit;
+    }
+    @include small-tablet {
+      font-size: 13px;
+    }
+  }
+  &__button {
+    margin-top: 40px;
+    max-width: 20.25rem;
+    width: 100%;
+    @include tablet {
+      font-size: 13px;
+      padding: 16.5px 30px;
+      color: #ececee;
+      line-height: 1;
+      max-width: 500px;
+      margin: 1rem auto 0;
+    }
+    &--mobile {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+    &--desk {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  &__video-wrap {
+    position: relative;
+    max-width: 656px;
+    width: 100%;
+    flex-shrink: 0;
+    @include tablet {
+      max-width: 100%;
+    }
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    @include big-desktop() {
+      grid-area: three;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__video {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    width: 100%;
+    @include tablet {
+      border-radius: 6px;
+    }
+  }
+}

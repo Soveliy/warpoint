@@ -1,0 +1,137 @@
+.tarifs {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  &__tabs {
+    margin-bottom: 70px;
+  }
+}
+.tarifs-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  background: #1c1e22;
+  border-radius: 12px;
+  &__head {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 32px;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+  &__info {
+    display: flex;
+    gap: 1rem;
+  }
+  &__info-value {
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+  }
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__type {
+    margin-top: 4px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #5e6573;
+  }
+  &__prices {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 24px 0 29px;
+  }
+  &__price-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    min-width: 116px;
+    width: max-content;
+  }
+  &__price-pretitle {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #5e6573;
+  }
+  &__value {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 4px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #c4c8cf;
+
+    &:before {
+      content: "";
+      height: 14px;
+      width: 14px;
+      border-radius: 100%;
+    }
+    &--green {
+      &:before {
+        background-color: #44a248;
+      }
+    }
+    &--blue {
+      &:before {
+        background-color: #0554f8;
+      }
+    }
+    &--red {
+      &:before {
+        background-color: #da1e28;
+      }
+    }
+  }
+  &__footer {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+  }
+  &__button {
+    max-width: 160px;
+    width: 100%;
+  }
+  &__picture {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

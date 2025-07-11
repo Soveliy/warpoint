@@ -48,3 +48,26 @@
     }
   }
 }
+
+.slider-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  .swiper-pagination-bullet {
+    height: 0.875rem;
+    width: 0.875rem;
+    background-color: rgba(#5b89f8, 0.3);
+    border: 1px solid rgba(#5b89f8, 0.3);
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    @include tablet {
+      height: 0.5rem;
+      width: 0.5rem;
+    }
+    &.swiper-pagination-bullet-active {
+      border-color: #5b89f8;
+    }
+  }
+}

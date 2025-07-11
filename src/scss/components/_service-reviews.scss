@@ -1,0 +1,73 @@
+.service-reviews-item {
+  padding: 16px 24px;
+  box-sizing: border-box;
+  background: #ececee;
+  border-radius: 16px;
+  &__top {
+    display: flex;
+    gap: 10px;
+  }
+  &__photo {
+    height: 56px;
+    width: 56px;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  &__author {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__author-name {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #3c4049;
+  }
+  &__date {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 11px;
+    color: #8f96a3;
+  }
+  &__rating {
+    display: flex;
+    gap: 8px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &__bottom {
+    margin-top: 16px;
+  }
+  &__desc {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 12px;
+    color: #5e6573;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  &__more {
+    margin-left: auto;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 11px;
+    color: #5e6573;
+  }
+  &__from {
+    display: flex;
+    width: max-content;
+    margin-top: 1rem;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 11px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #8f96a3;
+  }
+}
