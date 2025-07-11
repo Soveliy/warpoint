@@ -1,0 +1,97 @@
+@use "./mixins/disable-mob-hover" as *;
+@use "./mixins/breakpoint" as *;
+.menu {
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    @include hover {
+      &:hover {
+        .sublist {
+          opacity: 1;
+          pointer-events: all;
+          visibility: visible;
+        }
+        .menu__link {
+          color: #0554f8;
+          svg {
+            transform: rotate(180deg);
+            stroke: #0554f8;
+          }
+        }
+      }
+    }
+    &:not(:first-child) {
+      .menu__link {
+        border-right: 1px solid #25272d;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c4c8cf;
+    transition: 0.3s;
+  }
+  &__link-icon {
+    height: 16px;
+    width: 16px;
+    fill: none;
+    stroke: #c4c8cf;
+    transition: 0.3s;
+  }
+}
+
+.sublist {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #141517;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: 0.3s;
+  &__link {
+    display: block;
+    padding: 9px 4px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c4c8cf;
+    text-align: center;
+    border-bottom: 1px solid #25272d;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        color: #0554f8;
+      }
+    }
+    &:not(:first-child) {
+      border-top: 1px solid #25272d;
+    }
+  }
+}
