@@ -24,7 +24,4 @@
   --font-medium-xl: 2.5rem; // 40px
   --font-big: 4.375rem; // 70px
   $resolution: 1920;
-  @include mobile {
-    --container-offset: 20px;
-  }
 }

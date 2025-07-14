@@ -17,9 +17,20 @@ var swiper = new Swiper(".news__slider", {
 });
 
 var swiper = new Swiper(".formats__slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 24,
-
+  breakpoints: {
+    // when window width is >= 320px
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    // when window width is >= 480px
+    986: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 640px
+  },
   navigation: {
     nextEl: ".formats__slider .slider__arrow--next",
     prevEl: ".formats__slider .slider__arrow--prev",
@@ -31,8 +42,16 @@ var swiper = new Swiper(".formats__slider", {
 });
 
 var swiper = new Swiper(".games__slider", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 24,
+
+  breakpoints: {
+    // when window width is >= 320px
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+  },
 
   navigation: {
     nextEl: ".games__slider .slider__arrow--next",

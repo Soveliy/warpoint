@@ -20,6 +20,9 @@
   padding: 24px 32px;
   background: #1c1e22;
   border-radius: 12px;
+  @include tablet {
+    padding: 12px 16px;
+  }
   &__head {
     position: relative;
     z-index: 10;
@@ -29,6 +32,9 @@
     padding-right: 32px;
     box-sizing: border-box;
     gap: 20px;
+    @include tablet {
+      padding-right: 0;
+    }
   }
   &__info {
     display: flex;
@@ -46,6 +52,9 @@
     text-transform: uppercase;
     color: #fff;
     border-radius: 4px;
+    @include tablet {
+      font-size: 9px;
+    }
   }
   &__title {
     font-family: var(--font-family);
@@ -54,6 +63,10 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #fff;
+    @include tablet {
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
   }
   &__type {
     margin-top: 4px;
@@ -62,6 +75,10 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #5e6573;
+    @include tablet {
+      margin-top: 2px;
+      font-size: 9px;
+    }
   }
   &__prices {
     position: relative;

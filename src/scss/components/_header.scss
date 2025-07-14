@@ -81,5 +81,13 @@
   &__button {
     flex-shrink: 0;
     margin-left: 50px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__menu {
+    @include tablet {
+      display: none;
+    }
   }
 }

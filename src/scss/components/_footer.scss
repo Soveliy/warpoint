@@ -112,7 +112,6 @@
   }
   @include mobile {
     grid-template-columns: 1fr;
-    gap: 80px;
   }
   &__list {
     display: flex;

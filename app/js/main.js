@@ -11349,8 +11349,20 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider",
   }
 });
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 24,
+  breakpoints: {
+    // when window width is >= 320px
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    },
+    // when window width is >= 480px
+    986: {
+      slidesPerView: 3
+    }
+    // when window width is >= 640px
+  },
   navigation: {
     nextEl: ".formats__slider .slider__arrow--next",
     prevEl: ".formats__slider .slider__arrow--prev"
@@ -11361,8 +11373,15 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slide
   }
 });
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".games__slider", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 24,
+  breakpoints: {
+    // when window width is >= 320px
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    }
+  },
   navigation: {
     nextEl: ".games__slider .slider__arrow--next",
     prevEl: ".games__slider .slider__arrow--prev"

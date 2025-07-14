@@ -1,3 +1,5 @@
+@use "./mixins/disable-mob-hover" as *;
+@use "./mixins/breakpoint" as *;
 .games {
   &__wrapper {
     position: relative;
@@ -5,6 +7,9 @@
     padding: 0 6rem 2.5rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @include tablet {
+      padding: 0 0 2.5rem;
+    }
   }
   &__slider {
     overflow: hidden;
@@ -22,6 +27,9 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+  @include tablet {
+    border-radius: 12px;
+  }
   &__content {
     position: relative;
     z-index: 50;
@@ -32,6 +40,10 @@
     min-height: 576px;
     box-sizing: border-box;
     padding: 24px 40px;
+    @include tablet {
+      padding: 16px;
+      min-height: 257px;
+    }
   }
   &__pretitle {
     margin-bottom: 1px;
@@ -40,6 +52,9 @@
     font-size: 13px;
     text-transform: uppercase;
     color: #8f96a3;
+    @include tablet {
+      font-size: 11px;
+    }
   }
   &__title {
     font-family: var(--font-family);
@@ -49,6 +64,9 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #fff;
+    @include tablet {
+      font-size: 18px;
+    }
   }
   &__options {
     padding: 0;
@@ -57,6 +75,10 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    @include tablet {
+      margin-top: 12px;
+      gap: 10px;
+    }
   }
   &__option {
     font-family: var(--font-family);
@@ -65,6 +87,12 @@
     text-transform: uppercase;
     &:first-child {
       margin-right: 40px;
+      @include tablet {
+        margin-right: 28px;
+      }
+    }
+    @include tablet {
+      font-size: 11px;
     }
   }
   &__option-title {
@@ -94,6 +122,12 @@
     text-transform: uppercase;
     color: #fff;
     border-radius: 4px;
+    @include tablet {
+      font-size: 9px;
+      height: 22px;
+      padding: 0 4px;
+      max-width: 62px;
+    }
     &--hit {
       background: #da1e28;
       letter-spacing: 0.06em;
@@ -102,6 +136,9 @@
     &--our {
       font-size: 11px;
       background: #db890d;
+      @include tablet {
+        font-size: 8px;
+      }
     }
     &--new {
       background: #44a248;
