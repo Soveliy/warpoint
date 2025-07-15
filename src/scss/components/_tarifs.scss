@@ -21,6 +21,7 @@
   background: #1c1e22;
   border-radius: 12px;
   @include tablet {
+    overflow: hidden;
     padding: 12px 16px;
   }
   &__head {
@@ -88,6 +89,9 @@
     align-items: flex-start;
     gap: 1rem;
     margin: 24px 0 29px;
+    @include tablet {
+      margin: 10px 0 40px;
+    }
   }
   &__price-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -96,6 +100,13 @@
     box-sizing: border-box;
     min-width: 116px;
     width: max-content;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      padding: 4px 6px;
+      min-width: 144px;
+      gap: 8px;
+    }
   }
   &__price-pretitle {
     font-family: var(--font-family);
@@ -104,6 +115,9 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #5e6573;
+    @include tablet {
+      font-size: 9px;
+    }
   }
   &__value {
     position: relative;
@@ -117,12 +131,18 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #c4c8cf;
-
+    @include tablet {
+      font-size: 11px;
+    }
     &:before {
       content: "";
       height: 14px;
       width: 14px;
       border-radius: 100%;
+      @include tablet {
+        height: 8px;
+        width: 8px;
+      }
     }
     &--green {
       &:before {
@@ -148,12 +168,24 @@
     gap: 20px;
   }
   &__button {
+    padding: 0.75rem;
     max-width: 160px;
     width: 100%;
+    font-size: 13px;
+    @include tablet {
+      padding: 7px;
+      font-size: 11px;
+      border-radius: 4px;
+      max-width: 124px;
+    }
   }
   &__picture {
     position: absolute;
     bottom: 0;
     right: 0;
+    @include tablet {
+      height: 80%;
+      width: 86%;
+    }
   }
 }

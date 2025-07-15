@@ -41,7 +41,9 @@
 // import { getHeaderHeight } from './functions/header-height';
 
 // Подключение плагина кастом-скролла
-// import 'simplebar';
+// import "simplebar";
+// import ResizeObserver from "resize-observer-polyfill";
+// window.ResizeObserver = ResizeObserver;
 
 // Подключение плагина для позиционирования тултипов
 // import { createPopper, right} from '@popperjs/core';

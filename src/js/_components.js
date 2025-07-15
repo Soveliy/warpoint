@@ -2,8 +2,12 @@
 // import "./components/modals.js";
 // import "./components/marquee_slider.js";
 // import "./components/accordeon.js";
+import "./components/menu.js";
+import "./components/selects.js";
 import "./components/fancybox.js";
 import "./components/slider.js";
+import "./components/tabs.js";
+import "./components/scrollbar.js";
 // import "./components/burger.js";
 // import "./components/validation.js";
 // import "./components/animation.js";

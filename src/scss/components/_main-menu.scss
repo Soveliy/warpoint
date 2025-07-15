@@ -2,10 +2,20 @@
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
   background-color: #141517;
   height: 100dvh;
   width: 375px;
   overflow: auto;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 1000;
+  &.js-active {
+    opacity: 1;
+    transform: none;
+  }
   &__head {
     display: flex;
     align-items: center;
@@ -13,6 +23,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 10.5px 24px;
     box-sizing: border-box;
+    flex-shrink: 0;
   }
   &__close {
     height: 31px;
@@ -41,20 +52,107 @@
     line-height: 133%;
     text-transform: uppercase;
     color: #c4c8cf;
+    transition: 0.3s;
   }
   &__list {
     list-style: none;
     padding: 8px 24px;
     margin: 0;
+    overflow: auto;
   }
   &__item {
     & + & {
       margin-top: 1rem;
+    }
+    &.js-active {
+      .main-menu__submenu {
+        opacity: 1;
+        max-height: 500px;
+      }
+      .main-menu__link {
+        color: #0554f8;
+      }
+      .main-menu__link-icon {
+        transform: rotate(180deg);
+        stroke: #0554f8;
+      }
     }
   }
   &__link-icon {
     height: 16px;
     width: 16px;
     stroke: #c4c8cf;
+    transition: 0.3s;
+  }
+  &__submenu {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+    background: #101114;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &__submenu-link {
+    display: block;
+    padding: 8px 24px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #c4c8cf;
+  }
+  &__footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+    padding: 1rem 1rem 0;
+  }
+  .main-menu__select {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  &__button {
+    width: 100%;
+  }
+  &__social {
+    margin: 1rem -1rem 0;
+    padding: 24px 0;
+    background: #1c1e22;
+  }
+  &__social-title {
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #5e6573;
+  }
+  &__social-list {
+    padding: 0;
+    left: 0;
+    list-style: none;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__social-item {
+    width: 32px;
+  }
+  &__social-link {
+    display: block;
+    height: 32px;
+    svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
   }
 }

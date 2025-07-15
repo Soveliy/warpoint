@@ -3,7 +3,7 @@
 // @import "../../node_modules/graph-modal/dist/graph-modal.min";
 
 // стили для табов
-// @import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+@use "../../node_modules/graph-tabs/dist/graph-tabs.min" as *;
 
 // стили для библиотеки aos
 // @import "../../node_modules/aos/dist/aos";
@@ -15,6 +15,8 @@
 @use "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css" as *;
 
 // стили для скролла simplebar
-// @import "../../node_modules/simplebar/dist/simplebar.min";
+@use "../../node_modules/simplebar/dist/simplebar.min" as *;
 
 @use "./vendor/modal" as *;
+
+@use "../../node_modules/nice-select2/dist/css/nice-select2.css" as *;

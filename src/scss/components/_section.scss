@@ -9,7 +9,7 @@
   &--big {
     padding: 10rem 0;
     @include tablet {
-      padding: 8rem 0;
+      padding: 4rem 0;
     }
   }
   &--dark {
@@ -40,6 +40,9 @@
     @include small-tablet {
       font-size: 18px;
       line-height: 133%;
+    }
+    span {
+      color: #0554f8;
     }
   }
   &__desc {

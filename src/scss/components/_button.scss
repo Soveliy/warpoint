@@ -10,9 +10,16 @@
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
-
+  transition: 0.3s;
   &--blue {
     background-color: #0043ce;
+    border: 1px solid #0043ce;
+    @include hover {
+      &:hover {
+        background-color: transparent;
+        background: rgba(5, 84, 248, 0.1);
+      }
+    }
   }
   &--big {
     padding: 1.5rem;
@@ -34,5 +41,11 @@
   &--rounded {
     border: 1px solid #0554f8;
     background: rgba(5, 84, 248, 0.1);
+    @include hover {
+      &:hover {
+        background-color: transparent;
+        background: #0554f8;
+      }
+    }
   }
 }

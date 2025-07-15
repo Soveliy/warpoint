@@ -1,0 +1,16 @@
+.simplebar-content-wrapper {
+  padding-right: 16px;
+}
+.simplebar-track {
+  background: #25272d;
+  border: 1px solid #25272d;
+  width: 8px;
+  box-sizing: border-box;
+}
+.simplebar-scrollbar {
+  background: rgba(91, 137, 248, 0.15);
+  border-radius: 16px;
+  &.simplebar-visible {
+    background: rgba(91, 137, 248, 0.15);
+  }
+}

@@ -51,6 +51,11 @@
       height: 20px;
       width: 20px;
     }
+    &[data-value="5"] {
+      svg {
+        fill: #efcd5d;
+      }
+    }
   }
   &__bottom {
     margin-top: 16px;

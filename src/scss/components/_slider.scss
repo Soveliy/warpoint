@@ -1,4 +1,4 @@
-@use "mixins" as mixins;
+@use "./mixins/disable-mob-hover" as *;
 @use "./mixins/breakpoint" as *;
 .slider {
   &__arrow {
@@ -13,6 +13,12 @@
     border: 1px solid #0554f8;
     border-radius: 0.75rem;
     margin-top: -2.5rem;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        background-color: #0554f8;
+      }
+    }
     @include tablet {
       display: none;
     }
@@ -44,11 +50,7 @@
       fill: none;
       stroke-width: 1.5px;
       stroke: #adc4fc;
-    }
-    @include mixins.hover {
-      svg {
-        fill: var(--green-light);
-      }
+      fill: transparent;
     }
   }
 }
