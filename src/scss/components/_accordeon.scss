@@ -1,0 +1,87 @@
+@use "./mixins/breakpoint" as *;
+.faq-item {
+  background: rgba(91, 137, 248, 0.05);
+  transition: 0.3s;
+  border-radius: 16px;
+  @include small-tablet {
+    border-radius: 12px;
+  }
+  & + & {
+    margin-top: 1rem;
+  }
+  &.js-active {
+    background: #282d37;
+    .faq-item__title {
+      color: #5b89f8;
+    }
+    .faq-item__body {
+      max-height: 500px;
+      padding: 16px 24px 32px;
+      opacity: 1;
+      @include tablet {
+        padding: 16px;
+      }
+    }
+    .faq-item__icon {
+      transform: rotate(180deg);
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    gap: 8px;
+    cursor: pointer;
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 121%;
+    color: #c4c8cf;
+    transition: 0.3s;
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+  &__button {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0554f8;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgba(5, 84, 248, 0.1);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  &__icon {
+    height: 24px;
+    width: 24px;
+    fill: none;
+    stroke: #c4c8cf;
+    transition: 0.3s;
+  }
+  &__body {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 18px;
+    color: #8f96a3;
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 24px;
+    transition: 0.3s ease;
+    @include small-tablet {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+  }
+}

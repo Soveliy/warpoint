@@ -1,0 +1,87 @@
+@use "./mixins/breakpoint" as *;
+.faq {
+  &__row {
+    display: flex;
+    gap: 80px;
+    @include big-desktop {
+      gap: 24px;
+    }
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 64px;
+    }
+  }
+  &__left {
+    max-width: 504px;
+    width: 100%;
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+  &__button {
+    display: block;
+    max-width: 326px;
+    margin: 64px auto 0;
+    text-align: center;
+    padding: 21px 16px;
+    font-size: 18px;
+    border-radius: 16px;
+    @include tablet {
+      margin-top: 24px;
+    }
+    @include small-tablet {
+      font-size: 13px;
+    }
+  }
+}
+
+.qusetion-form {
+  padding: 64px 40px;
+  background: #1c1e22;
+  border-radius: 18px;
+  @include big-desktop {
+    padding: 40px 24px;
+  }
+  &__title {
+    margin-bottom: 4px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 56px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #5e6573;
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    & + & {
+      margin-top: 32px;
+    }
+  }
+  &__checkbox {
+    margin-top: 24px;
+    display: block;
+  }
+  &__button {
+    margin-top: 24px;
+  }
+}

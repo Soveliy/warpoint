@@ -1,7 +1,7 @@
 import { validateForms } from "../functions/validate-forms.js";
 const rules1 = [
   {
-    ruleSelector: ".form__input--name",
+    ruleSelector: ".input__native--name",
     rules: [
       {
         rule: "minLength",
@@ -10,21 +10,36 @@ const rules1 = [
       {
         rule: "required",
         value: true,
-        errorMessage: "Заполните имя!",
+        errorMessage: "поле обязательно для заполнения",
       },
     ],
   },
   {
-    ruleSelector: ".form__input--phone",
+    ruleSelector: ".input__native--email",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "поле обязательно для заполнения",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".input__native--phone",
     tel: true,
-    telError: "Введите корректный телефон",
+    telError: "поле обязательно для заполнения",
     rules: [
       {
         rule: "required",
         value: true,
-        errorMessage: "Заполните телефон!",
+        errorMessage: "поле обязательно для заполнения",
       },
     ],
+    
   },
 ];
 
@@ -32,4 +47,4 @@ const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 
-validateForms(".form--modal", rules1, afterForm);
+validateForms(".qusetion-form", rules1, afterForm);

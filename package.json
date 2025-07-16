@@ -70,6 +70,7 @@
     "micromodal": "^0.6.1",
     "nice-select2": "^2.3.1",
     "rellax": "^1.12.1",
+    "simple-phone-mask": "^1.0.4",
     "simplebar": "^6.3.0",
     "swiped-events": "^1.2.0",
     "swiper": "^11.2.1",

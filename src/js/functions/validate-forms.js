@@ -1,6 +1,6 @@
 import JustValidate from "just-validate";
-import Inputmask from "../../../node_modules/inputmask/dist/inputmask.es6.js";
-
+// import Inputmask from "../../../node_modules/inputmask/dist/inputmask.es6.js";
+import SimplePhoneMask from "simple-phone-mask";
 export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
@@ -16,18 +16,19 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask("+7 (999) 999-99-99", {
-      showMaskOnHover: false,
+    // --- Вместо Inputmask: ---
+    const phoneMask = new SimplePhoneMask('input[type="tel"]', {
+      countryCode: "RU",
+      // другие опции...
     });
-    inputMask.mask(telSelector);
 
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
           rule: "function",
           validator: function () {
-            const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 10;
+            const phone = telSelector.value.replace(/\D/g, ""); // или phoneMask.getUnmaskedValue(telSelector)
+            return phone.length === 11; // для РФ, смотри какая у тебя длина
           },
           errorMessage: item.telError,
         });
@@ -38,13 +39,29 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   const validation = new JustValidate(selector, {
     errorFieldCssClass: "is-invalid",
     errorLabelStyle: {
-      color: "#DD4619",
+      color: "#ff545d",
     },
   });
 
   for (let item of rules) {
-    validation.addField(item.ruleSelector, item.rules);
+    const el = document.querySelector(item.ruleSelector);
+    let errorLabelTarget = undefined;
+
+    if (el) {
+      const parentInput = el.closest(".input");
+      console.log(parentInput);
+      if (parentInput) {
+        errorLabelTarget = parentInput;
+      }
+    }
+
+    validation.addField(
+      item.ruleSelector,
+      item.rules,
+      errorLabelTarget ? { errorLabelTarget } : undefined
+    );
   }
+  console.log(validation);
 
   if (checkboxes.length) {
     for (let item of checkboxes) {
