@@ -8,6 +8,88 @@
         Выберите свое виртуальное приключение
       </p>
     </div>
+
+    <form class="filters games__filters">
+      <button class="filters__button" type="button">
+        <span class="filters__button-title">
+          фильтры
+        </span>
+        <span class="filters__button-icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+      </button>
+
+      <div class="filters__row">
+        <div class="filters__head">
+          <div class="filters__title">
+            фильтры:
+          </div>
+          <button class="filters__reset" type="reset">
+            сбросить всё
+          </button>
+        </div>
+
+        <div class="filters-item">
+          <label class="filters-item__label">игровая зона</label>
+          <select class="filters-item__select" name="zones">
+            <option value="любая" selected>любая</option>
+            <option value="любая">любая</option>
+            <option value="любая">любая</option>
+            <option value="любая">любая</option>
+          </select>
+
+        </div>
+
+        <div class="filters-item">
+          <label class="filters-item__label">сделано в warpoint</label>
+          <label class="checkbox">
+            <input type="checkbox" checked>
+            <span class="checkbox__wrap">
+              <span class="checkbox__fake"></span>
+            </span>
+          </label>
+
+        </div>
+
+
+
+
+        <div class="filters-item">
+          <label class="filters-item__label">кол-во игрокова</label>
+          <select class="filters-item__select" name="quantity">
+            <option value="любая" selected>любое</option>
+            <option value="любая">любое</option>
+            <option value="любая">любое</option>
+            <option value="любая">любое</option>
+          </select>
+
+        </div>
+        <div class="filters-item">
+          <label class="filters-item__label">жанр</label>
+          <select class="filters-item__select" name="jenre">
+            <option value="любая" selected>любой</option>
+            <option value="любая">любой</option>
+            <option value="любая">любой</option>
+            <option value="любая">любой</option>
+          </select>
+
+        </div>
+        <div class="filters-item">
+          <label class="filters-item__label">возраст</label>
+          <select class="filters-item__select" name="years">
+            <option value="любая" selected>любой</option>
+            <option value="любая">любой</option>
+            <option value="любая">любой</option>
+            <option value="любая">любой</option>
+          </select>
+
+        </div>
+
+
+      </div>
+    </form>
     <div class="games__wrapper">
       <div class="games__slider">
         <div class="swiper-wrapper">

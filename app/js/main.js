@@ -16332,6 +16332,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_scrollbar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollbar.js */ "./src/js/components/scrollbar.js");
 /* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
+/* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
 // import "./components/hero_slider.js";
 // import "./components/modals.js";
 // import "./components/marquee_slider.js";
@@ -16344,6 +16345,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import "./components/burger.js";
+
 
 // import "./components/animation.js";
 
@@ -16389,6 +16391,25 @@ console.log(_fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox);
 _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
+
+/***/ }),
+
+/***/ "./src/js/components/filters.js":
+/*!**************************************!*\
+  !*** ./src/js/components/filters.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const filterButton = document.querySelector(".filters__button");
+const filterBody = document.querySelector(".filters__row");
+if (filterButton && filterBody) {
+  filterButton.addEventListener("click", () => {
+    filterButton.classList.toggle("js-active");
+    filterBody.classList.toggle("js-active");
+  });
+}
 
 /***/ }),
 
@@ -16500,6 +16521,14 @@ if (citySelects.length > 0) {
 const langSelects = document.querySelectorAll(".select-lang-js");
 if (langSelects.length > 0) {
   langSelects.forEach(select => {
+    new nice_select2__WEBPACK_IMPORTED_MODULE_0__["default"](select, {
+      searchable: false
+    });
+  });
+}
+const filtersSelects = document.querySelectorAll(".filters-item__select");
+if (filtersSelects.length > 0) {
+  filtersSelects.forEach(select => {
     new nice_select2__WEBPACK_IMPORTED_MODULE_0__["default"](select, {
       searchable: false
     });

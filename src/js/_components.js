@@ -11,4 +11,5 @@ import "./components/tabs.js";
 import "./components/scrollbar.js";
 // import "./components/burger.js";
 import "./components/validation.js";
+import "./components/filters.js";
 // import "./components/animation.js";

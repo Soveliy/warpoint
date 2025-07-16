@@ -19,3 +19,13 @@ if (langSelects.length > 0) {
     });
   });
 }
+
+const filtersSelects = document.querySelectorAll(".filters-item__select");
+
+if (filtersSelects.length > 0) {
+  filtersSelects.forEach((select) => {
+    new NiceSelect(select, {
+      searchable: false,
+    });
+  });
+}

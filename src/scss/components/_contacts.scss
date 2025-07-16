@@ -79,9 +79,6 @@
     position: relative;
   }
   &__left {
-    @include big-desktop {
-      display: none;
-    }
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -93,6 +90,9 @@
     width: 528px;
     background: rgba(28, 30, 34, 0.9);
     z-index: 500;
+    @include big-desktop {
+      display: none;
+    }
   }
   &__map {
     height: 818px;
