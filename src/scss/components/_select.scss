@@ -92,6 +92,20 @@ select.select-default {
 }
 .select {
   &__caption {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    width: max-content;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
   }
   &__icon {
     height: 16px;

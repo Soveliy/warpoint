@@ -3238,6 +3238,22 @@ module.exports = toNumber;
 
 /***/ }),
 
+/***/ "./node_modules/micromodal/dist/micromodal.es.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/micromodal/dist/micromodal.es.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function t(e){return function(e){if(Array.isArray(e))return o(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||function(e,t){if(!e)return;if("string"==typeof e)return o(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);"Object"===n&&e.constructor&&(n=e.constructor.name);if("Map"===n||"Set"===n)return Array.from(e);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return o(e,t)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function o(e,t){(null==t||t>e.length)&&(t=e.length);for(var o=0,n=new Array(t);o<t;o++)n[o]=e[o];return n}var n,i,a,r,s,l=(n=["a[href]","area[href]",'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',"select:not([disabled]):not([aria-hidden])","textarea:not([disabled]):not([aria-hidden])","button:not([disabled]):not([aria-hidden])","iframe","object","embed","[contenteditable]",'[tabindex]:not([tabindex^="-"])'],i=function(){function o(e){var n=e.targetModal,i=e.triggers,a=void 0===i?[]:i,r=e.onShow,s=void 0===r?function(){}:r,l=e.onClose,c=void 0===l?function(){}:l,d=e.openTrigger,u=void 0===d?"data-micromodal-trigger":d,f=e.closeTrigger,h=void 0===f?"data-micromodal-close":f,v=e.openClass,g=void 0===v?"is-open":v,m=e.disableScroll,b=void 0!==m&&m,y=e.disableFocus,p=void 0!==y&&y,w=e.awaitCloseAnimation,E=void 0!==w&&w,k=e.awaitOpenAnimation,M=void 0!==k&&k,A=e.debugMode,C=void 0!==A&&A;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,o),this.modal="string"==typeof n?document.getElementById(n):n,this.config={debugMode:C,disableScroll:b,openTrigger:u,closeTrigger:h,openClass:g,onShow:s,onClose:c,awaitCloseAnimation:E,awaitOpenAnimation:M,disableFocus:p},a.length>0&&this.registerTriggers.apply(this,t(a)),this.onClick=this.onClick.bind(this),this.onKeydown=this.onKeydown.bind(this)}var i,a,r;return i=o,(a=[{key:"registerTriggers",value:function(){for(var e=this,t=arguments.length,o=new Array(t),n=0;n<t;n++)o[n]=arguments[n];o.filter(Boolean).forEach((function(t){t.addEventListener("click",(function(t){return e.showModal(t)}))}))}},{key:"showModal",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null;if(this.activeElement=document.activeElement,this.modal.setAttribute("aria-hidden","false"),this.modal.classList.add(this.config.openClass),this.scrollBehaviour("disable"),this.addEventListeners(),this.config.awaitOpenAnimation){var o=function t(){e.modal.removeEventListener("animationend",t,!1),e.setFocusToFirstNode()};this.modal.addEventListener("animationend",o,!1)}else this.setFocusToFirstNode();this.config.onShow(this.modal,this.activeElement,t)}},{key:"closeModal",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t=this.modal;if(this.modal.setAttribute("aria-hidden","true"),this.removeEventListeners(),this.scrollBehaviour("enable"),this.activeElement&&this.activeElement.focus&&this.activeElement.focus(),this.config.onClose(this.modal,this.activeElement,e),this.config.awaitCloseAnimation){var o=this.config.openClass;this.modal.addEventListener("animationend",(function e(){t.classList.remove(o),t.removeEventListener("animationend",e,!1)}),!1)}else t.classList.remove(this.config.openClass)}},{key:"closeModalByIdOrElement",value:function(e){this.modal="string"==typeof e?document.getElementById(e):e,this.modal&&this.closeModal()}},{key:"scrollBehaviour",value:function(e){if(this.config.disableScroll){var t=document.querySelector("body");switch(e){case"enable":Object.assign(t.style,{overflow:""});break;case"disable":Object.assign(t.style,{overflow:"hidden"})}}}},{key:"addEventListeners",value:function(){this.modal.addEventListener("touchstart",this.onClick),this.modal.addEventListener("click",this.onClick),document.addEventListener("keydown",this.onKeydown)}},{key:"removeEventListeners",value:function(){this.modal.removeEventListener("touchstart",this.onClick),this.modal.removeEventListener("click",this.onClick),document.removeEventListener("keydown",this.onKeydown)}},{key:"onClick",value:function(e){(e.target.hasAttribute(this.config.closeTrigger)||e.target.parentNode.hasAttribute(this.config.closeTrigger))&&(e.preventDefault(),e.stopPropagation(),this.closeModal(e))}},{key:"onKeydown",value:function(e){27===e.keyCode&&this.closeModal(e),9===e.keyCode&&this.retainFocus(e)}},{key:"getFocusableNodes",value:function(){var e=this.modal.querySelectorAll(n);return Array.apply(void 0,t(e))}},{key:"setFocusToFirstNode",value:function(){var e=this;if(!this.config.disableFocus){var t=this.getFocusableNodes();if(0!==t.length){var o=t.filter((function(t){return!t.hasAttribute(e.config.closeTrigger)}));o.length>0&&o[0].focus(),0===o.length&&t[0].focus()}}}},{key:"retainFocus",value:function(e){var t=this.getFocusableNodes();if(0!==t.length)if(t=t.filter((function(e){return null!==e.offsetParent})),this.modal.contains(document.activeElement)){var o=t.indexOf(document.activeElement);e.shiftKey&&0===o&&(t[t.length-1].focus(),e.preventDefault()),!e.shiftKey&&t.length>0&&o===t.length-1&&(t[0].focus(),e.preventDefault())}else t[0].focus()}}])&&e(i.prototype,a),r&&e(i,r),o}(),a=null,r=function(e){if("string"==typeof id?!document.getElementById(e):!e)return console.warn("MicroModal: ❗Seems like you have missed %c'".concat(e,"'"),"background-color: #f8f9fa;color: #50596c;font-weight: bold;","ID somewhere in your code. Refer example below to resolve it."),console.warn("%cExample:","background-color: #f8f9fa;color: #50596c;font-weight: bold;",'<div class="modal" id="'.concat(e,'"></div>')),!1},s=function(e,t){if(function(e){e.length<=0&&(console.warn("MicroModal: ❗Please specify at least one %c'micromodal-trigger'","background-color: #f8f9fa;color: #50596c;font-weight: bold;","data attribute."),console.warn("%cExample:","background-color: #f8f9fa;color: #50596c;font-weight: bold;",'<a href="#" data-micromodal-trigger="my-modal"></a>'))}(e),!t)return!0;for(var o in t)r(o);return!0},{init:function(e){var o=Object.assign({},{openTrigger:"data-micromodal-trigger"},e),n=t(document.querySelectorAll("[".concat(o.openTrigger,"]"))),r=function(e,t){var o=[];return e.forEach((function(e){var n=e.attributes[t].value;void 0===o[n]&&(o[n]=[]),o[n].push(e)})),o}(n,o.openTrigger);if(!0!==o.debugMode||!1!==s(n,r))for(var l in r){var c=r[l];o.targetModal=l,o.triggers=t(c),a=new i(o)}},show:function(e,t){var o=t||{};o.targetModal=e,!0===o.debugMode&&!1===r(e)||(a&&a.removeEventListeners(),(a=new i(o)).showModal())},close:function(e){e?a.closeModalByIdOrElement(e):a.closeModal()}});"undefined"!=typeof window&&(window.MicroModal=l);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (l);
+
+
+/***/ }),
+
 /***/ "./node_modules/nice-select2/src/js/nice-select2.js":
 /*!**********************************************************!*\
   !*** ./node_modules/nice-select2/src/js/nice-select2.js ***!
@@ -16323,18 +16339,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_mask_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/mask.js */ "./src/js/components/mask.js");
-/* harmony import */ var _components_accordeon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordeon.js */ "./src/js/components/accordeon.js");
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu.js */ "./src/js/components/menu.js");
-/* harmony import */ var _components_selects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/selects.js */ "./src/js/components/selects.js");
-/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
-/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_scrollbar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollbar.js */ "./src/js/components/scrollbar.js");
-/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
-/* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
+/* harmony import */ var _components_modals_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/modals.js */ "./src/js/components/modals.js");
+/* harmony import */ var _components_mask_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/mask.js */ "./src/js/components/mask.js");
+/* harmony import */ var _components_accordeon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordeon.js */ "./src/js/components/accordeon.js");
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu.js */ "./src/js/components/menu.js");
+/* harmony import */ var _components_selects_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/selects.js */ "./src/js/components/selects.js");
+/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
+/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_scrollbar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/scrollbar.js */ "./src/js/components/scrollbar.js");
+/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
+/* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
+/* harmony import */ var _components_location_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/location.js */ "./src/js/components/location.js");
 // import "./components/hero_slider.js";
-// import "./components/modals.js";
+
 // import "./components/marquee_slider.js";
 
 
@@ -16345,6 +16363,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import "./components/burger.js";
+
 
 
 // import "./components/animation.js";
@@ -16410,6 +16429,140 @@ if (filterButton && filterBody) {
     filterBody.classList.toggle("js-active");
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/components/location.js":
+/*!***************************************!*\
+  !*** ./src/js/components/location.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем элементы
+  const tabEls = document.querySelectorAll(".location-tab");
+  const tabSelectEls = document.querySelectorAll(".location-tab__select");
+  const tabContentEls = document.querySelectorAll(".location-content");
+  const tabNames = ["страна", "город", "локация"];
+
+  // Массив для выбранных значений
+  let selected = [null, null, null];
+
+  // Переключение табов
+  tabSelectEls.forEach((selectEl, idx) => {
+    selectEl.addEventListener("click", function (e) {
+      e.stopPropagation();
+      // Переключаем активные табы
+      tabEls.forEach((tab, i) => tab.classList.toggle("js-active", i === idx));
+      // Показываем нужный контент
+      tabContentEls.forEach((cnt, i) => cnt.style.display = i === idx ? "" : "none");
+    });
+  });
+
+  // По умолчанию активен первый таб
+  tabEls[0].classList.add("js-active");
+  tabContentEls.forEach((cnt, i) => cnt.style.display = i === 0 ? "" : "none");
+
+  // ===== Выбор страны =====
+  const countryList = document.querySelector(".location-content__country-list");
+  if (countryList) {
+    countryList.addEventListener("click", function (e) {
+      const li = e.target.closest(".location-content__country-item");
+      if (!li) return;
+      // Сохраняем выбранную страну
+      selected[0] = li.textContent.trim();
+      // Подставляем в таб
+      const countryTab = tabEls[0].querySelector(".location-tab__name");
+      countryTab.textContent = selected[0];
+      // Делаем второй таб активным
+      tabEls[1].classList.add("js-active");
+      tabEls[0].classList.remove("js-active");
+      tabContentEls[1].style.display = "";
+      tabContentEls[0].style.display = "none";
+    });
+  }
+
+  // ===== Выбор города =====
+  const cityList = document.querySelector(".city-list");
+  if (cityList) {
+    cityList.addEventListener("click", function (e) {
+      const li = e.target.closest(".city-list__city");
+      if (!li) return;
+      // Сохраняем выбранный город
+      selected[1] = li.textContent.trim();
+      // Подставляем в таб
+      const cityTab = tabEls[1].querySelector(".location-tab__name");
+      cityTab.textContent = selected[1];
+      // Делаем третий таб активным
+      tabEls[2].classList.add("js-active");
+      tabEls[1].classList.remove("js-active");
+      tabContentEls[2].style.display = "";
+      tabContentEls[1].style.display = "none";
+    });
+  }
+
+  // ===== Выбор локации =====
+  const locationGrid = document.querySelector(".location__grid");
+  if (locationGrid) {
+    locationGrid.addEventListener("click", function (e) {
+      const item = e.target.closest(".location-item");
+      if (!item) return;
+      // Сохраняем выбранную локацию
+      const locationTitle = item.querySelector(".location-item__title");
+      selected[2] = locationTitle ? locationTitle.textContent.trim() : "";
+      // Подставляем в таб
+      const locTab = tabEls[2].querySelector(".location-tab__name");
+      locTab.textContent = selected[2];
+      // Скрываем модалку (или можно оставить открытой)
+      // document.getElementById('location').setAttribute('aria-hidden', 'true');
+      // Можно добавить любой свой колбэк!
+    });
+  }
+
+  // ===== Фильтр поиска =====
+  const inputEls = document.querySelectorAll(".location-content__input");
+  inputEls.forEach((input, idx) => {
+    input.addEventListener("input", function (e) {
+      const val = input.value.toLowerCase();
+      if (idx === 0) {
+        // Поиск стран
+        const items = countryList.querySelectorAll(".location-content__country-item");
+        items.forEach(item => {
+          item.style.display = item.textContent.toLowerCase().includes(val) ? "" : "none";
+        });
+      } else if (idx === 1) {
+        // Поиск городов
+        const groups = cityList.querySelectorAll(".city-list__group");
+        groups.forEach(group => {
+          let found = false;
+          const cities = group.querySelectorAll(".city-list__city");
+          cities.forEach(city => {
+            const match = city.textContent.toLowerCase().includes(val);
+            city.style.display = match ? "" : "none";
+            if (match) found = true;
+          });
+          // Скрываем букву, если нет городов
+          group.style.display = found ? "" : "none";
+        });
+      } else if (idx === 2) {
+        // Поиск локаций
+        const locations = locationGrid.querySelectorAll(".location-item");
+        locations.forEach(loc => {
+          const title = loc.querySelector(".location-item__title");
+          loc.style.display = title && title.textContent.toLowerCase().includes(val) ? "" : "none";
+        });
+      }
+    });
+  });
+
+  // ===== По кнопке "ОК" выводим выбранные значения =====
+  document.querySelector(".location__button").addEventListener("click", function () {
+    alert(`Вы выбрали:\nСтрана: ${selected[0]}\nГород: ${selected[1]}\nЛокация: ${selected[2]}`);
+    // Тут можно вставить свой код для передачи данных дальше
+  });
+});
 
 /***/ }),
 
@@ -16481,6 +16634,23 @@ menu?.addEventListener("click", e => {
     e.preventDefault();
     link.parentElement.classList.toggle("js-active");
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/modals.js":
+/*!*************************************!*\
+  !*** ./src/js/components/modals.js ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var micromodal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! micromodal */ "./node_modules/micromodal/dist/micromodal.es.js");
+
+micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].init({
+  disableScroll: true,
+  disableFocus: true
 });
 
 /***/ }),

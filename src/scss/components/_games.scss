@@ -1,6 +1,9 @@
 @use "./mixins/disable-mob-hover" as *;
 @use "./mixins/breakpoint" as *;
 .games {
+  &__pick-up {
+    margin-top: 40px;
+  }
   &__wrapper {
     position: relative;
     overflow: hidden;
@@ -159,6 +162,81 @@
       display: block;
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+.pick-up {
+  background: #1c1e22;
+  border-radius: 8px;
+  padding: 40px;
+  @include small-tablet {
+    padding: 24px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    text-wrap: balance;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__form {
+    max-width: 732px;
+    width: 100%;
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  &__form-row {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__button {
+    flex-shrink: 0;
+    @include small-tablet {
+      margin: 16px 0 auto;
+      width: 100%;
+    }
+    &--mobile {
+      display: none;
+      @include small-tablet {
+        display: block;
+      }
+    }
+    &--desk {
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 121%;
+    color: #c4c8cf;
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+  &__subtitle {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #5e6573;
+    @include small-tablet {
+      margin-top: 8px;
+      font-size: 16px;
     }
   }
 }

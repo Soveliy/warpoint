@@ -1,5 +1,5 @@
 // import "./components/hero_slider.js";
-// import "./components/modals.js";
+import "./components/modals.js";
 // import "./components/marquee_slider.js";
 import "./components/mask.js";
 import "./components/accordeon.js";
@@ -12,4 +12,5 @@ import "./components/scrollbar.js";
 // import "./components/burger.js";
 import "./components/validation.js";
 import "./components/filters.js";
+import "./components/location.js";
 // import "./components/animation.js";

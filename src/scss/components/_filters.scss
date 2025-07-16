@@ -19,6 +19,9 @@
       justify-content: center;
       margin-top: 16px;
     }
+    @include mobile {
+      justify-content: flex-start;
+    }
   }
   &__title {
     font-family: var(--font-family);
@@ -70,10 +73,13 @@
     outline: 0;
     max-width: 500px;
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    @include tablet {
+      display: flex;
+    }
   }
   &__button-title {
     font-family: var(--font-family);
@@ -113,7 +119,7 @@
   @include mobile {
     max-width: 100%;
   }
-  &:nth-child(3) {
+  &:nth-child(4) {
     @include for-desktop {
       margin-left: auto;
     }
