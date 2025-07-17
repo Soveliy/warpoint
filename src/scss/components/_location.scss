@@ -110,16 +110,18 @@
 .location-tab {
   padding-bottom: 12px;
   border-bottom: 1px solid #272b2b;
+  margin-top: 24px;
+  cursor: pointer;
   @include tablet {
     padding: 12px 32px;
   }
   & + & {
-    margin-top: 24px;
+   
     @include tablet {
       margin-top: 0;
     }
   }
-  cursor: pointer;
+  
   &__title {
     margin-bottom: 8px;
     font-family: var(--font-family);

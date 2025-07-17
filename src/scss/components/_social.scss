@@ -1,3 +1,4 @@
+@use "./mixins/disable-mob-hover" as *;
 .social {
   &__list {
     display: flex;
@@ -8,10 +9,19 @@
     display: flex;
     height: 2rem;
     width: 2rem;
+    @include hover{
+      &:hover{
+        .social__icon{
+          fill: var(--white);
+        }
+      }
+    }
   }
   &__icon {
     height: 100%;
     width: 100%;
     fill: var(--light-grey);
+    transition: .3s;
+    
   }
 }

@@ -349,7 +349,7 @@
         ВМЕСТЕ C КРУПНЕЙШЕЙ СЕТЬЮ
         ПАРКОВ ВИРТУАЛЬНОЙ РЕАЛЬНОСТИ
       </p>
-      <button class="hero__button button button--blue button--big">Забронировать</button>
+      <button class="hero__button button button--blue button--big"  data-micromodal-trigger="reservation">Забронировать</button>
     </div>
   </div>
 </div>
@@ -487,7 +487,7 @@
         ЭКСКУРСИЯ ПО НАШИМ VR-ПАРКАМ
       </h2>
     </div>
-    <a href="" class="video-section__link">
+    <a href="https://www.youtube.com/watch?v=w1aAb_32Pb8&ab_channel=WARPOINT%7CFranchise" data-fancybox class="video-section__link">
       <div class="video-section__play-button-wrap">
         <div class="video-section__play-button">
           <svg width="111" height="110" viewBox="0 0 111 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -906,7 +906,7 @@
         </div>
 
         <div class="filters-item">
-          <label class="filters-item__label">кол-во игрокова</label>
+          <label class="filters-item__label">кол-во игроков</label>
           <select class="filters-item__select" name="quantity">
             <option value="любая" selected>любое</option>
             <option value="любая">любое</option>
@@ -3489,7 +3489,7 @@
 
 <div class="modal micromodal-slide" id="reservation" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="location__container modal__container modal__container--lit" role="dialog" aria-modal="true"
+    <div class="modal__container" role="dialog" aria-modal="true"
       aria-labelledby="modal-1-title">
 
       <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
@@ -3507,7 +3507,36 @@
         <button class="modal__button button button--blue button--big">забронировать онлайн</button>
       </div>
       <form action="#" class="reservation__form">
+        <div class="reservation__form-desc">
+          Или оставьте заявку, чтобы мы связались с вами
+        </div>
+        <div class="reservation__form-wrap">
+          <div class="qusetion-form__input input">
 
+            <input type="email" id="q-email" class="input__native input__native--name input__native--lit"
+              placeholder="youremail@email.com">
+            <label for="r-name" class="input__label input__label--abs">Ваше имя</label>
+          </div>
+          <div class="qusetion-form__input input input--phone">
+
+            <input type="tel" id="q-phone" class="input__native input__native--phone input__native--lit"
+              placeholder="Ваш телефон">
+            <label for="q-name" class="input__label input__label--abs">ваш телефон</label>
+          </div>
+          <label class="qusetion-form__checkbox checkbox">
+            <input type="checkbox" class="checkbox__native">
+            <span class="checkbox__wrap">
+              <span class="checkbox__fake"></span>
+              <span class="checkbox__text">
+                Принимаю условия <a href="#">политики конфиденциальности</a>
+                и даю согласие на <a href="#">обработку персональных данных</a>
+              </span>
+            </span>
+          </label>
+        </div>
+        <button type="submit" class="reservation__button button button--rounded button--big">
+          оставить заявку
+        </button>
       </form>
 
     </div>

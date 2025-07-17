@@ -39,7 +39,10 @@
     width: 100%;
     padding: 12rem 0 9rem;
     min-height: 100vh;
-    @include tablet {
+    @include tablet{
+      padding-bottom: 5rem;
+    }
+    @include mobile {
       padding: 117px 0 24px;
       min-height: inherit;
       text-wrap: balance;
@@ -77,8 +80,18 @@
     text-align: center;
     color: #c4c8cf;
     @include tablet {
-      margin: 16px 0 246px;
+      margin: 16px 0 24px;
       font-size: 14px;
+    }
+    @include mobile{
+      margin: 16px 0 246px;
+    }
+  }
+  &__button{
+    @include mobile{
+      max-width: 350px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 }

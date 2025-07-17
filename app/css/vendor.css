@@ -366,7 +366,7 @@ template {
 }
 
 /**
- * Swiper 11.2.6
+ * Swiper 11.2.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -374,7 +374,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: March 19, 2025
+ * Released on: June 28, 2025
  */
 @font-face {
   font-family: swiper-icons;
@@ -1268,7 +1268,6 @@ button.swiper-pagination-bullet {
   transform: var(--f-button-transform);
   -webkit-transition: var(--f-button-transition);
   transition: var(--f-button-transition);
-  -webkit-backdrop-filter: var(--f-button-backdrop-filter);
   backdrop-filter: var(--f-button-backdrop-filter);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1843,12 +1842,21 @@ picture.f-panzoom__content img {
     opacity: 0;
   }
 }
-.f-carousel__slide.has-html {
-  overflow: auto;
+.has-iframe .f-html, .has-pdf .f-html, .has-gmap .f-html {
+  width: 100%;
+  height: 100%;
+  min-height: 1px;
+  overflow: visible;
+}
+
+.has-pdf .f-html, .has-gmap .f-html {
+  padding: 0;
 }
 
 .f-html {
   position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: var(--f-html-margin, 0);
   padding: var(--f-html-padding, 2rem);
   color: var(--f-html-color, currentColor);
@@ -1857,19 +1865,6 @@ picture.f-panzoom__content img {
 
 .f-html.is-error {
   text-align: center;
-}
-
-.has-iframe .f-html, .has-pdf .f-html, .has-gmap .f-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  min-height: 1px;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-}
-
-.has-pdf .f-html, .has-gmap .f-html {
-  padding: 0;
 }
 
 .f-iframe {
@@ -1886,11 +1881,11 @@ picture.f-panzoom__content img {
   align-self: center;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin: var(--f-caption-margin);
+  padding: var(--f-caption-padding, 16px 8px);
   max-width: 100%;
   max-height: calc(80vh - 100px);
   overflow: auto;
-  margin: var(--f-caption-margin);
-  padding: var(--f-caption-padding, 16px 8px);
   overflow-wrap: anywhere;
   line-height: var(--f-caption-line-height);
   color: var(--f-caption-color);
@@ -1902,11 +1897,11 @@ picture.f-panzoom__content img {
   padding: 0;
   width: 100%;
   height: 100%;
+  min-height: 1px;
+  overflow: visible;
   max-width: var(--f-video-width, 960px);
   max-height: var(--f-video-height, 540px);
   aspect-ratio: var(--f-video-aspect-ratio);
-  min-height: 1px;
-  overflow: visible;
   background: var(--f-video-bg, rgba(0, 0, 0, 0.9));
 }
 
@@ -2008,7 +2003,6 @@ picture.f-panzoom__content img {
   background: var(--f-toolbar-bg, none);
   -webkit-box-shadow: var(--f-toolbar-shadow, none);
   box-shadow: var(--f-toolbar-shadow, none);
-  -webkit-backdrop-filter: var(--f-toolbar-backdrop-filter);
   backdrop-filter: var(--f-toolbar-backdrop-filter);
   position: relative;
   z-index: 20;

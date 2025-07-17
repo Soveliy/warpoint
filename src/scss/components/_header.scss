@@ -24,6 +24,12 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 9px;
     border-radius: 50%;
+    transition: .3s;
+    @include hover{
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
 
     svg {
       height: 23px;
@@ -89,6 +95,12 @@
     font-weight: 500;
     font-size: 14px;
     color: #c4c8cf;
+    transition: .3s;
+    @include hover{
+      &:hover{
+        color: var(--white);
+      }
+    }
   }
 }
 .header-nav {

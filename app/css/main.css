@@ -182,6 +182,13 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 9px;
   border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (any-hover: hover) {
+  .header__auth:hover:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 .header__auth svg {
   height: 23px;
@@ -276,6 +283,13 @@ a {
   font-weight: 500;
   font-size: 14px;
   color: #c4c8cf;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (any-hover: hover) {
+  .header-top__phone:hover:hover {
+    color: var(--white);
+  }
 }
 
 .header-nav {
@@ -460,8 +474,7 @@ a {
 }
 @media (any-hover: hover) {
   .button--blue:hover:hover {
-    background-color: transparent;
-    background: rgba(5, 84, 248, 0.1);
+    background-color: #0554F8;
   }
 }
 .button--big {
@@ -947,6 +960,11 @@ select.select-default {
     line-height: 1;
   }
 }
+@media (any-hover: hover) {
+  .nice-select.select-default:not(.open) .current:hover:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
 .nice-select.select-default .nice-select-dropdown {
   padding: 0;
   width: 100%;
@@ -1006,12 +1024,21 @@ select.select-default {
   text-transform: uppercase;
   color: var(--white);
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (any-hover: hover) {
+  .select__caption:hover:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 .select__icon {
   height: 16px;
   width: 16px;
   fill: #c4c8cf;
   stroke: #c4c8cf;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .social__list {
@@ -1030,10 +1057,17 @@ select.select-default {
   height: 2rem;
   width: 2rem;
 }
+@media (any-hover: hover) {
+  .social__link:hover:hover .social__icon {
+    fill: var(--white);
+  }
+}
 .social__icon {
   height: 100%;
   width: 100%;
   fill: var(--light-grey);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .section--default {
@@ -1156,6 +1190,11 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .hero__content {
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero__content {
     padding: 117px 0 24px;
     min-height: inherit;
     text-wrap: balance;
@@ -1199,8 +1238,20 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .hero__desc {
-    margin: 16px 0 246px;
+    margin: 16px 0 24px;
     font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__desc {
+    margin: 16px 0 246px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__button {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -2631,12 +2682,14 @@ select.select-default {
   }
 }
 .formats-item__title {
+  margin-bottom: 16px;
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 28px;
   line-height: 110%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  text-wrap: balance;
   color: #ececee;
 }
 @media (max-width: 1024px) {
@@ -4415,15 +4468,13 @@ select.select-default {
 .location-tab {
   padding-bottom: 12px;
   border-bottom: 1px solid #272b2b;
+  margin-top: 24px;
   cursor: pointer;
 }
 @media (max-width: 1024px) {
   .location-tab {
     padding: 12px 32px;
   }
-}
-.location-tab + .location-tab {
-  margin-top: 24px;
 }
 @media (max-width: 1024px) {
   .location-tab + .location-tab {
@@ -5144,4 +5195,81 @@ select.select-default {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   max-width: 448px;
+}
+
+.modal__container {
+  padding: 2.5rem;
+  border-radius: 4px;
+  width: 96%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
+  background: #1c1e22;
+}
+.modal__title {
+  margin-bottom: 16px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 121%;
+  text-align: center;
+  color: #c4c8cf;
+}
+.modal__button {
+  max-width: 408px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.modal__subtitle {
+  margin-bottom: 12px;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #5e6573;
+}
+.modal__close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  right: 24px;
+  top: 20px;
+}
+.modal__header {
+  margin-bottom: 2.5rem;
+}
+
+.reservation__form {
+  margin-top: 40px;
+}
+.reservation__form-desc {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #5e6573;
+}
+.reservation__form-wrap {
+  border: 1px solid #272b2b;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px auto 0;
+  max-width: 416px;
+  width: 100%;
+}
+.reservation__button {
+  margin-top: 16px;
+  max-width: 416px;
+  width: 100%;
+  margin: 16px auto 0;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

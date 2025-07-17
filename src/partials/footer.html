@@ -507,7 +507,7 @@
 
 <div class="modal micromodal-slide" id="reservation" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="location__container modal__container modal__container--lit" role="dialog" aria-modal="true"
+    <div class="modal__container" role="dialog" aria-modal="true"
       aria-labelledby="modal-1-title">
 
       <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
@@ -525,7 +525,36 @@
         <button class="modal__button button button--blue button--big">забронировать онлайн</button>
       </div>
       <form action="#" class="reservation__form">
-        
+        <div class="reservation__form-desc">
+          Или оставьте заявку, чтобы мы связались с вами
+        </div>
+        <div class="reservation__form-wrap">
+          <div class="qusetion-form__input input">
+
+            <input type="email" id="q-email" class="input__native input__native--name input__native--lit"
+              placeholder="youremail@email.com">
+            <label for="r-name" class="input__label input__label--abs">Ваше имя</label>
+          </div>
+          <div class="qusetion-form__input input input--phone">
+
+            <input type="tel" id="q-phone" class="input__native input__native--phone input__native--lit"
+              placeholder="Ваш телефон">
+            <label for="q-name" class="input__label input__label--abs">ваш телефон</label>
+          </div>
+          <label class="qusetion-form__checkbox checkbox">
+            <input type="checkbox" class="checkbox__native">
+            <span class="checkbox__wrap">
+              <span class="checkbox__fake"></span>
+              <span class="checkbox__text">
+                Принимаю условия <a href="#">политики конфиденциальности</a>
+                и даю согласие на <a href="#">обработку персональных данных</a>
+              </span>
+            </span>
+          </label>
+        </div>
+        <button type="submit" class="reservation__button button button--rounded button--big">
+          оставить заявку
+        </button>
       </form>
 
     </div>
