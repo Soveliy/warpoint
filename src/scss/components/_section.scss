@@ -37,6 +37,7 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--white);
+    text-wrap: balance;
     @include small-tablet {
       font-size: 18px;
       line-height: 133%;
@@ -52,6 +53,7 @@
     font-size: 1.5rem;
     text-align: center;
     color: #5e6573;
+    text-wrap: balance;
     @include small-tablet {
       margin-top: 0.5rem;
       font-size: 14px;

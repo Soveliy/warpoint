@@ -9,7 +9,8 @@
     margin: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(600px, 746px));
+    // grid-template-columns: repeat(auto-fill, minmax(600px, 746px));
+    gap: 56px;
     justify-content: space-between;
     @include tablet {
       display: flex;
@@ -32,6 +33,7 @@
   align-items: flex-end;
   padding-left: 13.25rem;
   box-sizing: border-box;
+  max-width: 780px;
   @include tablet {
     &:not(:first-child) {
       margin-top: 54px;
@@ -53,6 +55,10 @@
     overflow: hidden;
     border-radius: 1.5rem;
     height: 31.4375rem;
+    width: 100%;
+    @include big-desktop {
+      height: 28rem;
+    }
     @include small-tablet {
       height: 232px;
     }
@@ -86,6 +92,11 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #ececee;
+    @include big-desktop {
+      font-size: 30px;
+      top: 18rem;
+      letter-spacing: 0;
+    }
     @include small-tablet {
       font-size: 16px;
       line-height: 150%;
@@ -99,6 +110,9 @@
     font-weight: 400;
     font-size: 21px;
     color: #8f96a3;
+    @include big-desktop {
+      font-size: 18px;
+    }
     @include small-tablet {
       font-size: 12px;
     }
@@ -115,6 +129,9 @@
       letter-spacing: 0.01em;
       text-transform: uppercase;
       color: rgba(236, 236, 238, 0.05);
+      @include big-desktop {
+        font-size: 130px;
+      }
       @include small-tablet {
         font-size: 48px;
         top: 50%;

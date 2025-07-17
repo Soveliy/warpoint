@@ -1,4 +1,9 @@
 /* stylelint-disable */
+@mixin retina {
+  @media (min-width: (2000px)) {
+    @content;
+  }
+}
 @mixin for-desktop {
   @media (min-width: (1025px)) {
     @content;
