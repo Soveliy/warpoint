@@ -130,9 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".location__button")
     .addEventListener("click", function () {
-      alert(
-        `Вы выбрали:\nСтрана: ${selected[0]}\nГород: ${selected[1]}\nЛокация: ${selected[2]}`
-      );
       // Тут можно вставить свой код для передачи данных дальше
     });
 });

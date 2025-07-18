@@ -29,3 +29,10 @@ if (filtersSelects.length > 0) {
     });
   });
 }
+
+const tariffsSelect = document.querySelector(".tarifs__select");
+if (tariffsSelect) {
+  new NiceSelect(tariffsSelect, {
+    searchable: false,
+  });
+}

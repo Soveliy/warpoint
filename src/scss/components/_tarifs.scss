@@ -12,6 +12,31 @@
   &__tabs {
     margin-bottom: 70px;
   }
+  &__select {
+    margin-top: 8px;
+    &.select-default {
+      .current {
+        padding-left: 36px;
+        border-color: #0554f8;
+      }
+      &:after {
+        background-color: #0554f8;
+      }
+    }
+    .current {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 8px;
+        height: 24px;
+        width: 24px;
+        background: url(../img/geo.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
 }
 .tarifs-item {
   position: relative;
@@ -184,8 +209,16 @@
     bottom: 0;
     right: 0;
     @include tablet {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
       height: 80%;
       width: 86%;
+      img {
+        height: 100%;
+        max-width: 100%;
+      }
     }
   }
 }

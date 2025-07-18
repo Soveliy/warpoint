@@ -1,3 +1,4 @@
+@use "./mixins/breakpoint" as *;
 .modal {
   &__container {
     padding: 2.5rem;
@@ -5,10 +6,13 @@
     width: 96%;
     box-sizing: border-box;
     max-width: 600px;
-    width: 100%;
+    width: 96%;
     background: #1c1e22;
+    @include tablet {
+      padding: 24px 16px;
+    }
   }
-  &__title{
+  &__title {
     margin-bottom: 16px;
     font-family: var(--second-family);
     font-weight: 700;
@@ -16,20 +20,24 @@
     line-height: 121%;
     text-align: center;
     color: #c4c8cf;
+    @include tablet {
+      font-size: 20px;
+    }
   }
-  &__button{
-    max-width: 408px;
+  &__button {
+    max-width: 416px;
     width: 100%;
     margin: 0 auto;
     display: block;
   }
-  &__subtitle{
+  &__subtitle {
     margin-bottom: 12px;
     font-family: var(--second-family);
-font-weight: 500;
-font-size: 16px;
-text-align: center;
-color: #5e6573;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-wrap: balance;
+    color: #5e6573;
   }
   &__close {
     position: absolute;
@@ -43,35 +51,40 @@ color: #5e6573;
     cursor: pointer;
     right: 24px;
     top: 20px;
+    @include tablet {
+      right: 5px;
+      top: 5px;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
-
 
   &__header {
     margin-bottom: 2.5rem;
   }
 }
 
-.reservation{
-  &__form{
+.reservation {
+  &__form {
     margin-top: 40px;
   }
-  &__form-desc{
+  &__form-desc {
     font-family: var(--second-family);
-font-weight: 500;
-font-size: 16px;
-text-align: center;
-color: #5e6573;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #5e6573;
+    text-wrap: balance;
   }
-  &__form-wrap{
+  &__form-wrap {
     border: 1px solid #272b2b;
-border-radius: 12px;
-padding: 24px;
+    border-radius: 12px;
+    padding: 24px;
     margin: 24px auto 0;
     max-width: 416px;
     width: 100%;
-
   }
-  &__button{
+  &__button {
     margin-top: 16px;
     max-width: 416px;
     width: 100%;

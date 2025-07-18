@@ -16,9 +16,20 @@
     border: 1px solid #0043ce;
     @include hover {
       &:hover {
-        background-color:   #0554F8;
-   
+        background-color: #0554f8;
       }
+    }
+  }
+  &--medium {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    padding: 1.4375rem;
+    border-radius: 10px;
+    @include tablet {
+      padding: 0.6875rem 1.5rem;
+      font-size: 13px;
     }
   }
   &--big {

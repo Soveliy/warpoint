@@ -113,8 +113,7 @@
 
 <div class="modal micromodal-slide location" id="location" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="location__container modal__container modal__container--lit" role="dialog" aria-modal="true"
-      aria-labelledby="modal-1-title">
+    <div class="location__container" role="dialog" aria-modal="true">
 
 
       <div class="location__header">
@@ -133,7 +132,7 @@
             <div class="location-tab">
               <div class="location-tab__title">страна</div>
               <div class="location-tab__select">
-                <img class="location-tab__image" src="https://flagcdn.com/ru.svg" alt="">
+                <img src="img/flags/ru.svg" alt="">
                 <div class="location-tab__name">Россия</div>
                 <svg class="location-tab__icon">
                   <use xlink:href="img/sprite.svg#chevron-right"></use>
@@ -162,7 +161,7 @@
             </div>
           </div>
           <div class="location-content">
-            <div class="location-content__head">
+            <div class="location-content__head location-content__head--mobile">
               <div class="location-content__title">
                 Выберите страну
               </div>
@@ -170,61 +169,52 @@
                 <svg class="location-content__input-icon">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-                <input type="text" name="coutry_search" class="location-content__input" placeholder="Найти город">
+                <input type="text" name="coutry_search" class="location-content__input" placeholder="Найти страну">
               </div>
             </div>
-            <div class="location-content__body" data-simplebar>
-              <ul class="location-content__country-list list-reset">
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-                <li class="location-content__country-item" data-country="ru">
-                  <img src="img/flags/ru.svg" alt="">
-                  Россия
-                </li>
-              </ul>
+            <div class="location-content__body1" style="height: 100%;">
+              <div class="location-content__body" data-simplebar>
+                <ul class="location-content__country-list list-reset">
+                  <li class="location-content__country-item" data-country="ru">
+                    <img src="img/flags/ru.svg" alt="">
+                    Россия
+                  </li>
+                  <li class="location-content__country-item" data-country="arm">
+                    <img src="img/flags/arm.svg" alt="">
+                    Армения
+                  </li>
+                  <li class="location-content__country-item" data-country="be">
+                    <img src="img/flags/be.svg" alt="">
+                    Беларусь
+                  </li>
+                  <li class="location-content__country-item" data-country="es">
+                    <svg>
+                      <use xlink:href="img/flags.svg#es"></use>
+                    </svg>
+                    Испания
+                  </li>
+                  <li class="location-content__country-item" data-country="kz">
+                    <svg>
+                      <use xlink:href="img/flags.svg#kz"></use>
+                    </svg>
+                    Казахстан
+                  </li>
+                  <li class="location-content__country-item" data-country="cr">
+                    <svg>
+                      <use xlink:href="img/flags.svg#cr"></use>
+                    </svg>
+                    Коста-Рика
+                  </li>
+                  <li class="location-content__country-item" data-country="kg">
+                    <svg>
+                      <use xlink:href="img/flags.svg#kg"></use>
+                    </svg>
+                    Кыргызстан
+                  </li>
+                </ul>
+              </div>
             </div>
+
 
           </div>
           <div class="location-content">
@@ -340,16 +330,11 @@
 
           </div>
           <div class="location-content">
-            <div class="location-content__head">
+            <div class="location-content__head location-content__head--mobile">
               <div class="location-content__title">
                 Выберите локацию
               </div>
-              <div class="location-content__input-wrap">
-                <svg class="location-content__input-icon">
-                  <use xlink:href="img/sprite.svg#search"></use>
-                </svg>
-                <input type="text" name="coutry_search" class="location-content__input" placeholder="Найти город">
-              </div>
+
             </div>
             <div class="location-content__body" data-simplebar>
               <div class="location__grid">
@@ -362,13 +347,13 @@
                   </div>
                   <div class="location-item__options">
                     <div class="location-item__option">
-                      <svg class="">
+                      <svg>
                         <use xlink:href="img/sprite.svg#metro"></use>
                       </svg>
                       Площадь Александра Невского II
                     </div>
                     <div class="location-item__option">
-                      <svg class="">
+                      <svg>
                         <use xlink:href="img/sprite.svg#marker"></use>
                       </svg>
                       ул. 50 лет Победы в Великой Отечественной войне
@@ -379,7 +364,7 @@
                       park
                     </div>
                     <div class="location-item__rating">
-                      <svg class="">
+                      <svg>
                         <use xlink:href="img/sprite.svg#star"></use>
                       </svg>
                       5.0
@@ -496,7 +481,7 @@
         <button class="location__cancel btn-reset" data-micromodal-close>
           ОТМЕНА
         </button>
-        <button class="location__button button button--blue button--lit">ок</button>
+        <button class="location__button button button--blue button--lit" data-micromodal-close>ок</button>
 
       </div>
 
@@ -507,8 +492,7 @@
 
 <div class="modal micromodal-slide" id="reservation" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="modal__container" role="dialog" aria-modal="true"
-      aria-labelledby="modal-1-title">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 
       <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
         <svg class="modal__close-icon" data-micromodal-close>
@@ -522,7 +506,7 @@
         <div class="modal__subtitle">
           Запишитесь онлайн на удобное для вас время:
         </div>
-        <button class="modal__button button button--blue button--big">забронировать онлайн</button>
+        <button class="modal__button button button--blue button--medium">забронировать онлайн</button>
       </div>
       <form action="#" class="reservation__form">
         <div class="reservation__form-desc">
@@ -531,15 +515,15 @@
         <div class="reservation__form-wrap">
           <div class="qusetion-form__input input">
 
-            <input type="email" id="q-email" class="input__native input__native--name input__native--lit"
+            <input type="email" id="r-email" class="input__native input__native--name input__native--lit"
               placeholder="youremail@email.com">
             <label for="r-name" class="input__label input__label--abs">Ваше имя</label>
           </div>
           <div class="qusetion-form__input input input--phone">
 
-            <input type="tel" id="q-phone" class="input__native input__native--phone input__native--lit"
+            <input type="tel" id="r-phone" class="input__native input__native--phone input__native--lit"
               placeholder="Ваш телефон">
-            <label for="q-name" class="input__label input__label--abs">ваш телефон</label>
+            <label for="r-name" class="input__label input__label--abs">ваш телефон</label>
           </div>
           <label class="qusetion-form__checkbox checkbox">
             <input type="checkbox" class="checkbox__native">
@@ -552,7 +536,7 @@
             </span>
           </label>
         </div>
-        <button type="submit" class="reservation__button button button--rounded button--big">
+        <button type="submit" class="reservation__button button button--rounded button--medium">
           оставить заявку
         </button>
       </form>

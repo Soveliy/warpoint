@@ -40,22 +40,22 @@ select.select-default {
     box-sizing: border-box;
     font-weight: 600;
     font-size: 13px;
-    line-height: 123%;
+    line-height: 1;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
     transition: 0.3s;
     cursor: pointer;
-    
+
     @include tablet {
       font-size: 11px;
       line-height: 1;
     }
   }
-  &:not(.open){
-    .current{
-      @include hover{
-        &:hover{
+  &:not(.open) {
+    .current {
+      @include hover {
+        &:hover {
           background: rgba(255, 255, 255, 0.05);
         }
       }
@@ -116,9 +116,9 @@ select.select-default {
     text-transform: uppercase;
     color: var(--white);
     cursor: pointer;
-    transition: .3s;
-    @include hover{
-      &:hover{
+    transition: 0.3s;
+    @include hover {
+      &:hover {
         background-color: rgba(255, 255, 255, 0.05);
       }
     }

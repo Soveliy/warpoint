@@ -148,6 +148,9 @@
     height: 100%;
     overflow: auto;
   }
+  .tabs__panel {
+    position: relative;
+  }
 }
 .contacts-item {
   display: flex;
