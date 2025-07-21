@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!li) return;
       // Сохраняем выбранную страну
       selected[0] = li.textContent.trim();
+      const countryImg = li.querySelector("img");
+    const tabImg = tabEls[0].querySelector(".location-tab__select img");
+    if (countryImg && tabImg) {
+      tabImg.src = countryImg.src;
+      tabImg.alt = countryImg.alt;
+    }
       // Подставляем в таб
       const countryTab = tabEls[0].querySelector(".location-tab__name");
       countryTab.textContent = selected[0];

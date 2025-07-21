@@ -1,4 +1,5 @@
 @use "./mixins/breakpoint" as *;
+@use "./mixins/disable-mob-hover" as *;
 .footer {
   padding: 5rem 0;
   background-color: #141517;
@@ -128,6 +129,12 @@
     line-height: 133%;
     text-transform: uppercase;
     color: #8f96a3;
+    transition: .3s;
+    @include hover{
+      &:hover{
+        color: #fff;
+      }
+    }
   }
 }
 .footer-bottom {

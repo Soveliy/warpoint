@@ -54,8 +54,8 @@
     background: rgba(5, 84, 248, 0.1);
     @include hover {
       &:hover {
-        background-color: transparent;
-        background: #0554f8;
+        background: rgba(5, 84, 248, 0.2);
+        border-color: #0554f8;
       }
     }
   }
