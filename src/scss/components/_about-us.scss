@@ -3,6 +3,9 @@
   padding: 5rem 0;
   position: relative;
   counter-reset: list;
+  @include tablet {
+    padding: 3rem 0;
+  }
   &__list {
     list-style: none;
     padding: 0;
@@ -16,6 +19,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      gap: 3rem;
     }
   }
   &__path {
@@ -41,12 +45,15 @@
   }
   @include small-tablet {
     max-width: 358px;
-    padding-left: 102px;
+    padding-left: 4rem;
   }
   &:nth-child(2n) {
     margin-top: 15rem;
     @include tablet {
       margin-top: 54px;
+    }
+    @include small-tablet {
+      margin-top: 0;
     }
   }
   &__picture {
@@ -98,9 +105,10 @@
       letter-spacing: 0;
     }
     @include small-tablet {
-      font-size: 16px;
-      line-height: 150%;
-      top: 8.25rem;
+      font-size: 1.5rem;
+      line-height: 133%;
+      top: 5.75rem;
+      left: 0;
     }
   }
   &__desc {
@@ -114,7 +122,8 @@
       font-size: 18px;
     }
     @include small-tablet {
-      font-size: 12px;
+      font-size: 16px;
+      line-height: normal;
     }
     &:before {
       content: "0" counter(list);
@@ -136,7 +145,7 @@
         font-size: 48px;
         top: 50%;
         transform: translateY(-50%);
-        left: -6.5rem;
+        left: -4rem;
       }
     }
   }

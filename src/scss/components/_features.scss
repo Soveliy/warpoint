@@ -5,7 +5,7 @@
 
   counter-reset: features;
   @include tablet {
-    padding: 1.5rem 0;
+    padding: 3rem 0;
   }
   &__grid {
     display: grid;
@@ -15,7 +15,7 @@
       grid-template-columns: 1fr;
     }
     @include tablet {
-      gap: 50px;
+      gap: 24px;
     }
   }
 }
@@ -27,15 +27,16 @@
   box-sizing: border-box;
   background: #1c1e22;
   border-radius: 16px;
-  transition: .3s;
-  @include hover{
-    &:hover{
+  transition: 0.3s;
+  @include hover {
+    &:hover {
       background-color: #25272d;
     }
   }
   @include tablet {
-    padding: 12px;
+    padding: 1rem;
     min-height: 212px;
+    border-radius: 8px;
   }
   &__content {
     position: relative;
@@ -64,7 +65,7 @@
     @include tablet {
       margin-bottom: 10px;
       max-width: 140px;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 111%;
     }
     &:before {
@@ -80,8 +81,8 @@
       text-transform: uppercase;
       color: #5e6573;
       @include tablet {
-        margin-bottom: 2px;
-        font-size: 11px;
+        margin-bottom: 6px;
+        font-size: 14px;
       }
     }
   }
@@ -92,9 +93,10 @@
     font-size: 16px;
     line-height: 140%;
     color: rgba(#c4c8cf, 0.8);
+    text-wrap: balance;
     @include tablet {
-      max-width: 160px;
-      font-size: 11px;
+      max-width: 200px;
+      font-size: 14px;
       br {
         display: none;
       }
@@ -118,7 +120,7 @@
     text-transform: uppercase;
     color: #0554f8;
     @include tablet {
-      font-size: 11px;
+      font-size: 14px;
       line-height: 1;
     }
   }

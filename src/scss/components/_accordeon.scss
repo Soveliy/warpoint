@@ -6,6 +6,9 @@
   @include small-tablet {
     border-radius: 12px;
   }
+  @include tablet {
+    border-radius: 8px;
+  }
   & + & {
     margin-top: 1rem;
   }

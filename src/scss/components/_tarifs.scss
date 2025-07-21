@@ -79,7 +79,7 @@
     color: #fff;
     border-radius: 4px;
     @include tablet {
-      font-size: 9px;
+      font-size: 12px;
     }
   }
   &__title {
@@ -90,7 +90,7 @@
     text-transform: uppercase;
     color: #fff;
     @include tablet {
-      font-size: 14px;
+      font-size: 18px;
       letter-spacing: 0.02em;
     }
   }
@@ -103,7 +103,8 @@
     color: #5e6573;
     @include tablet {
       margin-top: 2px;
-      font-size: 9px;
+      font-size: 12px;
+      // font-size: 9px;
     }
   }
   &__prices {
@@ -141,7 +142,7 @@
     text-transform: uppercase;
     color: #5e6573;
     @include tablet {
-      font-size: 9px;
+      font-size: 12px;
     }
   }
   &__value {
@@ -157,7 +158,8 @@
     text-transform: uppercase;
     color: #c4c8cf;
     @include tablet {
-      font-size: 11px;
+      font-size: 12px;
+      margin-top: 0;
     }
     &:before {
       content: "";
@@ -201,7 +203,7 @@
       padding: 7px;
       font-size: 11px;
       border-radius: 4px;
-      max-width: 124px;
+      max-width: 140px;
     }
   }
   &__picture {

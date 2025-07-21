@@ -42,6 +42,10 @@
   @include big-desktop {
     padding: 40px 24px;
   }
+  @include tablet {
+    padding: 40px 16px;
+    border-radius: 8px;
+  }
   &__title {
     margin-bottom: 4px;
     font-family: var(--font-family);

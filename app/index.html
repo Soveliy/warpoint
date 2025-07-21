@@ -9973,7 +9973,7 @@
 
 </footer>
 
-<div class="modal micromodal-slide location" id="location" aria-hidden="true">
+<div class="modal micromodal-slide location " id="location" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="location__container" role="dialog" aria-modal="true">
 
@@ -10021,7 +10021,10 @@
               </div>
             </div>
           </div>
-          <div class="location-content">
+          <div class="location__tabs-wrap">
+
+          </div>
+          <div class="location-content location-content--country">
             <div class="location-content__head location-content__head--mobile">
               <div class="location-content__title">
                 Выберите страну
@@ -10033,8 +10036,8 @@
                 <input type="text" name="coutry_search" class="location-content__input" placeholder="Найти страну">
               </div>
             </div>
-            <div class="location-content__body1" style="height: 100%;">
-              <div class="location-content__body" data-simplebar>
+            <div class="location-content__body">
+              <div class="location-content__scroll" data-simplebar>
                 <ul class="location-content__country-list list-reset">
                   <li class="location-content__country-item" data-country="ru">
                     <img src="img/flags/ru.svg" alt="">
@@ -10044,40 +10047,48 @@
                     <img src="img/flags/arm.svg" alt="">
                     Армения
                   </li>
-                  <li class="location-content__country-item" data-country="be">
-                    <img src="img/flags/be.svg" alt="">
+                  <li class="location-content__country-item" data-country="by">
+                    <img src="img/flags/by.svg" alt="">
                     Беларусь
                   </li>
                   <li class="location-content__country-item" data-country="es">
-                    <svg>
-                      <use xlink:href="img/flags.svg#es"></use>
-                    </svg>
+                    <img src="img/flags/es.svg" alt="">
                     Испания
                   </li>
                   <li class="location-content__country-item" data-country="kz">
-                    <svg>
-                      <use xlink:href="img/flags.svg#kz"></use>
-                    </svg>
+                    <img src="img/flags/kz.svg" alt="">
                     Казахстан
                   </li>
                   <li class="location-content__country-item" data-country="cr">
-                    <svg>
-                      <use xlink:href="img/flags.svg#cr"></use>
-                    </svg>
+                    <img src="img/flags/cr.svg" alt="">
                     Коста-Рика
                   </li>
                   <li class="location-content__country-item" data-country="kg">
-                    <svg>
-                      <use xlink:href="img/flags.svg#kg"></use>
-                    </svg>
+                    <img src="img/flags/kg.svg" alt="">
                     Кыргызстан
+                  </li>
+                  <li class="location-content__country-item" data-country="ae">
+                    <img src="img/flags/ae.svg" alt="">
+                    ОАЭ
+                  </li>
+                  <li class="location-content__country-item" data-country="us">
+                    <img src="img/flags/ae.svg" alt="">
+                    США
+                  </li>
+                  <li class="location-content__country-item" data-country="th">
+                    <img src="img/flags/th.svg" alt="">
+                    Таиланд
+                  </li>
+                  <li class="location-content__country-item" data-country="tj">
+                    <img src="img/flags/tj.svg" alt="">
+                    Таджикистан
                   </li>
                 </ul>
               </div>
             </div>
 
           </div>
-          <div class="location-content">
+          <div class="location-content location-content--city">
             <div class="location-content__head">
               <div class="location-content__title">
                 Выберите город
@@ -10089,247 +10100,252 @@
                 <input type="text" name="coutry_search" class="location-content__input" placeholder="Найти город">
               </div>
             </div>
-            <div class="location-content__body" data-simplebar>
-              <div class="city-list">
-                <div class="city-list__group">
-                  <div class="city-list__letter">А</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Анапа</li>
-                    <li class="city-list__city">Ангара</li>
-                    <li class="city-list__city">Архангельск</li>
-                    <li class="city-list__city">Армавир</li>
-                    <li class="city-list__city">Астрахань</li>
-                    <li class="city-list__city">Альметьевск</li>
-                  </ul>
+            <div class="location-content__body">
+              <div class="location-content__scroll" data-simplebar>
+                <div class="city-list">
+                  <div class="city-list__group">
+                    <div class="city-list__letter">А</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Анапа</li>
+                      <li class="city-list__city">Ангара</li>
+                      <li class="city-list__city">Архангельск</li>
+                      <li class="city-list__city">Армавир</li>
+                      <li class="city-list__city">Астрахань</li>
+                      <li class="city-list__city">Альметьевск</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">Б</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Барнаул</li>
+                      <li class="city-list__city">Баксан</li>
+                      <li class="city-list__city">Белгород</li>
+                      <li class="city-list__city">Благовещенск</li>
+                      <li class="city-list__city">Братск</li>
+                      <li class="city-list__city">Брянск</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">К</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Калининград</li>
+                      <li class="city-list__city">Калуга</li>
+                      <li class="city-list__city">Казань</li>
+                      <li class="city-list__city">Каспийск</li>
+                      <li class="city-list__city">Кемерово</li>
+                      <li class="city-list__city">Киров</li>
+                      <li class="city-list__city">Кизилюрт</li>
+                      <li class="city-list__city">Кисловодск</li>
+                      <li class="city-list__city">Ковров</li>
+                      <li class="city-list__city">Кострома</li>
+                      <li class="city-list__city">Коломна</li>
+                      <li class="city-list__city">Когалым</li>
+                      <li class="city-list__city">Королёв</li>
+                      <li class="city-list__city">Краснодар</li>
+                      <li class="city-list__city">Красноярск</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">О</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Обнинск</li>
+                      <li class="city-list__city">Омск</li>
+                      <li class="city-list__city">Оренбург</li>
+                      <li class="city-list__city">Орел</li>
+                      <li class="city-list__city">Орск</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">П</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Пенза</li>
+                      <li class="city-list__city">Первоуральск</li>
+                      <li class="city-list__city">Пермь</li>
+                      <li class="city-list__city">Петрозаводск</li>
+                      <li class="city-list__city">Петропавловск-Камчатский</li>
+                      <li class="city-list__city">Прокопьевск</li>
+                      <li class="city-list__city">Пушкино</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">У</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Улан-Удэ</li>
+                      <li class="city-list__city">Ульяновск</li>
+                      <li class="city-list__city">Усинск</li>
+                      <li class="city-list__city">Усолье-Сибирское</li>
+                      <li class="city-list__city">Уфа</li>
+                      <li class="city-list__city">Ухта</li>
+                      <li class="city-list__city">Учалы</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">Х</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Хабаровск</li>
+                      <li class="city-list__city">Ханты-Мансийск</li>
+                      <li class="city-list__city">Хасавюрт</li>
+                    </ul>
+                  </div>
+                  <div class="city-list__group">
+                    <div class="city-list__letter">Ч</div>
+                    <ul class="city-list__cities">
+                      <li class="city-list__city">Чебоксары</li>
+                      <li class="city-list__city">Челябинск</li>
+                      <li class="city-list__city">Череповец</li>
+                      <li class="city-list__city">Чита</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">Б</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Барнаул</li>
-                    <li class="city-list__city">Баксан</li>
-                    <li class="city-list__city">Белгород</li>
-                    <li class="city-list__city">Благовещенск</li>
-                    <li class="city-list__city">Братск</li>
-                    <li class="city-list__city">Брянск</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">К</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Калининград</li>
-                    <li class="city-list__city">Калуга</li>
-                    <li class="city-list__city">Казань</li>
-                    <li class="city-list__city">Каспийск</li>
-                    <li class="city-list__city">Кемерово</li>
-                    <li class="city-list__city">Киров</li>
-                    <li class="city-list__city">Кизилюрт</li>
-                    <li class="city-list__city">Кисловодск</li>
-                    <li class="city-list__city">Ковров</li>
-                    <li class="city-list__city">Кострома</li>
-                    <li class="city-list__city">Коломна</li>
-                    <li class="city-list__city">Когалым</li>
-                    <li class="city-list__city">Королёв</li>
-                    <li class="city-list__city">Краснодар</li>
-                    <li class="city-list__city">Красноярск</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">О</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Обнинск</li>
-                    <li class="city-list__city">Омск</li>
-                    <li class="city-list__city">Оренбург</li>
-                    <li class="city-list__city">Орел</li>
-                    <li class="city-list__city">Орск</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">П</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Пенза</li>
-                    <li class="city-list__city">Первоуральск</li>
-                    <li class="city-list__city">Пермь</li>
-                    <li class="city-list__city">Петрозаводск</li>
-                    <li class="city-list__city">Петропавловск-Камчатский</li>
-                    <li class="city-list__city">Прокопьевск</li>
-                    <li class="city-list__city">Пушкино</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">У</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Улан-Удэ</li>
-                    <li class="city-list__city">Ульяновск</li>
-                    <li class="city-list__city">Усинск</li>
-                    <li class="city-list__city">Усолье-Сибирское</li>
-                    <li class="city-list__city">Уфа</li>
-                    <li class="city-list__city">Ухта</li>
-                    <li class="city-list__city">Учалы</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">Х</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Хабаровск</li>
-                    <li class="city-list__city">Ханты-Мансийск</li>
-                    <li class="city-list__city">Хасавюрт</li>
-                  </ul>
-                </div>
-                <div class="city-list__group">
-                  <div class="city-list__letter">Ч</div>
-                  <ul class="city-list__cities">
-                    <li class="city-list__city">Чебоксары</li>
-                    <li class="city-list__city">Челябинск</li>
-                    <li class="city-list__city">Череповец</li>
-                    <li class="city-list__city">Чита</li>
-                  </ul>
-                </div>
+
               </div>
 
             </div>
 
           </div>
-          <div class="location-content">
+          <div class="location-content location-content--place">
             <div class="location-content__head location-content__head--mobile">
               <div class="location-content__title">
                 Выберите локацию
               </div>
 
             </div>
-            <div class="location-content__body" data-simplebar>
-              <div class="location__grid">
-                <div class="location-item">
-                  <div class="location-item__title">
-                    Площадь Александра Невского II
-                  </div>
-                  <div class="location-item__sticker">
+            <div class="location-content__body">
+              <div class="location-content__scroll" data-simplebar>
+                <div class="location__grid">
+                  <div class="location-item">
+                    <div class="location-item__title">
+                      Площадь Александра Невского II
+                    </div>
+                    <div class="location-item__sticker">
 
-                  </div>
-                  <div class="location-item__options">
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#metro"></use>
-                      </svg>
-                      Площадь Александра Невского II
                     </div>
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#marker"></use>
-                      </svg>
-                      ул. 50 лет Победы в Великой Отечественной войне
+                    <div class="location-item__options">
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#metro"></use>
+                        </svg>
+                        Площадь Александра Невского II
+                      </div>
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#marker"></use>
+                        </svg>
+                        ул. 50 лет Победы в Великой Отечественной войне
+                      </div>
                     </div>
-                  </div>
-                  <div class="location-item__info">
-                    <div class="location-item__type">
-                      park
-                    </div>
-                    <div class="location-item__rating">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#star"></use>
-                      </svg>
-                      5.0
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <div class="location-item__title">ТРЦ «VEER MALL»</div>
-                  <div class="location-item__sticker location-item__sticker--soon">SOON</div>
-                  <div class="location-item__options">
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#metro"></use>
-                      </svg>
-                      Площадь Александра Невского II
-                    </div>
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#marker"></use>
-                      </svg>
-                      пр. Космонавтов, 108д
+                    <div class="location-item__info">
+                      <div class="location-item__type">
+                        park
+                      </div>
+                      <div class="location-item__rating">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        5.0
+                      </div>
                     </div>
                   </div>
-                  <div class="location-item__info">
-                    <div class="location-item__type">PARK</div>
-                    <div class="location-item__rating">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#star"></use>
-                      </svg>
-                      5.0
+                  <div class="location-item">
+                    <div class="location-item__title">ТРЦ «VEER MALL»</div>
+                    <div class="location-item__sticker location-item__sticker--soon">SOON</div>
+                    <div class="location-item__options">
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#metro"></use>
+                        </svg>
+                        Площадь Александра Невского II
+                      </div>
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#marker"></use>
+                        </svg>
+                        пр. Космонавтов, 108д
+                      </div>
+                    </div>
+                    <div class="location-item__info">
+                      <div class="location-item__type">PARK</div>
+                      <div class="location-item__rating">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        5.0
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="location-item">
-                  <div class="location-item__title">ТЦ «НОВАЯ ЗЕМЛЯ»</div>
-                  <div class="location-item__sticker"></div>
-                  <div class="location-item__options">
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#metro"></use>
-                      </svg>
-                      Площадь Александра Невского II
+                  <div class="location-item">
+                    <div class="location-item__title">ТЦ «НОВАЯ ЗЕМЛЯ»</div>
+                    <div class="location-item__sticker"></div>
+                    <div class="location-item__options">
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#metro"></use>
+                        </svg>
+                        Площадь Александра Невского II
+                      </div>
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#marker"></use>
+                        </svg>
+                        ул. Тестировщиков, 155
+                      </div>
                     </div>
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#marker"></use>
-                      </svg>
-                      ул. Тестировщиков, 155
-                    </div>
-                  </div>
-                  <div class="location-item__info">
-                    <div class="location-item__type">ARENA</div>
-                    <div class="location-item__rating">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#star"></use>
-                      </svg>
-                      5.0
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <div class="location-item__title">ТРЦ «АЛАТЫРЬ»</div>
-                  <div class="location-item__sticker location-item__sticker--new">NEW</div>
-                  <div class="location-item__options">
-                    <div class="location-item__option"></div>
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#marker"></use>
-                      </svg>
-                      ул. Малышева, 5
+                    <div class="location-item__info">
+                      <div class="location-item__type">ARENA</div>
+                      <div class="location-item__rating">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        5.0
+                      </div>
                     </div>
                   </div>
-                  <div class="location-item__info">
-                    <div class="location-item__type">PARK</div>
-                    <div class="location-item__rating">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#star"></use>
-                      </svg>
-                      5.0
+                  <div class="location-item">
+                    <div class="location-item__title">ТРЦ «АЛАТЫРЬ»</div>
+                    <div class="location-item__sticker location-item__sticker--new">NEW</div>
+                    <div class="location-item__options">
+                      <div class="location-item__option"></div>
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#marker"></use>
+                        </svg>
+                        ул. Малышева, 5
+                      </div>
+                    </div>
+                    <div class="location-item__info">
+                      <div class="location-item__type">PARK</div>
+                      <div class="location-item__rating">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        5.0
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="location-item">
-                  <div class="location-item__title">ТРЦ «РАДУГА ПАРК»</div>
-                  <div class="location-item__sticker"></div>
-                  <div class="location-item__options">
-                    <div class="location-item__option"></div>
-                    <div class="location-item__option">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#marker"></use>
-                      </svg>
-                      ул. Репина, 94
+                  <div class="location-item">
+                    <div class="location-item__title">ТРЦ «РАДУГА ПАРК»</div>
+                    <div class="location-item__sticker"></div>
+                    <div class="location-item__options">
+                      <div class="location-item__option"></div>
+                      <div class="location-item__option">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#marker"></use>
+                        </svg>
+                        ул. Репина, 94
+                      </div>
+                    </div>
+                    <div class="location-item__info">
+                      <div class="location-item__type">PARK</div>
+                      <div class="location-item__rating">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        5.0
+                      </div>
                     </div>
                   </div>
-                  <div class="location-item__info">
-                    <div class="location-item__type">PARK</div>
-                    <div class="location-item__rating">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#star"></use>
-                      </svg>
-                      5.0
-                    </div>
-                  </div>
-                </div>
 
+                </div>
               </div>
             </div>
 
@@ -10349,7 +10365,7 @@
   </div>
 </div>
 
-<div class="modal micromodal-slide" id="reservation" aria-hidden="true">
+<div class="modal micromodal-slide " id="reservation" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 

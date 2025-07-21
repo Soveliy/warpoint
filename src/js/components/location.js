@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Получаем элементы
   const tabEls = document.querySelectorAll(".location-tab");
-  const tabSelectEls = document.querySelectorAll(".location-tab__select");
   const tabContentEls = document.querySelectorAll(".location-content");
   const tabNames = ["страна", "город", "локация"];
 
-  // Массив для выбранных значений
   let selected = [null, null, null];
+  function updateCurrentTabs() {
+    tabEls.forEach((tab, i) => {
+      if (selected[i]) {
+        tab.classList.add("is-current");
+      } else {
+        tab.classList.remove("is-current");
+      }
+    });
+  }
 
   // Переключение табов
-  tabSelectEls.forEach((selectEl, idx) => {
-    selectEl.addEventListener("click", function (e) {
+  tabEls.forEach((tab, idx) => {
+    tab.addEventListener("click", function (e) {
       e.stopPropagation();
-      // Переключаем активные табы
-      tabEls.forEach((tab, i) => tab.classList.toggle("js-active", i === idx));
-      // Показываем нужный контент
-      tabContentEls.forEach(
-        (cnt, i) => (cnt.style.display = i === idx ? "" : "none")
+      tabEls.forEach((t, i) => t.classList.toggle("js-active", i === idx));
+      tabContentEls.forEach((cnt, i) =>
+        cnt.classList.toggle("js-active", i === idx)
       );
     });
   });
 
   // По умолчанию активен первый таб
   tabEls[0].classList.add("js-active");
-  tabContentEls.forEach(
-    (cnt, i) => (cnt.style.display = i === 0 ? "" : "none")
-  );
+  tabContentEls.forEach((cnt, i) => cnt.classList.toggle("js-active", i === 0));
 
   // ===== Выбор страны =====
   const countryList = document.querySelector(".location-content__country-list");
@@ -33,22 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
     countryList.addEventListener("click", function (e) {
       const li = e.target.closest(".location-content__country-item");
       if (!li) return;
-      // Сохраняем выбранную страну
       selected[0] = li.textContent.trim();
       const countryImg = li.querySelector("img");
-    const tabImg = tabEls[0].querySelector(".location-tab__select img");
-    if (countryImg && tabImg) {
-      tabImg.src = countryImg.src;
-      tabImg.alt = countryImg.alt;
-    }
-      // Подставляем в таб
+      const tabImg = tabEls[0].querySelector(".location-tab__select img");
+      if (countryImg && tabImg) {
+        tabImg.src = countryImg.src;
+        tabImg.alt = countryImg.alt;
+      }
       const countryTab = tabEls[0].querySelector(".location-tab__name");
       countryTab.textContent = selected[0];
-      // Делаем второй таб активным
-      tabEls[1].classList.add("js-active");
-      tabEls[0].classList.remove("js-active");
-      tabContentEls[1].style.display = "";
-      tabContentEls[0].style.display = "none";
+      tabEls.forEach((tab, i) => tab.classList.toggle("js-active", i === 1));
+      tabContentEls.forEach((cnt, i) =>
+        cnt.classList.toggle("js-active", i === 1)
+      );
+
+      updateCurrentTabs();
     });
   }
 
@@ -58,16 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
     cityList.addEventListener("click", function (e) {
       const li = e.target.closest(".city-list__city");
       if (!li) return;
-      // Сохраняем выбранный город
       selected[1] = li.textContent.trim();
-      // Подставляем в таб
       const cityTab = tabEls[1].querySelector(".location-tab__name");
       cityTab.textContent = selected[1];
-      // Делаем третий таб активным
-      tabEls[2].classList.add("js-active");
-      tabEls[1].classList.remove("js-active");
-      tabContentEls[2].style.display = "";
-      tabContentEls[1].style.display = "none";
+
+      tabEls.forEach((tab, i) => tab.classList.toggle("js-active", i === 2));
+      tabContentEls.forEach((cnt, i) =>
+        cnt.classList.toggle("js-active", i === 2)
+      );
+
+      updateCurrentTabs();
     });
   }
 
@@ -77,15 +78,25 @@ document.addEventListener("DOMContentLoaded", function () {
     locationGrid.addEventListener("click", function (e) {
       const item = e.target.closest(".location-item");
       if (!item) return;
-      // Сохраняем выбранную локацию
+
+      locationGrid.querySelectorAll(".location-item").forEach((el) => {
+        el.classList.remove("js-active");
+      });
+
+      item.classList.add("js-active");
+
       const locationTitle = item.querySelector(".location-item__title");
       selected[2] = locationTitle ? locationTitle.textContent.trim() : "";
-      // Подставляем в таб
+
       const locTab = tabEls[2].querySelector(".location-tab__name");
       locTab.textContent = selected[2];
-      // Скрываем модалку (или можно оставить открытой)
-      // document.getElementById('location').setAttribute('aria-hidden', 'true');
-      // Можно добавить любой свой колбэк!
+
+      tabEls.forEach((tab, i) => tab.classList.toggle("js-active", i === 2));
+      tabContentEls.forEach((cnt, i) =>
+        cnt.classList.toggle("js-active", i === 2)
+      );
+
+      updateCurrentTabs();
     });
   }
 
@@ -95,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", function (e) {
       const val = input.value.toLowerCase();
       if (idx === 0) {
-        // Поиск стран
         const items = countryList.querySelectorAll(
           ".location-content__country-item"
         );
@@ -105,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
             : "none";
         });
       } else if (idx === 1) {
-        // Поиск городов
         const groups = cityList.querySelectorAll(".city-list__group");
         groups.forEach((group) => {
           let found = false;
@@ -115,11 +124,9 @@ document.addEventListener("DOMContentLoaded", function () {
             city.style.display = match ? "" : "none";
             if (match) found = true;
           });
-          // Скрываем букву, если нет городов
           group.style.display = found ? "" : "none";
         });
       } else if (idx === 2) {
-        // Поиск локаций
         const locations = locationGrid.querySelectorAll(".location-item");
         locations.forEach((loc) => {
           const title = loc.querySelector(".location-item__title");
@@ -132,10 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ===== По кнопке "ОК" выводим выбранные значения =====
   document
     .querySelector(".location__button")
-    .addEventListener("click", function () {
-      // Тут можно вставить свой код для передачи данных дальше
-    });
+    .addEventListener("click", function () {});
 });

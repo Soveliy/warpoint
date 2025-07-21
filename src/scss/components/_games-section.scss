@@ -8,6 +8,9 @@
     padding: 0;
     margin: 0;
     counter-reset: games;
+    @include tablet {
+      gap: 1.5rem;
+    }
   }
 }
 .games-section-item {
@@ -15,6 +18,9 @@
   overflow: hidden;
   border-radius: 1.5rem;
   background: #1c1e22;
+  @include tablet {
+    border-radius: 8px;
+  }
   &:before {
     content: "0" counter(games);
     counter-increment: games;
@@ -52,7 +58,7 @@
     @include tablet() {
       display: flex;
       flex-direction: column;
-      padding: 56px 20px 20px;
+      padding: 3.5rem 1rem 1rem;
     }
     @include small-tablet {
       gap: 16px;
@@ -67,7 +73,7 @@
       padding-top: 80px;
     }
     @include tablet() {
-      padding: 0 24px;
+      padding: 0;
       order: -1;
       display: flex;
       gap: 8px;
@@ -120,7 +126,7 @@
       padding: 0 0 2rem 2.5rem;
     }
     @include tablet() {
-      padding: 0 24px;
+      padding: 0;
       box-sizing: border-box;
     }
     @include small-tablet {
@@ -170,11 +176,12 @@
     font-size: 22px;
     line-height: 121%;
     color: #c4c8cf;
+    text-wrap: balance;
     @include tablet {
       min-height: inherit;
     }
     @include small-tablet {
-      font-size: 13px;
+      font-size: 16px;
     }
   }
   &__button {
@@ -182,7 +189,7 @@
     max-width: 20.25rem;
     width: 100%;
     @include tablet {
-      font-size: 13px;
+      font-size: 14px;
       padding: 16.5px 30px;
       color: #ececee;
       line-height: 1;

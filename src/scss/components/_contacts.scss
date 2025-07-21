@@ -15,7 +15,7 @@
     padding: 100px 0 0;
   }
   @include tablet {
-    padding: 32px 0 0;
+    padding: 3rem 0;
   }
   &__grid {
     display: grid;
@@ -47,6 +47,7 @@
     @include mobile {
       width: 100%;
       margin: 0 auto 32px;
+      border-radius: 8px;
     }
   }
   &-tabs__nav-item {
@@ -73,6 +74,7 @@
     @include mobile {
       display: block;
       width: 100%;
+      border-radius: 8px;
     }
   }
   &__wrap {
@@ -95,8 +97,11 @@
     }
   }
   &__map {
+    position: relative;
+    overflow: hidden;
     height: 818px;
     width: 100%;
+    border-radius: 8px;
     @include tablet {
       height: 530px;
     }
@@ -423,6 +428,10 @@
   padding: 40px 16px 16px 32px;
   background: rgba(28, 30, 34, 0.9);
   box-sizing: border-box;
+  @include tablet {
+    padding: 32px 16px;
+    border-radius: 8px;
+  }
   &__sticker {
     position: absolute;
     top: 16px;

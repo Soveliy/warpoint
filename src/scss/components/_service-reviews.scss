@@ -3,7 +3,9 @@
   .container {
     position: relative;
     padding-top: 16px;
-
+    @include tablet {
+      padding-top: 24px;
+    }
     &::after,
     &:before {
       content: "";
@@ -25,7 +27,7 @@
     position: relative;
     padding: 0 4.5rem 2.5rem;
     @include tablet {
-      padding: 0 0 2.5rem;
+      padding: 0 0 24px;
     }
   }
   &__slider {
@@ -41,6 +43,7 @@
     gap: 4px;
     @include tablet {
       margin-left: 0;
+      border-radius: 8px;
     }
   }
   &__tab {
@@ -83,6 +86,9 @@
   box-sizing: border-box;
   background: #ececee;
   border-radius: 16px;
+  @include tablet {
+    border-radius: 8px;
+  }
   &__top {
     display: flex;
     gap: 10px;

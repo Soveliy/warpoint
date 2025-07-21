@@ -2,7 +2,7 @@
 .video-section {
   padding: 10rem 0;
   @include tablet {
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
   &__link {
     position: relative;
@@ -17,6 +17,14 @@
     left: 0;
     height: 100%;
     width: 100%;
+  }
+  &__play-button {
+    svg {
+      @include tablet {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
   }
   &__play-button-wrap {
     display: flex;
@@ -37,5 +45,8 @@
     text-transform: uppercase;
     text-align: center;
     color: #c4c8cf;
+    @include tablet {
+      font-size: 14px;
+    }
   }
 }

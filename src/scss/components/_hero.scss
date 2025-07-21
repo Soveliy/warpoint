@@ -39,7 +39,7 @@
     width: 100%;
     padding: 12rem 0 9rem;
     min-height: 100vh;
-    @include tablet{
+    @include tablet {
       padding-bottom: 5rem;
     }
     @include mobile {
@@ -59,7 +59,7 @@
     @include tablet {
       font-family: var(--second-family);
       font-weight: 700;
-      font-size: 20px;
+      font-size: 28px;
       line-height: 121%;
       text-align: center;
       color: #ececee;
@@ -67,7 +67,7 @@
     span {
       font-size: 48px;
       @include tablet {
-        font-size: 20px;
+        font-size: 28px;
       }
     }
   }
@@ -79,16 +79,17 @@
     line-height: 121%;
     text-align: center;
     color: #c4c8cf;
+    text-wrap: balance;
     @include tablet {
       margin: 16px 0 24px;
-      font-size: 14px;
+      font-size: 16px;
     }
-    @include mobile{
+    @include mobile {
       margin: 16px 0 246px;
     }
   }
-  &__button{
-    @include mobile{
+  &__button {
+    @include mobile {
       max-width: 350px;
       width: 100%;
       margin: 0 auto;

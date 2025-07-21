@@ -6,7 +6,8 @@
     width: 100%;
     background: #1c1e22;
     border-radius: 10px;
-    min-height: 780px;
+    // max-height: 780px;
+
     display: flex;
     flex-direction: column;
     @include tablet {
@@ -47,6 +48,7 @@
     @include tablet {
       padding: 4px 0 8px;
       flex-direction: column-reverse;
+      min-height: 64px;
     }
   }
   &__footer {
@@ -59,7 +61,7 @@
     margin-top: auto;
   }
   &__body {
-    height: 100%;
+    flex: 1 0 auto;
   }
   &__title {
     font-family: var(--second-family);
@@ -127,8 +129,28 @@
   border-bottom: 1px solid #272b2b;
 
   cursor: pointer;
+  &.js-active {
+    border-bottom-color: #0043ce;
+    @include tablet {
+      background-color: #101114;
+    }
+    .location-tab__name {
+      color: #fff;
+    }
+
+    svg {
+      stroke: #0043ce;
+    }
+  }
+  &.is-current {
+    .location-tab__name {
+      color: #fff;
+    }
+  }
   @include tablet {
     padding: 12px 32px;
+    border-radius: 12px;
+    border: none;
   }
   & + & {
     margin-top: 24px;
@@ -146,6 +168,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #c4c8cf;
+    transition: 0.3s;
     @include tablet {
       margin-bottom: 0;
       font-family: var(--font-family);
@@ -158,9 +181,11 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    svg {
-      height: 24px;
-      width: 24px;
+    svg,
+    img {
+      width: 20px;
+      height: 14px;
+      border-radius: 3px;
     }
     @include tablet {
       display: none;
@@ -174,6 +199,7 @@
     stroke: #c4c8cf;
     stroke-width: 2px;
     margin-left: auto;
+    transition: 0.3s;
   }
   &__name {
     font-family: var(--second-family);
@@ -192,18 +218,49 @@
   }
 }
 .location-content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background: rgba(20, 21, 23, 0.25);
+  min-width: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  display: none;
+  &.js-active {
+    display: block;
+    pointer-events: all;
+    opacity: 1;
+  }
+  .location-content__body {
+  }
+  max-height: 624px;
+  // &--county {
+  //   .location-content__body {
+  //     max-height: 642px;
+  //   }
+  // }
+  &--place {
+    @include tablet {
+      .location-content__scroll {
+        height: calc(100dvh - 268px);
+      }
+    }
+  }
   @include tablet {
-    height: 100%;
-    display: flex;
     flex-direction: column;
+    max-height: inherit;
+    &.js-active {
+      display: flex;
+    }
   }
   &__head {
     display: flex;
     justify-content: flex-end;
     padding: 8px 16px;
     margin-bottom: 24px;
+    flex-shrink: 0;
     &--mobile {
       display: none;
       @include tablet {
@@ -219,7 +276,14 @@
     }
   }
   &__body {
+    flex: 1 0 auto;
+    height: calc(100% - 100px);
+  }
+  &__scroll {
     height: 100%;
+    @include tablet {
+      height: calc(100dvh - 350px);
+    }
   }
   &__input-wrap {
     position: relative;
@@ -269,9 +333,11 @@
     line-height: 1;
     color: #c4c8cf;
     cursor: pointer;
-    svg {
-      height: 24px;
-      width: 24px;
+    svg,
+    img {
+      width: 20px;
+      height: 14px;
+      border-radius: 3px;
     }
     @include tablet {
       padding: 12px 6px;
@@ -308,7 +374,6 @@
 .city-list {
   columns: 4;
   column-gap: 40px;
-  margin-bottom: -20px;
   padding: 0 40px;
   @include big-desktop {
     columns: 3;
@@ -361,8 +426,27 @@
   border: 2px solid #30343b;
   border-radius: 4px;
   transition: 0.3s;
+  &.js-active {
+    background: #3970f6;
+
+    .location-item__option {
+      color: #adc4fc;
+      svg {
+        fill: #0043ce;
+      }
+    }
+    .location-item__type {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .location-item__rating {
+      color: #fff;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
   @include tablet {
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 16px 44px 16px 16px;
   }
   @include hover {

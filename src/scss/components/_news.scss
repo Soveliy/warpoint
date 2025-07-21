@@ -3,7 +3,7 @@
 .news {
   padding: 2.5rem 0;
   @include tablet {
-    padding: 64px 0 1.25rem;
+    padding: 3rem 0;
     .swiper-arrow {
       display: none;
     }
@@ -31,7 +31,7 @@
   gap: 1.5rem;
   @include tablet {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   &__content {
     display: flex;
@@ -42,7 +42,6 @@
     font-family: var(--second-family);
     background: #101114;
     @include tablet {
-      gap: 8px;
       padding: 0;
       background-color: transparent;
     }
@@ -66,7 +65,7 @@
     color: #c4c8cf;
     @include tablet {
       font-weight: 500;
-      font-size: 16px;
+      font-size: 20px;
     }
   }
   &__desc {
@@ -76,7 +75,7 @@
     color: #5e6573;
     @include tablet {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   &__button {

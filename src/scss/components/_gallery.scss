@@ -35,8 +35,9 @@
     overflow: hidden;
     display: block;
     border-radius: 16px;
+    line-height: 0;
     @include small-tablet {
-      border-radius: 10px;
+      border-radius: 8px;
     }
   }
 }

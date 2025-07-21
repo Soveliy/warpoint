@@ -3,13 +3,13 @@
   &--default {
     padding: 5rem 0;
     @include tablet {
-      padding: 4rem 0;
+      padding: 3rem 0;
     }
   }
   &--big {
     padding: 10rem 0;
     @include tablet {
-      padding: 4rem 0;
+      padding: 3rem 0;
     }
   }
   &--dark {
@@ -21,13 +21,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    margin-bottom: 2rem;
+  }
   &--default-margin {
     margin-bottom: 2.5rem;
+    @include tablet {
+      margin-bottom: 2rem;
+    }
   }
   &--big-margin {
     margin-bottom: 4rem;
     @include tablet {
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
     }
   }
   &__title {
@@ -42,7 +48,7 @@
     color: var(--white);
     text-wrap: balance;
     @include small-tablet {
-      font-size: 18px;
+      font-size: 26px;
       line-height: 133%;
     }
     span {
@@ -59,7 +65,7 @@
     text-wrap: balance;
     @include small-tablet {
       margin-top: 0.5rem;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

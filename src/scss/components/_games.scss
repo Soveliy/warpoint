@@ -34,7 +34,7 @@
   overflow: hidden;
   border-radius: 16px;
   @include tablet {
-    border-radius: 12px;
+    border-radius: 8px;
   }
   &__content {
     position: relative;
@@ -59,7 +59,7 @@
     text-transform: uppercase;
     color: #8f96a3;
     @include tablet {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
   &__title {
@@ -71,7 +71,7 @@
     text-transform: uppercase;
     color: #fff;
     @include tablet {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
   &__options {
@@ -96,9 +96,6 @@
       @include tablet {
         margin-right: 28px;
       }
-    }
-    @include tablet {
-      font-size: 11px;
     }
   }
   &__option-title {
@@ -129,10 +126,7 @@
     color: #fff;
     border-radius: 4px;
     @include tablet {
-      font-size: 9px;
-      height: 22px;
-      padding: 0 4px;
-      max-width: 62px;
+      padding: 2px 4px;
     }
     &--hit {
       background: #da1e28;
@@ -142,9 +136,6 @@
     &--our {
       font-size: 11px;
       background: #db890d;
-      @include tablet {
-        font-size: 8px;
-      }
     }
     &--new {
       background: #44a248;

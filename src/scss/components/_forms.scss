@@ -87,3 +87,15 @@
   height: 77px;
   padding-left: 56px;
 }
+
+.spm-dropdown {
+  background-color: #141517;
+  border: none;
+}
+.spm-dropdown-option {
+  font-family: var(--second-family);
+  color: #fff;
+}
+.spm-dropdown-option:hover {
+  background-color: transparent;
+}
