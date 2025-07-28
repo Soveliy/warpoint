@@ -1,9 +1,9 @@
 <div class="hero">
   <div class="container">
-    <picture class="hero__bg">
-      <source srcset="img/hero.webp" type="image/webp">
-      <img loading="lazy" src="img/hero.jpg" class="image" width="" height="" alt="">
-    </picture>
+    <video autoplay muted playsinline loop class="hero__video">
+      <source src="video/video.mp4" type="video/mp4">
+    </video>
+
     <div class="hero__content">
       <h1 class="hero__title">
         ОТКРОЙТЕ ДЛЯ СЕБЯ
@@ -13,7 +13,8 @@
         ВМЕСТЕ C КРУПНЕЙШЕЙ СЕТЬЮ
         ПАРКОВ ВИРТУАЛЬНОЙ РЕАЛЬНОСТИ
       </p>
-      <button class="hero__button button button--blue button--big"  data-micromodal-trigger="reservation">Забронировать</button>
+      <button class="hero__button button button--blue button--big"
+        data-micromodal-trigger="reservation">Забронировать</button>
     </div>
   </div>
 </div>

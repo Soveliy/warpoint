@@ -4302,7 +4302,8 @@ class SimplePhoneMask {
 		this.maskPattern = this.options.maskPattern || country.mask;
 		this.prefixLength = this.countryCode.length + 1; // +1 for + symbol
 		this.currentCountry = country;
-
+    // доработка для визуализации маски
+    this.phoneFieldMap = new WeakMap();
 		// Bind methods to preserve context
 		this.createMask = this.createMask.bind(this);
 		this.handleClick = this.handleClick.bind(this);
@@ -4320,6 +4321,45 @@ class SimplePhoneMask {
 	 * @param {HTMLElement} elem - Input element
 	 * @param {boolean} [setFocus=false] - Whether to set focus on element
 	 */
+
+
+  createPhoneField(input) {
+	// Не создавать повторно
+    if (this.phoneFieldMap.has(input)) return;
+
+    // Создаём обёртку
+    const phoneField = document.createElement('div');
+    phoneField.className = 'spm-phone-field';
+
+    // Префикс
+    const prefix = document.createElement('span');
+    prefix.className = 'spm-phone-prefix';
+    prefix.innerText = '+' + this.countryCode;
+
+    // Визуальная маска (замени _ на 0 или другой пример)
+    const visualMask = document.createElement('span');
+    visualMask.className = 'spm-visual-mask';
+    visualMask.innerText = this.maskPattern.replace(/_/g, '0');
+
+    // Вставляем всё в правильном порядке
+    input.parentNode.insertBefore(phoneField, input);
+    phoneField.appendChild(prefix);
+    phoneField.appendChild(input);
+    phoneField.appendChild(visualMask);
+
+    // Сохраняем для обновления при смене страны
+    this.phoneFieldMap.set(input, { prefix, visualMask });
+  }
+
+
+  updatePhoneField(input) {
+    const field = this.phoneFieldMap.get(input);
+    if (field) {
+      field.prefix.innerText = '+' + this.countryCode;
+      field.visualMask.innerText = this.maskPattern.replace(/_/g, '0');
+    }
+  }
+
 	setCursorPosition(pos, elem, setFocus = false) {
 		if (setFocus) {
 			elem.focus();
@@ -4403,6 +4443,7 @@ class SimplePhoneMask {
 		//   val = def;
 		// }
 
+
 		input.value = matrix.replace(/./g, function (a) {
 			if (/[_\d]/.test(a) && i < val.length) {
 				return val.charAt(i++);
@@ -4420,6 +4461,24 @@ class SimplePhoneMask {
 		} else {
 			this.setCursorPosition(input.value.length, input);
 		}
+
+
+    const onlyDigits = input.value.replace(/\D/g, '');
+    const digitsWithoutCode = onlyDigits.slice(this.countryCode.length); // только "номер" без кода страны
+
+    input.classList.toggle('spm-has-2', input.value.length === 3);
+    input.classList.toggle('spm-has-3', input.value.length === 4);
+
+
+    const phoneField = input.closest('.spm-phone-field');
+    if (phoneField) {
+        phoneField.classList.toggle('spm-has-2', input.value.length === 3);
+        phoneField.classList.toggle('spm-has-3', input.value.length === 4);
+    }
+    const phoneFieldObj = this.phoneFieldMap.get(input);
+    if (phoneFieldObj) {
+        phoneFieldObj.visualMask.style.visibility = digitsWithoutCode.length > 0 ? 'hidden' : 'visible';
+    }
 	}
 
 	/**
@@ -4483,23 +4542,28 @@ class SimplePhoneMask {
 	 * @param {HTMLElement} input - Input element
 	 */
 	handleCountrySelect(country, code, input) {
-		this.countryCode = country.phoneCode.replace('+', '');
-		this.maskPattern = this.options.maskPattern || country.mask;
-		this.prefixLength = this.countryCode.length + 1;
-		this.currentCountry = country;
+	  this.countryCode = country.phoneCode.replace('+', '');
+    this.maskPattern = this.options.maskPattern || country.mask;
+    this.prefixLength = this.countryCode.length + 1;
+    this.currentCountry = country;
 
-		const flagButton = input.parentNode.querySelector('.spm-flag-button');
-		flagButton.innerHTML = `<img class="spm-flag-image" src="${country.flag}" alt="${country.name}">`;
+    const wrapper = input.closest('.spm-wrapper');
+    const flagButton = wrapper.querySelector('.spm-flag-button');
+    if (flagButton) {
+        flagButton.innerHTML = `<img class="spm-flag-image" src="${country.flag}" alt="${country.name}">`;
+    }
 
-		const dropdown = input.parentNode.querySelector('.spm-dropdown');
-		dropdown.style.display = 'none';
+    const dropdown = wrapper.querySelector('.spm-dropdown');
+    if (dropdown) dropdown.style.display = 'none';
 
-		input.value = '+' + this.countryCode;
+    input.value = '+' + this.countryCode;
 
-		this.createMask({
-			type: 'input',
-			target: input,
-		});
+    this.createMask({
+        type: 'input',
+        target: input,
+    });
+
+    this.updatePhoneField(input);
 	}
 
 	/**
@@ -4531,6 +4595,8 @@ class SimplePhoneMask {
 			if (this.options.showFlag) {
 				this.createDropdown(input);
 			}
+      this.createPhoneField(input);
+
 
 			input.addEventListener('input', this.createMask);
 			input.addEventListener('focus', this.createMask);
@@ -16528,6 +16594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
 /* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
 /* harmony import */ var _components_location_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/location.js */ "./src/js/components/location.js");
+/* harmony import */ var _components_fixed_header_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/fixed_header.js */ "./src/js/components/fixed_header.js");
 // import "./components/hero_slider.js";
 
 // import "./components/marquee_slider.js";
@@ -16540,6 +16607,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import "./components/burger.js";
+
 
 
 
@@ -16583,7 +16651,6 @@ if (accordeonItems.length > 0) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/index.js");
 
-console.log(_fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox);
 _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
@@ -16609,6 +16676,25 @@ if (filterButton && filterBody) {
 
 /***/ }),
 
+/***/ "./src/js/components/fixed_header.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/fixed_header.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const header = document.querySelector(".header");
+document.addEventListener("scroll", () => {
+  if (pageYOffset > 100 && header) {
+    header.classList.add("header--fixed");
+  } else {
+    header.classList.remove("header--fixed");
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/location.js":
 /*!***************************************!*\
   !*** ./src/js/components/location.js ***!
@@ -16631,8 +16717,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // Переключение табов
   tabEls.forEach((tab, idx) => {
     tab.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -16640,8 +16724,6 @@ document.addEventListener("DOMContentLoaded", function () {
       tabContentEls.forEach((cnt, i) => cnt.classList.toggle("js-active", i === idx));
     });
   });
-
-  // По умолчанию активен первый таб
   tabEls[0].classList.add("js-active");
   tabContentEls.forEach((cnt, i) => cnt.classList.toggle("js-active", i === 0));
 
@@ -16769,42 +16851,37 @@ const body = document.body;
 function openMenu() {
   menu.classList.add("js-active");
   body.classList.add("js-hidden");
-  // Вешаем слушатели только при открытии
   document.addEventListener("keydown", onEscClose);
   document.addEventListener("mousedown", onClickOutside);
 }
 function closeMenu() {
   menu.classList.remove("js-active");
   body.classList.remove("js-hidden");
-  // Удаляем слушатели при закрытии
   document.removeEventListener("keydown", onEscClose);
   document.removeEventListener("mousedown", onClickOutside);
 }
-
-// Закрытие по Esc
 function onEscClose(e) {
   if (e.key === "Escape") closeMenu();
 }
-
-// Закрытие по клику вне меню
 function onClickOutside(e) {
-  // Если меню не активно — ничего не делаем
   if (!menu.classList.contains("js-active")) return;
-  // Клик вне меню и не по бургеру
   if (!menu.contains(e.target) && !burger.contains(e.target)) {
     closeMenu();
   }
 }
 burger?.addEventListener("click", openMenu);
 closeBtn?.addEventListener("click", closeMenu);
-
-// Делегирование для пунктов с подменю
 menu?.addEventListener("click", e => {
   const link = e.target.closest(".main-menu__link--with-children");
   if (link) {
     e.preventDefault();
     link.parentElement.classList.toggle("js-active");
   }
+
+  // const anchor = e.target.closest("a[href^='#']");
+  // if (anchor) {
+  //   closeMenu();
+  // }
 });
 
 /***/ }),
@@ -17028,6 +17105,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
 
 const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts");
+const tabsAuth = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("auth");
 
 /***/ }),
 
@@ -17071,10 +17149,21 @@ const rules1 = [{
     errorMessage: "поле обязательно для заполнения"
   }]
 }];
+const rules2 = [{
+  ruleSelector: ".input__native--phone",
+  tel: true,
+  telError: "поле обязательно для заполнения",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "поле обязательно для заполнения"
+  }]
+}];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".qusetion-form", rules1, afterForm);
+(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".pick-up__form", rules2, afterForm);
 
 /***/ }),
 
@@ -17108,18 +17197,16 @@ const validateForms = function (selector, rules) {
     return false;
   }
   if (telSelector) {
-    // --- Вместо Inputmask: ---
     const phoneMask = new simple_phone_mask__WEBPACK_IMPORTED_MODULE_1__["default"]('input[type="tel"]', {
       countryCode: "RU"
-      // другие опции...
     });
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
           rule: "function",
           validator: function () {
-            const phone = telSelector.value.replace(/\D/g, ""); // или phoneMask.getUnmaskedValue(telSelector)
-            return phone.length === 11; // для РФ, смотри какая у тебя длина
+            const phone = telSelector.value.replace(/\D/g, "");
+            return phone.length === 11;
           },
           errorMessage: item.telError
         });
@@ -17137,7 +17224,6 @@ const validateForms = function (selector, rules) {
     let errorLabelTarget = undefined;
     if (el) {
       const parentInput = el.closest(".input");
-      console.log(parentInput);
       if (parentInput) {
         errorLabelTarget = parentInput;
       }
@@ -17146,7 +17232,6 @@ const validateForms = function (selector, rules) {
       errorLabelTarget
     } : undefined);
   }
-  console.log(validation);
   if (checkboxes.length) {
     for (let item of checkboxes) {
       validation.addRequiredGroup(`${item.selector}`, `${item.errorMessage}`);

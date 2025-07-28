@@ -107,6 +107,10 @@
     right: 0;
     bottom: 0;
     z-index: 10;
+    img {
+      height: auto;
+      width: auto;
+    }
   }
   &__link {
     display: flex;

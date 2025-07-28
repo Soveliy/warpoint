@@ -1,3 +1,4 @@
+@use "./mixins/disable-mob-hover" as *;
 .input {
   position: relative;
   .spm-wrapper {
@@ -30,6 +31,12 @@
     color: #fff;
     outline: 0;
     background-color: transparent;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        border-color: #fff;
+      }
+    }
     &.is-invalid {
       border-color: #ff545d;
       & + label {
@@ -40,8 +47,12 @@
       &::placeholder {
         opacity: 0;
       }
+      &:not(.is-invalid) {
+        border-color: #0043ce;
+      }
       &:not(.is-invalid) + .input__label {
         color: #0043ce;
+        border-color: #0043ce;
       }
     }
     &::placeholder {
@@ -82,7 +93,32 @@
     right: 4px;
   }
 }
+.spm-phone-prefix {
+  display: none;
+}
 
+.spm-visual-mask {
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #535965;
+  left: 80px;
+  top: 27px;
+}
+.spm-has-2 {
+  .spm-visual-mask {
+    left: 97px;
+  }
+}
+.spm-has-3 {
+  .spm-visual-mask {
+    left: 108px;
+  }
+}
 .spm-input {
   height: 77px;
   padding-left: 56px;

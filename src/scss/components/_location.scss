@@ -228,6 +228,7 @@
   pointer-events: none;
   transition: 0.3s;
   display: none;
+  max-height: 624px;
   &.js-active {
     display: block;
     pointer-events: all;
@@ -235,7 +236,7 @@
   }
   .location-content__body {
   }
-  max-height: 624px;
+
   // &--county {
   //   .location-content__body {
   //     max-height: 642px;
@@ -277,7 +278,7 @@
   }
   &__body {
     flex: 1 0 auto;
-    height: calc(100% - 100px);
+    height: calc(100%);
   }
   &__scroll {
     height: 100%;

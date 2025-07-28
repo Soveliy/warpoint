@@ -98,7 +98,7 @@
           </p>
           <picture>
             <source srcset="img/skolkovo.webp" type="image/webp">
-            <img loading="lazy" src="img/skolkovo.png" class="image" width="" height="" alt="">
+            <img loading="lazy" src="img/skolkovo.png" class="image" alt="">
           </picture>
         </div>
         <div class="footer__allert">
@@ -509,7 +509,7 @@
 
 <div class="modal micromodal-slide " id="reservation" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+    <div class="modal__container" role="dialog" aria-modal="true">
 
       <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
         <svg class="modal__close-icon" data-micromodal-close>
@@ -530,17 +530,17 @@
           Или оставьте заявку, чтобы мы связались с вами
         </div>
         <div class="reservation__form-wrap">
-          <div class="qusetion-form__input input">
+          <div class="reservation__form-input input">
 
             <input type="email" id="r-email" class="input__native input__native--name input__native--lit"
               placeholder="youremail@email.com">
-            <label for="r-name" class="input__label input__label--abs">Ваше имя</label>
+            <label for="r-email" class="input__label input__label--abs">Ваш email</label>
           </div>
-          <div class="qusetion-form__input input input--phone">
+          <div class="reservation__form-input input input--phone">
 
             <input type="tel" id="r-phone" class="input__native input__native--phone input__native--lit"
               placeholder="Ваш телефон">
-            <label for="r-name" class="input__label input__label--abs">ваш телефон</label>
+            <label for="r-phone" class="input__label input__label--abs">ваш телефон</label>
           </div>
           <label class="qusetion-form__checkbox checkbox">
             <input type="checkbox" class="checkbox__native">
@@ -557,6 +557,72 @@
           оставить заявку
         </button>
       </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal micromodal-slide " id="auth" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="auth__container" role="dialog" aria-modal="true">
+
+      <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+        <svg class="modal__close-icon" data-micromodal-close>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal__head">
+        <div class="modal__title">
+          Вход в аккаунт
+        </div>
+      </div>
+      <div class="auth__tabs tabs" data-tabs="auth">
+        <ul class="list-reset tabs__nav">
+          <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">по телефону</button></li>
+          <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">по email</button></li>
+
+        </ul>
+        <div class="tabs__content">
+          <div class="tabs__panel">
+            <form action="#" class="form-auth" id="auth-phone">
+              <div class="form-auth__input input input--phone">
+
+                <input type="tel" id="a-phone" class="input__native input__native--phone input__native--lit"
+                  placeholder="Ваш телефон">
+                <label for="a-phone" class="input__label input__label--abs">ваш телефон</label>
+              </div>
+              <button type="submit" class="form-auth__button button button--medium button--blue">
+                отправить код
+              </button>
+              <div class="form-auth__footer">
+                <a href="#" class="form-auth__forgot btn-reset">
+                  забыли пароль?
+                </a>
+              </div>
+
+            </form>
+          </div>
+          <div class="tabs__panel"></div>
+
+        </div>
+      </div>
+      <div class="auth-service">
+        <div class="auth-service__list">
+          <a href="#" class="auth-service__link">
+            <img src="img/google.svg" alt="">
+          </a>
+          <a href="#" class="auth-service__link">
+            <img src="img/vk.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="auth__footer">
+        <div class="auth__footer-label">Еще нет аккаунта?</div>
+        <a href="#" class="auth__footer-link">зарегистрироваться</a>
+      </div>
+
 
     </div>
   </div>

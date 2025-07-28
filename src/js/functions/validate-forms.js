@@ -16,10 +16,8 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   }
 
   if (telSelector) {
-    // --- Вместо Inputmask: ---
     const phoneMask = new SimplePhoneMask('input[type="tel"]', {
       countryCode: "RU",
-      // другие опции...
     });
 
     for (let item of rules) {
@@ -27,8 +25,8 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
         item.rules.push({
           rule: "function",
           validator: function () {
-            const phone = telSelector.value.replace(/\D/g, ""); // или phoneMask.getUnmaskedValue(telSelector)
-            return phone.length === 11; // для РФ, смотри какая у тебя длина
+            const phone = telSelector.value.replace(/\D/g, "");
+            return phone.length === 11;
           },
           errorMessage: item.telError,
         });
@@ -49,7 +47,6 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
 
     if (el) {
       const parentInput = el.closest(".input");
-      console.log(parentInput);
       if (parentInput) {
         errorLabelTarget = parentInput;
       }
@@ -61,7 +58,6 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
       errorLabelTarget ? { errorLabelTarget } : undefined
     );
   }
-  console.log(validation);
 
   if (checkboxes.length) {
     for (let item of checkboxes) {

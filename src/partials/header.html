@@ -9,8 +9,11 @@
 
           <div class="select">
             <div class="select__caption" data-micromodal-trigger="location">
+              <svg class="select__icon select__icon--big">
+                <use xlink:href="img/sprite.svg#marker"></use>
+              </svg>
               <div class="select__value">
-                петропавловск-камчатский
+                выберите локацию
               </div>
               <svg class="select__icon">
                 <use xlink:href="img/sprite.svg#caret-down"></use>
@@ -42,13 +45,13 @@
             </ul>
           </div>
           <a href="tel:+77174252900" class="header-top__phone">+7 (717) 425-29-00</a>
-          <select class="select-lang-js select-default" name="" id="lang">
+          <select class="select-lang-js select-default" id="lang">
             <option value="RU" selected>RU</option>
             <option value="EN">EN</option>
             <option value="AR">AR</option>
           </select>
-          <button class="btn-reset header__auth">
-            <svg class="">
+          <button class="btn-reset header__auth" data-micromodal-trigger="auth">
+            <svg>
               <use xlink:href="img/sprite.svg#user"></use>
             </svg>
           </button>
@@ -76,10 +79,10 @@
                 </svg>
               </a>
               <ul class="menu__sublist sublist">
-                <li class="sublist__item"><a href="#" class="sublist__link">игровые зоны</a></li>
-                <li class="sublist__item"><a href="#" class="sublist__link">каталог игр</a></li>
-                <li class="sublist__item"><a href="#" class="sublist__link">адреса локаций</a></li>
-                <li class="sublist__item"><a href="#" class="sublist__link">новости</a></li>
+                <li class="sublist__item"><a href="#zones" class="sublist__link">игровые зоны</a></li>
+                <li class="sublist__item"><a href="#catalog" class="sublist__link">каталог игр</a></li>
+                <li class="sublist__item"><a href="#locations" class="sublist__link">адреса локаций</a></li>
+                <li class="sublist__item"><a href="#news" class="sublist__link">новости</a></li>
               </ul>
             </li>
             <li class="menu__item">
@@ -129,11 +132,11 @@
             </li>
           </ul>
         </nav>
-        <button class="header-nav__button button button--blue button--lit">
+        <button class="header-nav__button button button--blue button--lit" data-micromodal-trigger="reservation">
           забронировать
         </button>
-        <button class="btn-reset header__auth header__auth--mob">
-          <svg class="">
+        <button class="btn-reset header__auth header__auth--mob" data-micromodal-trigger="auth">
+          <svg>
             <use xlink:href="img/sprite.svg#user"></use>
           </svg>
         </button>
@@ -146,7 +149,7 @@
         <img src="img/logo.svg" alt="Warpoint">
       </a>
 
-      <select class="select-lang-js select-default" name="" id="lang">
+      <select class="select-lang-js select-default">
         <option value="RU" selected>RU</option>
         <option value="EN">EN</option>
         <option value="AR">AR</option>
@@ -168,13 +171,13 @@
           </a>
           <ul class="main-menu__submenu">
             <li class="main-menu__submenu-item">
-              <a href="#" class="main-menu__submenu-link">игровые зоны</a>
+              <a href="#zones" class="main-menu__submenu-link">игровые зоны</a>
             </li>
             <li class="main-menu__submenu-item">
-              <a href="#" class="main-menu__submenu-link">каталог игр</a>
+              <a href="#games" class="main-menu__submenu-link">каталог игр</a>
             </li>
             <li class="main-menu__submenu-item">
-              <a href="#" class="main-menu__submenu-link">адреса локаций</a>
+              <a href="#locations" class="main-menu__submenu-link">адреса локаций</a>
             </li>
             <li class="main-menu__submenu-item">
               <a href="#" class="main-menu__submenu-link">новости</a>
@@ -240,11 +243,22 @@
     </div>
 
     <div class="main-menu__footer">
-      <select class="select-city-js select-default main-menu__select" name="">
-        <option value="петропавловск-камчатский" selected>петропавловск-камчатский</option>
-        <option value="петропавловск-камчатский1">петропавловск-камчатский1</option>
-        <option value="петропавловск-камчатский2">петропавловск-камчатский2</option>
-      </select>
+      <div class="main-menu__select select">
+        <div class="select__caption" data-micromodal-trigger="location">
+          <svg class="select__icon select__icon--big">
+            <use xlink:href="img/sprite.svg#marker"></use>
+          </svg>
+          <div class="select__value">
+            выберите локацию
+          </div>
+          <svg class="select__icon">
+            <use xlink:href="img/sprite.svg#caret-down"></use>
+          </svg>
+
+
+        </div>
+
+      </div>
       <button class="main-menu__button button button--blue button--lit">Забронировать</button>
       <div class="main-menu__social">
         <div class="main-menu__social-title">

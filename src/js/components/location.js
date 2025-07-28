@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Переключение табов
   tabEls.forEach((tab, idx) => {
     tab.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // По умолчанию активен первый таб
   tabEls[0].classList.add("js-active");
   tabContentEls.forEach((cnt, i) => cnt.classList.toggle("js-active", i === 0));
 

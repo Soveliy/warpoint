@@ -210,6 +210,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    img {
+      width: auto;
+      height: auto;
+    }
     @include tablet {
       display: flex;
       justify-content: flex-end;

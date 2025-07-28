@@ -2,22 +2,27 @@
 @use "./mixins/breakpoint" as *;
 .hero {
   position: relative;
+  min-height: 100vh;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #1f1d21 0%, rgba(31, 29, 33, 0) 180%);
+    // mix-blend-mode: overlay;
+  }
+  @include tablet {
+    min-height: inherit;
+  }
   &__bg {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(270deg, #0500ff 0%, rgba(5, 0, 255, 0) 100%);
-      mix-blend-mode: overlay;
-    }
+
     img {
       display: block;
       height: 100%;
@@ -25,9 +30,32 @@
       object-fit: cover;
     }
   }
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(20, 21, 23, 0.65) 0%,
+        rgba(20, 21, 23, 0) 50.48%
+      );
+    }
+  }
   &__content {
     position: relative;
     z-index: 100;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -38,8 +66,9 @@
     margin: auto;
     width: 100%;
     padding: 12rem 0 9rem;
-    min-height: 100vh;
+
     @include tablet {
+      min-height: inherit;
       padding-bottom: 5rem;
     }
     @include mobile {

@@ -1,0 +1,117 @@
+@use "./mixins/disable-mob-hover" as *;
+.auth {
+  &__container {
+    position: relative;
+    overflow: hidden;
+    padding: 32px 32px 0;
+    border-radius: 4px;
+    width: 96%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 416px;
+    width: 96%;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+    background: #1c1e22;
+    border-radius: 1.5rem;
+
+    .tabs__nav {
+      display: flex;
+      border-radius: 16px;
+      background: #25272d;
+      padding: 6px;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .tabs__nav-item {
+      width: 100%;
+    }
+    .tabs__nav-btn {
+      text-align: center;
+      padding: 16px;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 123%;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      transition: 0.3s;
+      border-radius: 12px;
+      display: block;
+      width: 100%;
+      &.tabs__nav-btn--active {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+        background: #101114;
+      }
+
+      @include hover {
+        &:hover {
+          background-color: rgba(#101114, 0.2);
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem -2rem 0;
+    padding: 2rem;
+
+    border-radius: 0px 0px 8px 8px;
+    background: #101114;
+  }
+  &__footer-label {
+    font-family: var(--font-family);
+    color: #c4c8cf;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 123.077% */
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+  }
+  &__footer-link {
+    font-family: var(--font-family);
+    color: #0554f8;
+
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        color: #0043ce;
+      }
+    }
+  }
+}
+
+.form-auth {
+  &__button {
+    width: 100%;
+    display: block;
+    margin-top: 24px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  &__forgot {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #c4c8cf;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        color: #0043ce;
+      }
+    }
+  }
+}

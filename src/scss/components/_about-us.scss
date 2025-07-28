@@ -28,6 +28,21 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+    @include small-tablet {
+      bottom: 22rem;
+    }
+
+    &--mob {
+      display: none;
+      @include small-tablet {
+        display: block;
+      }
+    }
+    &--desk {
+      @include small-tablet {
+        display: none;
+      }
+    }
   }
 }
 .about-us-item {

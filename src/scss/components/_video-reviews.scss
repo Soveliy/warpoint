@@ -16,11 +16,9 @@
   position: relative;
   overflow: hidden;
   display: block;
-  height: 596px;
+  aspect-ratio: 9 / 16;
   border-radius: 8px;
-  @include tablet {
-    height: 636px;
-  }
+
   &__name {
     position: absolute;
     top: 0;

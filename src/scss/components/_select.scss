@@ -104,19 +104,21 @@ select.select-default {
   &__caption {
     display: flex;
     gap: 0.25rem;
-    padding: 0.75rem;
-    width: max-content;
+    padding: 0.4375rem 0.75rem;
+    width: 100%;
     border-radius: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     font-weight: 600;
     font-size: 13px;
-    line-height: 123%;
+    line-height: 1;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
+    align-items: center;
     cursor: pointer;
     transition: 0.3s;
+    min-height: 40px;
     @include hover {
       &:hover {
         background-color: rgba(255, 255, 255, 0.05);
@@ -129,5 +131,12 @@ select.select-default {
     fill: #c4c8cf;
     stroke: #c4c8cf;
     transition: 0.3s;
+    &:not(.select__icon--big) {
+      margin-left: auto;
+    }
+    &--big {
+      height: 24px;
+      width: 24px;
+    }
   }
 }

@@ -1,11 +1,18 @@
 @use "./mixins/disable-mob-hover" as *;
 @use "./mixins/breakpoint" as *;
 .header {
-  position: absolute;
+  position: fixed;
   top: 0.5rem;
   left: 0;
   width: 100%;
   z-index: 500;
+  transition: 0.3s;
+  &--fixed {
+    transform: translateY(-65px);
+    @include tablet {
+      transform: translateY(-32px);
+    }
+  }
   @include tablet {
     top: 0;
     .select__caption {
@@ -24,9 +31,9 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 9px;
     border-radius: 50%;
-    transition: .3s;
-    @include hover{
-      &:hover{
+    transition: 0.3s;
+    @include hover {
+      &:hover {
         background-color: rgba(255, 255, 255, 0.05);
       }
     }
@@ -95,9 +102,9 @@
     font-weight: 500;
     font-size: 14px;
     color: #c4c8cf;
-    transition: .3s;
-    @include hover{
-      &:hover{
+    transition: 0.3s;
+    @include hover {
+      &:hover {
         color: var(--white);
       }
     }
@@ -125,6 +132,10 @@
   &__logo {
     flex-shrink: 0;
     line-height: 0;
+    margin-right: auto;
+    @media (max-width: 1200px) {
+      margin: 0 auto;
+    }
     img {
       height: 100%;
     }
@@ -135,12 +146,15 @@
   &__button {
     flex-shrink: 0;
     margin-left: 50px;
+    @include big-desktop {
+      margin-left: 0;
+    }
     @include tablet {
       display: none;
     }
   }
   &__menu {
-    @include tablet {
+    @media (max-width: 1200px) {
       display: none;
     }
   }

@@ -13,4 +13,5 @@ import "./components/scrollbar.js";
 import "./components/validation.js";
 import "./components/filters.js";
 import "./components/location.js";
+import "./components/fixed_header.js";
 // import "./components/animation.js";
