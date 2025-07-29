@@ -878,6 +878,17 @@ a {
 .input__native--lit:not(.spm-input) {
   padding-top: 12px;
 }
+.input__icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: -56px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  fill: #0554f8;
+}
 
 .just-validate-error-label {
   margin-top: 8px;
@@ -5773,6 +5784,9 @@ select.select-default {
 .modal__container--with-footer {
   padding-bottom: 0;
 }
+.modal__container--quiz {
+  max-width: 1384px;
+}
 @media (max-width: 1024px) {
   .modal__container {
     padding: 24px 16px;
@@ -5861,6 +5875,10 @@ select.select-default {
   width: 100%;
   margin: 16px auto 0;
   display: block;
+}
+
+.air-datepicker-global-container {
+  z-index: 15000;
 }
 
 .auth-service {
@@ -6020,4 +6038,221 @@ select.select-default {
   .form-auth__forgot:hover:hover {
     color: #0043ce;
   }
+}
+
+.quiz__header {
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.quiz__title {
+  margin-bottom: 4px;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: #ececee;
+}
+.quiz__subtitle {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  color: #5e6573;
+}
+
+.quiz-item {
+  display: none;
+}
+.quiz-item.js-active {
+  display: block;
+}
+.quiz-item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 18px 0;
+}
+.quiz-item__body {
+  min-height: 29.125rem;
+}
+.quiz-item__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.quiz-item__title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 121%;
+  color: #ececee;
+}
+.quiz-item__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+}
+.quiz-item__status-title {
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 18px;
+  color: #c7cccc;
+}
+.quiz-item__status-title span {
+  color: #5e6573;
+}
+.quiz-item__status-progress {
+  position: relative;
+  overflow: hidden;
+  width: 84px;
+  height: 4px;
+  background-color: #535965;
+  border-radius: 2px;
+}
+.quiz-item__status-current {
+  height: 100%;
+  background-color: #92b5ff;
+}
+.quiz-item__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.quiz-item__label {
+  display: block;
+  cursor: pointer;
+}
+.quiz-item__label input {
+  position: absolute;
+  opacity: 0;
+}
+.quiz-item__label img {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 170px;
+  border-radius: 8px;
+}
+.quiz-item input:checked + .quiz-item__label-wrap:after {
+  opacity: 1;
+}
+.quiz-item__label-wrap {
+  position: relative;
+  display: block;
+}
+.quiz-item__label-wrap::after {
+  position: absolute;
+  top: -9px;
+  left: -13px;
+  content: "";
+  height: 28px;
+  width: 28px;
+  background: url(../img/quiz/check.svg) no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.quiz-item__label-name {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: #ececee;
+}
+.quiz-item__input {
+  max-width: 400px;
+}
+
+.air-datepicker {
+  background: #25272d;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #c4c8cf;
+  border-radius: 8px;
+  border: 0;
+  font-family: var(--font5);
+  width: 445px;
+  padding-bottom: 44px;
+}
+
+.air-datepicker-nav {
+  padding: 20px 16px 0;
+}
+
+.air-datepicker-body--day-names {
+  margin: 15px 0 0;
+}
+
+.air-datepicker--content {
+  padding: 4px 30px;
+}
+
+.air-datepicker-body--cells.-days-,
+.air-datepicker-body--cells.-months-,
+.air-datepicker-body--cells.-years- {
+  grid-auto-rows: 64px;
+}
+
+.air-datepicker-body--day-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 123%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4c8cf;
+  width: 55px;
+  height: 56px;
+}
+
+.air-datepicker-nav {
+  border: 0;
+}
+
+.air-datepicker-cell.-focus-,
+.air-datepicker-nav--title:hover,
+.air-datepicker-nav--action:hover {
+  background: #282d37;
+}
+
+.air-datepicker-body--cells.-months- .air-datepicker-cell,
+.air-datepicker-body--cells.-years- .air-datepicker-cell {
+  width: 100%;
+}
+
+.air-datepicker-nav--title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 123%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4c8cf;
+}
+
+.air-datepicker-cell {
+  height: 64px;
+  width: 55px;
 }/*# sourceMappingURL=main.css.map */

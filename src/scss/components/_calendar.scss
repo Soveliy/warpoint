@@ -1,0 +1,65 @@
+.air-datepicker {
+  background: #25272d;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #c4c8cf;
+  border-radius: 8px;
+  border: 0;
+  font-family: var(--font5);
+  width: 445px;
+  padding-bottom: 44px;
+}
+.air-datepicker-nav {
+  padding: 20px 16px 0;
+}
+
+.air-datepicker-body--day-names {
+  margin: 15px 0 0;
+}
+.air-datepicker--content {
+  padding: 4px 30px;
+}
+.air-datepicker-body--cells.-days-,
+.air-datepicker-body--cells.-months-,
+.air-datepicker-body--cells.-years- {
+  grid-auto-rows: 64px;
+}
+.air-datepicker-body--day-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 123%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4c8cf;
+  width: 55px;
+  height: 56px;
+}
+.air-datepicker-nav {
+  border: 0;
+}
+.air-datepicker-cell.-focus-,
+.air-datepicker-nav--title:hover,
+.air-datepicker-nav--action:hover {
+  background: #282d37;
+}
+.air-datepicker-body--cells.-months-,
+.air-datepicker-body--cells.-years- {
+  .air-datepicker-cell {
+    width: 100%;
+  }
+}
+.air-datepicker-nav--title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 123%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4c8cf;
+}
+.air-datepicker-cell {
+  height: 64px;
+  width: 55px;
+}

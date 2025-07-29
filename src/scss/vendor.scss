@@ -19,6 +19,6 @@
 
 @use "./vendor/modal" as *;
 
+@use "../../node_modules/air-datepicker/air-datepicker.css" as *;
 @use "../../node_modules/nice-select2/dist/css/nice-select2.css" as *;
-
 @use "../../node_modules/simple-phone-mask/src/simple-phone-mask.css" as *;
