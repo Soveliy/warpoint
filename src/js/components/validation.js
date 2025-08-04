@@ -59,8 +59,13 @@ const rules2 = [
 
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
-  MicroModal.close();
-  MicroModal.show("quiz-thansk");
+  MicroModal.close("quiz");
+  setTimeout(() => {
+    MicroModal.show("quiz-thansk");
+  }, 100);
+  setTimeout(() => {
+    MicroModal.close("quiz-thansk");
+  }, 10000);
 };
 
 validateForms(".qusetion-form", rules1, afterForm);

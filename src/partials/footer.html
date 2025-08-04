@@ -516,52 +516,54 @@
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true">
 
-      <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
-        <svg class="modal__close-icon" data-micromodal-close>
-          <use xlink:href="img/sprite.svg#close"></use>
-        </svg>
-      </button>
-      <div class="modal__head">
-        <div class="modal__title">
-          Забронировать игру
-        </div>
-        <div class="modal__subtitle">
-          Запишитесь онлайн на удобное для вас время:
-        </div>
-        <button class="modal__button button button--blue button--medium">забронировать онлайн</button>
-      </div>
-      <form action="#" class="reservation__form">
-        <div class="reservation__form-desc">
-          Или оставьте заявку, чтобы мы связались с вами
-        </div>
-        <div class="reservation__form-wrap">
-          <div class="reservation__form-input input">
-
-            <input type="email" id="r-email" class="input__native input__native--name input__native--lit"
-              placeholder="youremail@email.com">
-            <label for="r-email" class="input__label input__label--abs">Ваш email</label>
-          </div>
-          <div class="reservation__form-input input input--phone">
-
-            <input type="tel" id="r-phone" class="input__native input__native--phone input__native--lit"
-              placeholder="Ваш телефон">
-            <label for="r-phone" class="input__label input__label--abs">ваш телефон</label>
-          </div>
-          <label class="qusetion-form__checkbox checkbox">
-            <input type="checkbox" class="checkbox__native">
-            <span class="checkbox__wrap">
-              <span class="checkbox__fake"></span>
-              <span class="checkbox__text">
-                Принимаю условия <a href="#">политики конфиденциальности</a>
-                и даю согласие на <a href="#">обработку персональных данных</a>
-              </span>
-            </span>
-          </label>
-        </div>
-        <button type="submit" class="reservation__button button button--rounded button--medium">
-          оставить заявку
+      <div class="modal__wrap">
+        <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+          <svg class="modal__close-icon" data-micromodal-close>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
         </button>
-      </form>
+        <div class="modal__head">
+          <div class="modal__title">
+            Забронировать игру
+          </div>
+          <div class="modal__subtitle">
+            Запишитесь онлайн на удобное для вас время:
+          </div>
+          <button class="modal__button button button--blue button--medium">забронировать онлайн</button>
+        </div>
+        <form action="#" class="reservation__form">
+          <div class="reservation__form-desc">
+            Или оставьте заявку, чтобы мы связались с вами
+          </div>
+          <div class="reservation__form-wrap">
+            <div class="reservation__form-input input">
+
+              <input type="email" id="r-email" class="input__native input__native--name input__native--lit"
+                placeholder="youremail@email.com">
+              <label for="r-email" class="input__label input__label--abs">Ваш email</label>
+            </div>
+            <div class="reservation__form-input input input--phone">
+
+              <input type="tel" id="r-phone" class="input__native input__native--phone input__native--lit"
+                placeholder="Ваш телефон">
+              <label for="r-phone" class="input__label input__label--abs">ваш телефон</label>
+            </div>
+            <label class="qusetion-form__checkbox checkbox">
+              <input type="checkbox" class="checkbox__native">
+              <span class="checkbox__wrap">
+                <span class="checkbox__fake"></span>
+                <span class="checkbox__text">
+                  Принимаю условия <a href="#">политики конфиденциальности</a>
+                  и даю согласие на <a href="#">обработку персональных данных</a>
+                </span>
+              </span>
+            </label>
+          </div>
+          <button type="submit" class="reservation__button button button--rounded button--medium">
+            оставить заявку
+          </button>
+        </form>
+      </div>
 
     </div>
   </div>

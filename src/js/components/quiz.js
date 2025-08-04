@@ -33,7 +33,7 @@ function updateButtons() {
           showStep(currentStep);
         } else {
           if (quizContainer) quizContainer.style.display = "none";
-          if (resultContainer) resultContainer.style.display = "block";
+          if (resultContainer) resultContainer.style.display = "flex";
           collectQuizData();
         }
       };
@@ -90,7 +90,7 @@ function resetQuiz() {
   // Сброс шага
   currentStep = 0;
   showStep(currentStep);
-  quizContainer.style.display = "block";
+  quizContainer.style.display = "flex";
   resultContainer.style.display = "none";
 }
 

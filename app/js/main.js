@@ -17034,7 +17034,7 @@ function updateButtons() {
           showStep(currentStep);
         } else {
           if (quizContainer) quizContainer.style.display = "none";
-          if (resultContainer) resultContainer.style.display = "block";
+          if (resultContainer) resultContainer.style.display = "flex";
           collectQuizData();
         }
       };
@@ -17076,7 +17076,7 @@ function resetQuiz() {
   // Сброс шага
   currentStep = 0;
   showStep(currentStep);
-  quizContainer.style.display = "block";
+  quizContainer.style.display = "flex";
   resultContainer.style.display = "none";
 }
 if (changeAnswersButton) {
@@ -17427,8 +17427,13 @@ const rules2 = [{
 }];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
-  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close();
-  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].show("quiz-thansk");
+  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close("quiz");
+  setTimeout(() => {
+    micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].show("quiz-thansk");
+  }, 100);
+  setTimeout(() => {
+    micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close("quiz-thansk");
+  }, 10000);
 };
 (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_1__.validateForms)(".qusetion-form", rules1, afterForm);
 (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_1__.validateForms)(".pick-up__form", rules2, afterForm);

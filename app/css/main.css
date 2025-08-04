@@ -6062,6 +6062,9 @@ select.select-default {
   height: 100%;
   width: 100%;
 }
+.modal__container--quiz-form {
+  display: none;
+}
 .modal__wrap {
   position: relative;
   border-radius: 12px;
@@ -6072,6 +6075,7 @@ select.select-default {
   background: #1c1e22;
   pointer-events: all;
   margin: auto;
+  padding: 2.5rem;
 }
 @media (max-width: 1024px) {
   .modal__wrap {
@@ -6083,18 +6087,17 @@ select.select-default {
   padding-bottom: 0;
 }
 .modal__wrap--quiz {
-  max-width: 1384px;
+  max-width: 86.5rem;
 }
 .modal__wrap--quiz-form {
-  display: none;
-  max-width: 1119px;
+  max-width: 69.9375rem;
 }
 .modal__wrap--thanks {
-  max-width: 832px;
+  max-width: 52rem;
 }
 .modal__wrap--contacts-detail {
-  max-width: 1120px;
-  padding: 104px 24px 32px 24px;
+  max-width: 70rem;
+  padding: 6.5rem 1.5rem 2rem 1.5rem;
 }
 @media (max-width: 1024px) {
   .modal__wrap--contacts-detail {
