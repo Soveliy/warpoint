@@ -1,8 +1,21 @@
+@use "./mixins/breakpoint" as *;
 .quiz {
   &__header {
+    display: flex;
+    gap: 1rem;
     padding-bottom: 23px;
     margin-bottom: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    svg {
+      flex-shrink: 0;
+      height: 3rem;
+      width: 3rem;
+      fill: #0043ce;
+      @include tablet {
+        height: 40px;
+        width: 40px;
+      }
+    }
   }
   &__title {
     margin-bottom: 4px;
@@ -10,12 +23,29 @@
     font-weight: 500;
     font-size: 24px;
     color: #ececee;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   &__subtitle {
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 20px;
     color: #5e6573;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__form-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -33,6 +63,8 @@
   }
   &__body {
     min-height: 29.125rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
   }
   &__footer {
     display: flex;
@@ -46,6 +78,9 @@
     font-size: 22px;
     line-height: 121%;
     color: #ececee;
+    @include tablet {
+      font-size: 1rem;
+    }
   }
   &__status {
     display: flex;
@@ -61,6 +96,9 @@
     span {
       color: #5e6573;
     }
+    @include tablet {
+      font-size: 12px;
+    }
   }
   &__status-progress {
     position: relative;
@@ -70,6 +108,9 @@
 
     background-color: #535965;
     border-radius: 2px;
+    @include tablet {
+      width: 50px;
+    }
   }
   &__status-current {
     height: 100%;
@@ -79,6 +120,15 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
+    @media (max-width: 1250px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__label {
     display: block;
@@ -93,6 +143,9 @@
       width: 100%;
       height: 170px;
       border-radius: 8px;
+      @include tablet {
+        height: 112px;
+      }
     }
   }
   input:checked + .quiz-item__label-wrap {
@@ -121,6 +174,9 @@
     font-weight: 500;
     font-size: 16px;
     color: #ececee;
+    @include tablet {
+      font-size: 12px;
+    }
   }
   &__input {
     max-width: 400px;

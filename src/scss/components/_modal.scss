@@ -15,6 +15,13 @@
     &--quiz {
       max-width: 1384px;
     }
+    &--quiz-form {
+      display: none;
+      max-width: 1119px;
+    }
+    &--thanks {
+      max-width: 832px;
+    }
     @include tablet {
       padding: 24px 16px;
     }

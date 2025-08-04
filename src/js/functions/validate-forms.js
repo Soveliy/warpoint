@@ -66,6 +66,7 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   }
 
   validation.onSuccess((ev) => {
+    afterSend();
     let formData = new FormData(ev.target);
 
     let xhr = new XMLHttpRequest();
@@ -80,9 +81,9 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
         }
       }
     };
-
-    xhr.open("POST", "mail.php", true);
-    xhr.send(formData);
+    console.log("q");
+    // xhr.open("POST", "mail.php", true);
+    // xhr.send(formData);
 
     ev.target.reset();
   });

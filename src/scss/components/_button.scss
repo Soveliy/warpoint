@@ -64,4 +64,12 @@
       }
     }
   }
+  &--rounded-white {
+    border: 1px solid rgba(143, 150, 163, 0.5);
+    color: #c4c8cf;
+    @include hover {
+      &:hover {
+      }
+    }
+  }
 }

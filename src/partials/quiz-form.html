@@ -1,4 +1,4 @@
-<div class="modal micromodal-slide " id="quiz" aria-hidden="true">
+<div class="modal micromodal-slide" id="quiz" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container modal__container--quiz" role="dialog" aria-modal="true">
       <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
@@ -8,12 +8,15 @@
       </button>
       <div class="quiz">
         <div class="quiz__header">
-          <div class="quiz__title">
-            Рассчитайте стоимость мероприятия
+          <div class="quiz__header-content">
+            <div class="quiz__title">
+              Рассчитайте стоимость мероприятия
+            </div>
+            <div class="quiz__subtitle">
+              Ответьте на несколько вопросов и получите спецпредложение
+            </div>
           </div>
-          <div class="quiz__subtitle">
-            Ответьте на несколько вопросов и получите спецпредложение
-          </div>
+
         </div>
         <div class="quiz__items">
           <div class="quiz-item js-active" data-item="1">
@@ -70,7 +73,7 @@
               </div>
             </div>
             <div class="quiz-item__footer">
-              <button class="quiz-item__button button button--medium quiz-item__button--back">
+              <button class="quiz-item__button button button--medium button--rounded-white quiz-item__button--back">
                 назад
               </button>
               <button class="quiz-item__button button button--blue button--medium quiz-item__button--next">
@@ -127,7 +130,7 @@
               </div>
             </div>
             <div class="quiz-item__footer">
-              <button class="quiz-item__button button button--medium quiz-item__button--back">
+              <button class="quiz-item__button button button--medium button--rounded-white quiz-item__button--back">
                 назад
               </button>
               <button class="quiz-item__button button button--blue button--medium quiz-item__button--next">
@@ -163,7 +166,7 @@
               </div>
             </div>
             <div class="quiz-item__footer">
-              <button class="quiz-item__button button button--medium quiz-item__button--back">
+              <button class="quiz-item__button button button--medium button--rounded-white quiz-item__button--back">
                 назад
               </button>
               <button class="quiz-item__button button button--blue button--medium quiz-item__button--next">
@@ -256,7 +259,7 @@
               </div>
             </div>
             <div class="quiz-item__footer">
-              <button class="quiz-item__button button button--medium quiz-item__button--back">
+              <button class="quiz-item__button button button--medium button--rounded-white quiz-item__button--back">
                 назад
               </button>
               <button class="quiz-item__button button button--blue button--medium quiz-item__button--next">
@@ -322,7 +325,7 @@
               </div>
             </div>
             <div class="quiz-item__footer">
-              <button class="quiz-item__button button button--medium quiz-item__button--back">
+              <button class="quiz-item__button button button--medium button--rounded-white quiz-item__button--back">
                 назад
               </button>
               <button class="quiz-item__button button button--blue button--medium quiz-item__button--next">
@@ -332,6 +335,118 @@
 
           </div>
         </div>
+      </div>
+    </div>
+    <div class="modal__container modal__container--quiz-form" role="dialog" aria-modal="true">
+      <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+        <svg class="modal__close-icon" data-micromodal-close>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="quiz">
+        <div class="quiz__header">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#heart"></use>
+          </svg>
+          <div class="quiz__header-content">
+            <div class="quiz__title">
+              Почти готово! Укажите данные для получения предложения
+            </div>
+            <div class="quiz__subtitle">
+              Мы пришлем вам подходящую программу
+            </div>
+          </div>
+
+        </div>
+        <form action="#" class="quiz__form">
+          <input type="hidden" name="event" id="hidden-event">
+          <input type="hidden" name="persons" id="hidden-persons">
+          <input type="hidden" name="event_date" id="hidden-event-date">
+          <input type="hidden" name="additionally" id="hidden-additionally">
+          <input type="hidden" name="loc" id="hidden-loc">
+
+          <div class="quiz__form-input input">
+
+            <input type="name" id="q-name" class="input__native input__native--lit" placeholder="youremail@email.com">
+            <label for="q-nane" class="input__label input__label--abs">Ваше имя</label>
+          </div>
+          <div class="quiz__form-input input input--phone">
+            <input type="tel" id="q-phone" class="input__native input__native--lit" placeholder="Ваш телефон">
+            <label for="q-phone" class="input__label input__label--abs">ваш телефон</label>
+          </div>
+          <div class="quiz__form-input input">
+
+            <input type="email" id="q-email" class="input__native input__native--name input__native--lit"
+              placeholder="youremail@email.com">
+            <label for="q-email" class="input__label input__label--abs">Ваш email</label>
+          </div>
+          <div class="quiz__form-checkboxes radio-group">
+            <label class="input__label">как удобнее получить информацию</label>
+            <div class="radio-group__row">
+              <label class="radio">
+                <input type="radio" name="mess">
+                <span class="radio__wrap">
+                  Whatsapp
+                </span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="mess">
+                <span class="radio__wrap">
+                  Telegram
+                </span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="mess">
+                <span class="radio__wrap">
+                  Email
+                </span>
+              </label>
+            </div>
+          </div>
+          <label class="quiz__form-checkbox checkbox">
+            <input type="checkbox" class="checkbox__native">
+            <span class="checkbox__wrap">
+              <span class="checkbox__fake"></span>
+              <span class="checkbox__text checkbox__text--big">
+                Нажимая кнопку “Получить расчёт”, Вы соглашаетесь на обработку персональных данных в соответствии с <a
+                  href="#">Политикой конфиденциальности</a>, а также с условиями <a href="#">Пользовательского
+                  соглашения</a>
+              </span>
+            </span>
+          </label>
+          <div class="quiz__form-bottom">
+            <button
+              class="quiz__form-button quiz__form-button--reset button button--medium button--rounded-white">изменить
+              ответы</button>
+            <button type="submit" class="quiz__form-button button button--rounded button--medium">
+              получить расчёт
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal micromodal-slide" id="quiz-thansk" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container modal__container--thanks" role="dialog" aria-modal="true">
+      <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+        <svg class="modal__close-icon" data-micromodal-close>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="thanks">
+        <div class="thanks__row">
+          <img class="thanks__icon" src="/img/quiz/check.svg" alt="">
+          <div class="thanks__content">
+            <div class="thanks__title">Благодарим за ответы!</div>
+            <div class="thanks__desc">Мы уже готовим для вас расчёт стоимости праздника
+              и вот-вот вернёмся к вам с ответом</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
