@@ -5,12 +5,18 @@
   top: 0.5rem;
   left: 0;
   width: 100%;
-  z-index: 500;
+  z-index: 5000;
   transition: 0.3s;
   &--fixed {
     transform: translateY(-65px);
+    .main-menu {
+      margin-top: 3.5625rem;
+    }
     @include tablet {
       transform: translateY(-40px);
+      .main-menu {
+        margin-top: 2.5rem;
+      }
     }
   }
   @include tablet {

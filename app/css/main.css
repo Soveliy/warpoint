@@ -213,7 +213,7 @@ html.with-fancybox body.hide-scrollbar {
   top: 0.5rem;
   left: 0;
   width: 100%;
-  z-index: 500;
+  z-index: 5000;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -222,11 +222,17 @@ html.with-fancybox body.hide-scrollbar {
   -ms-transform: translateY(-65px);
   transform: translateY(-65px);
 }
+.header--fixed .main-menu {
+  margin-top: 3.5625rem;
+}
 @media (max-width: 1024px) {
   .header--fixed {
     -webkit-transform: translateY(-40px);
     -ms-transform: translateY(-40px);
     transform: translateY(-40px);
+  }
+  .header--fixed .main-menu {
+    margin-top: 2.5rem;
   }
 }
 @media (max-width: 1024px) {
