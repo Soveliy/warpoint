@@ -17160,116 +17160,155 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider", {
-  slidesPerView: 1,
-  spaceBetween: 12,
-  navigation: {
-    nextEl: ".news__slider .slider__arrow--next",
-    prevEl: ".news__slider .slider__arrow--prev"
-  },
-  pagination: {
-    el: ".news__slider-pagination",
-    clickable: 1
-  }
-});
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slider", {
-  slidesPerView: 1.1,
-  spaceBetween: 24,
-  breakpoints: {
-    // when window width is >= 320px
-    600: {
-      slidesPerView: 2,
-      spaceBetween: 24
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs]);
+const initSliders = () => {
+  const NewsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider", {
+    slidesPerView: 1,
+    spaceBetween: 12,
+    navigation: {
+      nextEl: ".news__slider .slider__arrow--next",
+      prevEl: ".news__slider .slider__arrow--prev"
     },
-    // when window width is >= 480px
-    986: {
-      slidesPerView: 3
+    pagination: {
+      el: ".news__slider-pagination",
+      clickable: 1
     }
-    // when window width is >= 640px
-  },
-  navigation: {
-    nextEl: ".formats__slider .slider__arrow--next",
-    prevEl: ".formats__slider .slider__arrow--prev"
-  },
-  pagination: {
-    el: ".formats__slider-pagination",
-    clickable: 1
-  }
-});
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".games__slider", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  breakpoints: {
-    // when window width is >= 320px
-    992: {
-      slidesPerView: 2,
-      spaceBetween: 24
+  });
+  const formatsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slider", {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    breakpoints: {
+      // when window width is >= 320px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      // when window width is >= 480px
+      986: {
+        slidesPerView: 3
+      }
+      // when window width is >= 640px
+    },
+    navigation: {
+      nextEl: ".formats__slider .slider__arrow--next",
+      prevEl: ".formats__slider .slider__arrow--prev"
+    },
+    pagination: {
+      el: ".formats__slider-pagination",
+      clickable: 1
     }
-  },
-  navigation: {
-    nextEl: ".games__slider .slider__arrow--next",
-    prevEl: ".games__slider .slider__arrow--prev"
-  },
-  pagination: {
-    el: ".games__slider-pagination",
-    clickable: 1
-  }
-});
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".service-reviews__slider", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  navigation: {
-    nextEl: ".service-reviews__slider .slider__arrow--next",
-    prevEl: ".service-reviews__slider .slider__arrow--prev"
-  },
-  pagination: {
-    el: ".service-reviews__slider-pagination",
-    clickable: 1
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    600: {
-      slidesPerView: 2,
-      spaceBetween: 24
+  });
+  const gamesSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".games__slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    breakpoints: {
+      // when window width is >= 320px
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
     },
-    // when window width is >= 480px
-    986: {
-      slidesPerView: 3
+    navigation: {
+      nextEl: ".games__slider .slider__arrow--next",
+      prevEl: ".games__slider .slider__arrow--prev"
     },
-    // when window width is >= 640px
-    1400: {
-      slidesPerView: 4
+    pagination: {
+      el: ".games__slider-pagination",
+      clickable: 1
     }
-  }
-});
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".video-reviews__slider", {
-  slidesPerView: 1.1,
-  spaceBetween: 24,
-  navigation: {
-    nextEl: ".video-reviews__slider .slider__arrow--next",
-    prevEl: ".video-reviews__slider .slider__arrow--prev"
-  },
-  pagination: {
-    el: ".video-reviews__slider-pagination",
-    clickable: 1
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    600: {
-      slidesPerView: 2,
-      spaceBetween: 24
+  });
+  const serviceSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".service-reviews__slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".service-reviews__slider .slider__arrow--next",
+      prevEl: ".service-reviews__slider .slider__arrow--prev"
     },
-    // when window width is >= 480px
-    986: {
-      slidesPerView: 3
+    pagination: {
+      el: ".service-reviews__slider-pagination",
+      clickable: 1
     },
-    // when window width is >= 640px
-    1400: {
-      slidesPerView: 4
+    breakpoints: {
+      // when window width is >= 320px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      // when window width is >= 480px
+      986: {
+        slidesPerView: 3
+      },
+      // when window width is >= 640px
+      1400: {
+        slidesPerView: 4
+      }
     }
-  }
-});
+  });
+  const videoSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".video-reviews__slider", {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".video-reviews__slider .slider__arrow--next",
+      prevEl: ".video-reviews__slider .slider__arrow--prev"
+    },
+    pagination: {
+      el: ".video-reviews__slider-pagination",
+      clickable: 1
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      // when window width is >= 480px
+      986: {
+        slidesPerView: 3
+      },
+      // when window width is >= 640px
+      1400: {
+        slidesPerView: 4
+      }
+    }
+  });
+  document.querySelectorAll(".contact-detail").forEach(container => {
+    const previewsSlider = container.querySelector(".contact-detail__previews-slider");
+    const mainSlider = container.querySelector(".contact-detail__main-slider");
+    const nextBtn = container.querySelector(".slider__arrow--next");
+    const prevBtn = container.querySelector(".slider__arrow--prev");
+    if (!previewsSlider || !mainSlider) return;
+    const thumbsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](previewsSlider, {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        600: {
+          slidesPerView: 4
+        },
+        986: {
+          slidesPerView: 5
+        },
+        1200: {
+          slidesPerView: 6
+        }
+      }
+    });
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mainSlider, {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn
+      },
+      thumbs: {
+        swiper: thumbsSwiper
+      }
+    });
+  });
+};
+initSliders();
 
 /***/ }),
 

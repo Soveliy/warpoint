@@ -109,3 +109,10 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+// html.with-fancybox {
+//   scrollbar-gutter: none;
+// }
+html.with-fancybox body.hide-scrollbar {
+  margin-right: 0;
+}

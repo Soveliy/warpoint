@@ -1,14 +1,29 @@
 @use "./mixins/breakpoint" as *;
 .modal {
   &__container {
-    padding: 2.5rem;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-color: transparent;
+    pointer-events: none;
+
+    height: 100%;
+    width: 100%;
+  }
+  &__wrap {
+    position: relative;
+    border-radius: 12px;
     width: 96%;
     box-sizing: border-box;
     max-width: 600px;
-    width: 96%;
     background: #1c1e22;
-
+    pointer-events: all;
+    margin: auto;
+    @include tablet {
+      padding: 24px 16px;
+      width: 100%;
+    }
     &--with-footer {
       padding-bottom: 0;
     }
@@ -22,8 +37,12 @@
     &--thanks {
       max-width: 832px;
     }
-    @include tablet {
-      padding: 24px 16px;
+    &--contacts-detail {
+      max-width: 1120px;
+      padding: 104px 24px 32px 24px;
+      @include tablet {
+        padding: 2rem 1rem;
+      }
     }
   }
   &__title {

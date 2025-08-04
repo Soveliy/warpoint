@@ -21,6 +21,7 @@
     map = new YMap(document.getElementById('map'), { location: LOCATION });
     map.addChild(new YMapDefaultSchemeLayer({
       theme: 'dark',
+      // JSON Косячит
       customization: [
         {
           "tags": "country",
@@ -6865,35 +6866,33 @@
 
     contactsItems.forEach((item, idx) => {
       const coords = item.dataset.coords.split(',').map(Number);
-
-      // SVG маркер
       const markerElement = document.createElement('div');
       markerElement.className = 'marker-class';
       markerElement.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
-<g clip-path="url(#clip0_5027_40419)">
-<g filter="url(#filter0_d_5027_40419)">
-<path d="M26.2223 39.0131C34.2215 36.3969 40 28.8733 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 28.8713 5.77586 36.3935 13.7722 39.0113L14.0344 39.1104C16.766 40.1421 18.9334 42.2818 20 45C21.0666 42.2818 23.2338 40.142 25.9654 39.1102L26.2223 39.0131Z" fill="white"/>
-</g>
-<circle cx="20" cy="20" r="18" fill="#0554F8"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M9.01906 13.074C9.02956 13.1144 9.1255 13.5719 9.23228 14.0908C9.33905 14.6097 9.50491 15.4121 9.60081 15.8738L9.77523 16.7134L12.0488 16.7321L14.3223 16.7507L14.1781 16.8019C13.9017 16.9 12.1424 17.5615 12.1314 17.5715C12.1253 17.577 12.2792 18.3013 12.4734 19.1811C13.0875 21.9635 14.0894 26.4771 14.1683 26.8164L14.2441 27.1429H16.925H19.6059L19.6468 26.9283C19.6692 26.8103 19.8895 25.5469 20.1363 24.1209C20.3831 22.6948 20.5922 21.5208 20.601 21.512C20.6097 21.5031 20.6216 21.5029 20.6272 21.5114C20.6328 21.52 20.7842 22.2658 20.9635 23.1688C21.3496 25.1129 21.7179 26.9413 21.7472 27.0589L21.7681 27.1429H24.4354C26.0777 27.1429 27.1112 27.1292 27.1246 27.1074C27.1365 27.088 27.2035 26.7899 27.2735 26.4451C27.3434 26.1003 27.4938 25.3648 27.6076 24.8107C27.7215 24.2566 27.8464 23.6437 27.8852 23.4487C27.924 23.2537 28.0577 22.5989 28.1823 21.9934C28.3069 21.388 28.432 20.7751 28.4604 20.6314C28.4887 20.4878 28.6053 19.9169 28.7196 19.3627C28.8338 18.8086 28.959 18.1957 28.9978 18.0008C29.0367 17.8058 29.1704 17.1509 29.2949 16.5455C29.4195 15.9401 29.5446 15.3272 29.5729 15.1835C29.6012 15.0398 29.7089 14.5118 29.8122 14.0101C29.9155 13.5084 30 13.0759 30 13.0489V13L27.8776 13.0096L25.7552 13.0193L25.7125 13.2245C25.689 13.3374 25.6335 13.6312 25.5892 13.8775C25.5449 14.1238 25.4765 14.4932 25.4372 14.6984C25.3638 15.0814 25.1739 16.1008 25.0096 16.9933C24.9586 17.2703 24.9013 17.5726 24.8823 17.6649C24.8633 17.7573 24.7878 18.1603 24.7146 18.5605C24.573 19.3342 24.5507 19.4338 24.5254 19.4082C24.5165 19.3993 24.1279 17.9581 23.6618 16.2056L22.8143 13.0193L20.695 13.0096L18.5758 13L18.5404 13.0843C18.5209 13.1306 18.4282 13.4708 18.3344 13.8402C18.2406 14.2096 18.1077 14.7301 18.0389 14.9969C17.9701 15.2637 17.8202 15.8514 17.7056 16.3029C16.8798 19.5582 16.9152 19.4275 16.8683 19.3983C16.8495 19.3866 16.834 19.3454 16.834 19.3068C16.834 19.2155 15.5458 13.0841 15.5167 13.0367C15.5027 13.0139 14.299 13.0006 12.2472 13.0006H9L9.01906 13.074Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_5027_40419" x="-16" y="-10" width="72" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="6"/>
-<feGaussianBlur stdDeviation="8"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.105882 0 0 0 0 0.141176 0 0 0 0 0.172549 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5027_40419"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5027_40419" result="shape"/>
-</filter>
-<clipPath id="clip0_5027_40419">
-<rect width="40" height="45" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-    `;
+        <g clip-path="url(#clip0_5027_40419)">
+        <g filter="url(#filter0_d_5027_40419)">
+        <path d="M26.2223 39.0131C34.2215 36.3969 40 28.8733 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 28.8713 5.77586 36.3935 13.7722 39.0113L14.0344 39.1104C16.766 40.1421 18.9334 42.2818 20 45C21.0666 42.2818 23.2338 40.142 25.9654 39.1102L26.2223 39.0131Z" fill="white"/>
+        </g>
+        <circle cx="20" cy="20" r="18" fill="#0554F8"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.01906 13.074C9.02956 13.1144 9.1255 13.5719 9.23228 14.0908C9.33905 14.6097 9.50491 15.4121 9.60081 15.8738L9.77523 16.7134L12.0488 16.7321L14.3223 16.7507L14.1781 16.8019C13.9017 16.9 12.1424 17.5615 12.1314 17.5715C12.1253 17.577 12.2792 18.3013 12.4734 19.1811C13.0875 21.9635 14.0894 26.4771 14.1683 26.8164L14.2441 27.1429H16.925H19.6059L19.6468 26.9283C19.6692 26.8103 19.8895 25.5469 20.1363 24.1209C20.3831 22.6948 20.5922 21.5208 20.601 21.512C20.6097 21.5031 20.6216 21.5029 20.6272 21.5114C20.6328 21.52 20.7842 22.2658 20.9635 23.1688C21.3496 25.1129 21.7179 26.9413 21.7472 27.0589L21.7681 27.1429H24.4354C26.0777 27.1429 27.1112 27.1292 27.1246 27.1074C27.1365 27.088 27.2035 26.7899 27.2735 26.4451C27.3434 26.1003 27.4938 25.3648 27.6076 24.8107C27.7215 24.2566 27.8464 23.6437 27.8852 23.4487C27.924 23.2537 28.0577 22.5989 28.1823 21.9934C28.3069 21.388 28.432 20.7751 28.4604 20.6314C28.4887 20.4878 28.6053 19.9169 28.7196 19.3627C28.8338 18.8086 28.959 18.1957 28.9978 18.0008C29.0367 17.8058 29.1704 17.1509 29.2949 16.5455C29.4195 15.9401 29.5446 15.3272 29.5729 15.1835C29.6012 15.0398 29.7089 14.5118 29.8122 14.0101C29.9155 13.5084 30 13.0759 30 13.0489V13L27.8776 13.0096L25.7552 13.0193L25.7125 13.2245C25.689 13.3374 25.6335 13.6312 25.5892 13.8775C25.5449 14.1238 25.4765 14.4932 25.4372 14.6984C25.3638 15.0814 25.1739 16.1008 25.0096 16.9933C24.9586 17.2703 24.9013 17.5726 24.8823 17.6649C24.8633 17.7573 24.7878 18.1603 24.7146 18.5605C24.573 19.3342 24.5507 19.4338 24.5254 19.4082C24.5165 19.3993 24.1279 17.9581 23.6618 16.2056L22.8143 13.0193L20.695 13.0096L18.5758 13L18.5404 13.0843C18.5209 13.1306 18.4282 13.4708 18.3344 13.8402C18.2406 14.2096 18.1077 14.7301 18.0389 14.9969C17.9701 15.2637 17.8202 15.8514 17.7056 16.3029C16.8798 19.5582 16.9152 19.4275 16.8683 19.3983C16.8495 19.3866 16.834 19.3454 16.834 19.3068C16.834 19.2155 15.5458 13.0841 15.5167 13.0367C15.5027 13.0139 14.299 13.0006 12.2472 13.0006H9L9.01906 13.074Z" fill="white"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_5027_40419" x="-16" y="-10" width="72" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="6"/>
+        <feGaussianBlur stdDeviation="8"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.105882 0 0 0 0 0.141176 0 0 0 0 0.172549 0 0 0 0.1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5027_40419"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5027_40419" result="shape"/>
+        </filter>
+        <clipPath id="clip0_5027_40419">
+        <rect width="40" height="45" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+          `;
       const marker = new YMapMarker({ coordinates: coords }, markerElement);
       map.addChild(marker);
 
@@ -6931,6 +6930,7 @@
       const title = item.querySelector('.contacts-item__title')?.innerText || '';
       const sticker = item.querySelector('.contacts-item__sticker')?.outerHTML || '';
       const phone = item.dataset.phone || '';
+      const id = item.dataset.id || '';
       const metro = item.querySelector('.contacts-item__option--metro')?.innerText || '';
       const address = item.querySelector('.contacts-item__option--adress')?.innerText || '';
       const type = item.querySelector('.contacts-item__type')?.innerText || '';
@@ -6965,7 +6965,7 @@
           <svg><use xlink:href="img/sprite.svg#star"></use></svg>${rating}
         </div>
       </div>
-      <button class="contacts-item__button button button--blue button--lit">ПОДРОБНЕЕ</button>
+      <button data-micromodal-trigger="contact-detail-${id}" class="contacts-item__button button button--blue button--lit">ПОДРОБНЕЕ</button>
     </div>
   `;
     }
@@ -7017,8 +7017,21 @@
       if (!popup.contains(e.target)) hidePopup();
     });
     popup.addEventListener('click', (e) => {
-      if (e.target.classList.contains('popup-card__close') || e.target.classList.contains('popup-card__close-icon')) hidePopup();
+      if (e.target.classList.contains('popup-card__close') || e.target.classList.contains('popup-card__close-icon')) {
+        hidePopup();
+        return;
+      }
+
+      const modalButton = e.target.closest('[data-micromodal-trigger]');
+      if (modalButton) {
+        const modalId = modalButton.getAttribute('data-micromodal-trigger');
+        if (modalId) {
+          MicroModal.show(modalId);
+        }
+      }
     });
+
+
   });
 </script>
 
@@ -7048,7 +7061,8 @@
                 локации:
               </div>
               <div class="contacts__list" data-simplebar data-simplebar-auto-hide="false">
-                <div class="contacts-item" data-coords="60.798465,56.838011" data-phone="+7 (917)-111-11-11">
+                <div class="contacts-item" data-id="1" data-coords="60.798465,56.838011"
+                  data-phone="+7 (917)-111-11-11">
                   <img src="img/pin.svg" alt="">
                   <div class="contacts-item__content">
                     <div class="contacts-item__head">
@@ -7086,7 +7100,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="contacts-item" data-coords="60.698465,56.388011" data-phone="+7 (917)-111-11-11">
+                <div class="contacts-item" data-id="2" data-coords="60.698465,56.388011"
+                  data-phone="+7 (917)-111-11-11">
                   <img src="img/pin.svg" alt="">
                   <div class="contacts-item__content">
                     <div class="contacts-item__head">
@@ -7124,7 +7139,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="contacts-item" data-coords="60.591465,56.831011" data-phone="+7 (917)-111-11-11">
+                <div class="contacts-item" data-id="1" data-coords="60.591465,56.831011"
+                  data-phone="+7 (917)-111-11-11">
                   <img src="img/pin.svg" alt="">
                   <div class="contacts-item__content">
                     <div class="contacts-item__head">
@@ -7160,7 +7176,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="contacts-item" data-coords="60.597465,56.888011" data-phone="+7 (917)-111-11-11">
+                <div class="contacts-item" data-id="2" data-coords="60.597465,56.888011"
+                  data-phone="+7 (917)-111-11-11">
                   <img src="img/pin.svg" alt="">
                   <div class="contacts-item__content">
                     <div class="contacts-item__head">
@@ -7199,7 +7216,8 @@
                   </div>
                 </div>
 
-                <div class="contacts-item" data-coords="60.598465,56.838011" data-phone="+7 (917)-111-11-11">
+                <div class="contacts-item" data-id="1" data-coords="60.598465,56.838011"
+                  data-phone="+7 (917)-111-11-11">
                   <img src="img/pin.svg" alt="">
                   <div class="contacts-item__content">
                     <div class="contacts-item__head">
@@ -7302,7 +7320,8 @@
                 </div>
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button data-micromodal-trigger="contact-detail-1"
+                  class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -7368,7 +7387,8 @@
 
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button class="button contacts-grid-item__button button--blue button--lit"
+                  data-micromodal-trigger="contact-detail-2">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -7439,7 +7459,8 @@
                 </div>
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button class="button contacts-grid-item__button button--blue button--lit"
+                  data-micromodal-trigger="contact-detail-1">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -7510,7 +7531,8 @@
                 </div>
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button class="button contacts-grid-item__button button--blue button--lit"
+                  data-micromodal-trigger="contact-detail-1">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -7582,7 +7604,8 @@
                 </div>
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button class="button contacts-grid-item__button button--blue button--lit"
+                  data-micromodal-trigger="contact-detail-1">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -7656,7 +7679,8 @@
                 </div>
               </div>
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button class="button contacts-grid-item__button button--blue button--lit"
+                  data-micromodal-trigger="contact-detail-2">подробнее</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park

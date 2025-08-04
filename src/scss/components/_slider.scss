@@ -43,6 +43,10 @@
         transform: rotate(180deg);
       }
     }
+    &--center {
+      margin-top: 0;
+      transform: translateY(-50%);
+    }
     svg {
       height: 1.5rem;
       width: 1.5rem;

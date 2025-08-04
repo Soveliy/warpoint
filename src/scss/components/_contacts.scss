@@ -432,6 +432,10 @@
     padding: 32px 16px;
     border-radius: 8px;
   }
+  &--no-padding {
+    padding: 0;
+    width: 100%;
+  }
   &__sticker {
     position: absolute;
     top: 16px;
@@ -451,6 +455,12 @@
     &--soon {
       background: #da1e28;
       color: #fff;
+    }
+    &--static-right {
+      position: static;
+      margin-left: auto;
+      width: max-content;
+      margin-bottom: 4px;
     }
   }
   &__title {

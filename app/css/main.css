@@ -131,6 +131,10 @@ a {
   position: relative;
 }
 
+html.with-fancybox body.hide-scrollbar {
+  margin-right: 0;
+}
+
 /* stylelint-disable */
 /* stylelint-disable */
 .custom-checkbox__field:checked + .custom-checkbox__content::after {
@@ -1816,6 +1820,12 @@ select.select-default {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+.slider__arrow--center {
+  margin-top: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .slider__arrow svg {
   height: 1.5rem;
@@ -4583,6 +4593,10 @@ select.select-default {
     border-radius: 8px;
   }
 }
+.contacts-grid-item--no-padding {
+  padding: 0;
+  width: 100%;
+}
 .contacts-grid-item__sticker {
   position: absolute;
   top: 16px;
@@ -4603,6 +4617,14 @@ select.select-default {
 .contacts-grid-item__sticker--soon {
   background: #da1e28;
   color: #fff;
+}
+.contacts-grid-item__sticker--static-right {
+  position: static;
+  margin-left: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 4px;
 }
 .contacts-grid-item__title {
   margin-bottom: 1rem;
@@ -6025,31 +6047,58 @@ select.select-default {
 }
 
 .modal__container {
-  padding: 2.5rem;
-  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: auto;
+  background-color: transparent;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+}
+.modal__wrap {
+  position: relative;
+  border-radius: 12px;
   width: 96%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 600px;
-  width: 96%;
   background: #1c1e22;
+  pointer-events: all;
+  margin: auto;
 }
-.modal__container--with-footer {
+@media (max-width: 1024px) {
+  .modal__wrap {
+    padding: 24px 16px;
+    width: 100%;
+  }
+}
+.modal__wrap--with-footer {
   padding-bottom: 0;
 }
-.modal__container--quiz {
+.modal__wrap--quiz {
   max-width: 1384px;
 }
-.modal__container--quiz-form {
+.modal__wrap--quiz-form {
   display: none;
   max-width: 1119px;
 }
-.modal__container--thanks {
+.modal__wrap--thanks {
   max-width: 832px;
 }
+.modal__wrap--contacts-detail {
+  max-width: 1120px;
+  padding: 104px 24px 32px 24px;
+}
 @media (max-width: 1024px) {
-  .modal__container {
-    padding: 24px 16px;
+  .modal__wrap--contacts-detail {
+    padding: 2rem 1rem;
   }
 }
 .modal__title {
@@ -6648,6 +6697,79 @@ select.select-default {
   .thanks__desc {
     font-size: 16px;
   }
+}
+
+.contact-detail__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4rem;
+}
+@media (max-width: 1024px) {
+  .contact-detail__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .contact-detail__row {
+    gap: 2rem;
+  }
+}
+.contact-detail__left {
+  max-width: 40rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 1024px) {
+  .contact-detail__left {
+    width: 100%;
+  }
+}
+.contact-detail__left img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.contact-detail__top-slider {
+  position: relative;
+  padding: 0 3.75rem;
+}
+@media (max-width: 1024px) {
+  .contact-detail__top-slider {
+    padding: 0;
+  }
+}
+.contact-detail__top-slider a {
+  display: block;
+  height: 23.5rem;
+}
+.contact-detail__main-slider, .contact-detail__previews-slider {
+  position: relative;
+  overflow: hidden;
+}
+.contact-detail__previews-slider {
+  margin: 2rem 3.75rem 0;
+}
+@media (max-width: 1024px) {
+  .contact-detail__previews-slider {
+    margin: 1.5rem 0 0;
+  }
+}
+.contact-detail__previews-slider .swiper-slide {
+  height: 2rem;
+}
+.contact-detail__previews-slider .swiper-slide img {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .up-btn {
