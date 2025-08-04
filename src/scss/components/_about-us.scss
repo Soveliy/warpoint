@@ -30,13 +30,11 @@
     z-index: -1;
     @include small-tablet {
       bottom: 22rem;
+      display: none;
     }
 
     &--mob {
       display: none;
-      @include small-tablet {
-        display: block;
-      }
     }
     &--desk {
       @include small-tablet {
