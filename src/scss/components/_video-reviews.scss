@@ -5,16 +5,24 @@
     position: relative;
     padding: 0 6rem 2.5rem;
     @include tablet {
-      padding: 0 3rem;
+      padding: 3.6rem 0 0;
     }
   }
   &__slider {
     overflow: hidden;
+    @include mobile {
+      overflow: visible;
+    }
     .slider__arrow {
       @include tablet {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 3rem;
+        width: 3rem;
         display: flex;
+        top: 62px;
+        &.slider__arrow--prev {
+          left: auto;
+          right: 4.625rem;
+        }
       }
     }
   }

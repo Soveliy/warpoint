@@ -93,7 +93,7 @@ var swiper = new Swiper(".service-reviews__slider", {
 });
 
 var swiper = new Swiper(".video-reviews__slider", {
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   spaceBetween: 24,
 
   navigation: {

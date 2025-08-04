@@ -3307,19 +3307,29 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .video-reviews__wrap {
-    padding: 0 3rem;
+    padding: 3.6rem 0 0;
   }
 }
 .video-reviews__slider {
   overflow: hidden;
 }
+@media (max-width: 576px) {
+  .video-reviews__slider {
+    overflow: visible;
+  }
+}
 @media (max-width: 1024px) {
   .video-reviews__slider .slider__arrow {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 62px;
+  }
+  .video-reviews__slider .slider__arrow.slider__arrow--prev {
+    left: auto;
+    right: 4.625rem;
   }
 }
 

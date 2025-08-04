@@ -17242,7 +17242,7 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".service-review
   }
 });
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".video-reviews__slider", {
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   spaceBetween: 24,
   navigation: {
     nextEl: ".video-reviews__slider .slider__arrow--next",
