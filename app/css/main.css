@@ -3307,11 +3307,20 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .video-reviews__wrap {
-    padding: 0;
+    padding: 0 3rem;
   }
 }
 .video-reviews__slider {
   overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .video-reviews__slider .slider__arrow {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .video-reviews-item {
