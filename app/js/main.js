@@ -16650,26 +16650,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/_vars.js":
-/*!*************************!*\
-  !*** ./src/js/_vars.js ***!
-  \*************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  windowEl: window,
-  documentEl: document,
-  htmlEl: document.documentElement,
-  bodyEl: document.body
-});
-
-/***/ }),
-
 /***/ "./src/js/components/accordeon.js":
 /*!****************************************!*\
   !*** ./src/js/components/accordeon.js ***!
@@ -17192,7 +17172,7 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider",
   }
 });
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".formats__slider", {
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   spaceBetween: 24,
   breakpoints: {
     // when window width is >= 320px
@@ -17300,7 +17280,7 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".video-reviews_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
-/* harmony import */ var _functions_mobile_check_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/mobile-check.js */ "./src/js/functions/mobile-check.js");
+/* harmony import */ var _functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/check-viewport.js */ "./src/js/functions/check-viewport.js");
 
 
 
@@ -17312,7 +17292,7 @@ const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts", 
 });
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
-if ((0,_functions_mobile_check_js__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)()) {
+if (!(0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isDesktop)()) {
   const secondTabBtn = tabs.tabsBtns[1];
   const firstTabBtn = tabs.tabsBtns[0];
   if (secondTabBtn && firstTabBtn) {
@@ -17418,30 +17398,36 @@ const rules3 = [{
 
 /***/ }),
 
-/***/ "./src/js/functions/mobile-check.js":
-/*!******************************************!*\
-  !*** ./src/js/functions/mobile-check.js ***!
-  \******************************************/
+/***/ "./src/js/functions/check-viewport.js":
+/*!********************************************!*\
+  !*** ./src/js/functions/check-viewport.js ***!
+  \********************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   mobileCheck: () => (/* binding */ mobileCheck)
+/* harmony export */   isDesktop: () => (/* binding */ isDesktop),
+/* harmony export */   isMobile: () => (/* binding */ isMobile),
+/* harmony export */   isTablet: () => (/* binding */ isTablet)
 /* harmony export */ });
-/* harmony import */ var _vars_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars.js */ "./src/js/_vars.js");
-
-const mobileCheck = () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  if (/android/i.test(userAgent)) {
-    _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
-    return "Android";
+const isMobile = () => {
+  if (window.innerWidth < 768) {
+    return true;
   }
-  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
-    return "iOS";
+  return false;
+};
+const isTablet = () => {
+  if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+    return true;
   }
-  return "unknown";
+  return false;
+};
+const isDesktop = () => {
+  if (window.innerWidth > 1025) {
+    return true;
+  }
+  return false;
 };
 
 /***/ }),

@@ -9,10 +9,21 @@
     gap: 32px;
     height: 54px;
     margin-bottom: 32px;
+    @include tablet {
+      margin-bottom: 1rem;
+      gap: 24px;
+      height: 48px;
+      margin-top: -8px;
+    }
     .slider__arrow {
       position: static;
       transform: none;
       margin-top: 0;
+      display: flex;
+      @include tablet {
+        height: 48px;
+        width: 48px;
+      }
     }
   }
   &__slider-pagination {
@@ -41,7 +52,7 @@
     height: 333px;
     flex-shrink: 0;
     @include tablet {
-      height: 14.1875rem;
+      height: 13.1875rem;
     }
     img {
       display: block;

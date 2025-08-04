@@ -1,5 +1,5 @@
 import GraphTabs from "graph-tabs";
-import { mobileCheck } from "../functions/mobile-check.js";
+import { isDesktop } from "../functions/check-viewport.js";
 
 // Инициализация табов
 const tabs = new GraphTabs("contacts", {
@@ -9,7 +9,7 @@ const tabs = new GraphTabs("contacts", {
 });
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
-if (mobileCheck()) {
+if (!isDesktop()) {
   const secondTabBtn = tabs.tabsBtns[1];
   const firstTabBtn = tabs.tabsBtns[0];
   if (secondTabBtn && firstTabBtn) {

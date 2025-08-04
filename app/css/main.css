@@ -3092,12 +3092,29 @@ select.select-default {
   height: 54px;
   margin-bottom: 32px;
 }
+@media (max-width: 1024px) {
+  .formats__arrows {
+    margin-bottom: 1rem;
+    gap: 24px;
+    height: 48px;
+    margin-top: -8px;
+  }
+}
 .formats__arrows .slider__arrow {
   position: static;
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
   margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .formats__arrows .slider__arrow {
+    height: 48px;
+    width: 48px;
+  }
 }
 .formats__slider-pagination {
   display: none;
@@ -3136,7 +3153,7 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .formats-item__image {
-    height: 14.1875rem;
+    height: 13.1875rem;
   }
 }
 .formats-item__image img {

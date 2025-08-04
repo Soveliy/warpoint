@@ -17,7 +17,7 @@ var swiper = new Swiper(".news__slider", {
 });
 
 var swiper = new Swiper(".formats__slider", {
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   spaceBetween: 24,
   breakpoints: {
     // when window width is >= 320px
