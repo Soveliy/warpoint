@@ -190,11 +190,12 @@
     width: 100%;
     @include tablet {
       font-size: 14px;
-      padding: 16.5px 30px;
+      padding: 1rem 1.5rem;
       color: #ececee;
       line-height: 1;
       max-width: 500px;
       margin: 1rem auto 0;
+      border-radius: 0.75rem;
     }
     &--mobile {
       display: none;

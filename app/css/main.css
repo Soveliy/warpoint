@@ -544,8 +544,9 @@ a {
 }
 @media (max-width: 1024px) {
   .button--medium {
-    padding: 0.6875rem 1.5rem;
+    padding: 1rem 1.5rem;
     font-size: 14px;
+    line-height: 100%;
   }
 }
 .button--big {
@@ -556,9 +557,11 @@ a {
 }
 @media (max-width: 1024px) {
   .button--big {
-    padding: 1.25rem;
-    font-size: 0.875rem;
+    padding: 1rem 1.5rem;
+    font-size: 14px;
     letter-spacing: 0.06em;
+    line-height: 100%;
+    border-radius: 0.75rem;
   }
 }
 .button--lit {
@@ -569,8 +572,9 @@ a {
 }
 @media (max-width: 1024px) {
   .button--lit {
-    font-size: 0.875rem;
-    line-height: 133%;
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+    line-height: 100%;
     letter-spacing: 0.06em;
   }
 }
@@ -2358,11 +2362,12 @@ select.select-default {
 @media (max-width: 1024px) {
   .games-section-item__button {
     font-size: 14px;
-    padding: 16.5px 30px;
+    padding: 1rem 1.5rem;
     color: #ececee;
     line-height: 1;
     max-width: 500px;
     margin: 1rem auto 0;
+    border-radius: 0.75rem;
   }
 }
 .games-section-item__button--mobile {
@@ -3876,11 +3881,11 @@ select.select-default {
 @media (max-width: 1024px) {
   .faq__button {
     margin-top: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .faq__button {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 1rem 1.5rem;
+    letter-spacing: 0.06rem;
+    border-radius: 0.75rem;
   }
 }
 

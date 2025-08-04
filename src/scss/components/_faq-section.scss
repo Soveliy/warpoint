@@ -28,9 +28,11 @@
     border-radius: 16px;
     @include tablet {
       margin-top: 24px;
-    }
-    @include small-tablet {
-      font-size: 13px;
+      font-size: 14px;
+      line-height: 100%;
+      padding: 1rem 1.5rem;
+      letter-spacing: 0.06rem;
+      border-radius: 0.75rem;
     }
   }
 }

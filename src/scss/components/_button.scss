@@ -28,8 +28,9 @@
     padding: 1.4375rem;
     border-radius: 10px;
     @include tablet {
-      padding: 0.6875rem 1.5rem;
+      padding: 1rem 1.5rem;
       font-size: 14px;
+      line-height: 100%;
     }
   }
   &--big {
@@ -38,9 +39,11 @@
     line-height: 133%;
     border-radius: 1rem;
     @include tablet {
-      padding: 1.25rem;
-      font-size: 0.875rem;
+      padding: 1rem 1.5rem;
+      font-size: 14px;
       letter-spacing: 0.06em;
+      line-height: 100%;
+      border-radius: 0.75rem;
     }
   }
   &--lit {
@@ -49,8 +52,9 @@
     line-height: 150%;
     border-radius: 0.75rem;
     @include tablet {
-      font-size: 0.875rem;
-      line-height: 133%;
+      padding: 1rem 1.5rem;
+      font-size: 14px;
+      line-height: 100%;
       letter-spacing: 0.06em;
     }
   }
