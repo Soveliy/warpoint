@@ -1889,8 +1889,10 @@ select.select-default {
 }
 @media (max-width: 768px) {
   .about-us-item {
-    max-width: 358px;
-    padding-left: 4rem;
+    max-width: 100%;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 12px;
+    background-color: #1c1e22;
   }
 }
 .about-us-item:nth-child(2n) {
@@ -1921,7 +1923,13 @@ select.select-default {
 }
 @media (max-width: 768px) {
   .about-us-item__picture {
-    height: 232px;
+    height: 450px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us-item__picture {
+    height: 31.25rem;
   }
 }
 .about-us-item__picture:after {
@@ -1961,8 +1969,16 @@ select.select-default {
   .about-us-item__title {
     font-size: 1.5rem;
     line-height: 133%;
-    top: 5.75rem;
+    top: 12.75rem;
+    padding: 0 36px;
+    text-align: center;
+    width: 100%;
     left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .about-us-item__title {
+    top: 14.75rem;
   }
 }
 .about-us-item__desc {
@@ -1982,6 +1998,7 @@ select.select-default {
   .about-us-item__desc {
     font-size: 16px;
     line-height: normal;
+    color: #c4c8cf;
   }
 }
 .about-us-item__desc:before {
@@ -2005,12 +2022,7 @@ select.select-default {
 }
 @media (max-width: 768px) {
   .about-us-item__desc:before {
-    font-size: 48px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: -4rem;
+    display: none;
   }
 }
 
