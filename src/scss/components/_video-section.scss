@@ -10,6 +10,18 @@
     display: block;
     padding-bottom: 56.5%;
     border-radius: 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        360deg,
+        rgba(20, 21, 23, 0.25) 2.4%,
+        rgba(20, 21, 23, 0.85) 25.48%,
+        rgba(20, 21, 23, 0) 100%
+      );
+    }
   }
   &__poster {
     position: absolute;
@@ -48,5 +60,12 @@
     @include tablet {
       font-size: 14px;
     }
+  }
+  &__button {
+    display: block;
+    margin: 40px auto 0;
+    max-width: 326px;
+    width: 100%;
+    text-align: center;
   }
 }

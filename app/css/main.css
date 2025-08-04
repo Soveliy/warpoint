@@ -2037,6 +2037,14 @@ select.select-default {
   padding-bottom: 56.5%;
   border-radius: 20px;
 }
+.video-section__link:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2.4%, rgba(20, 21, 23, 0.25)), color-stop(25.48%, rgba(20, 21, 23, 0.85)), to(rgba(20, 21, 23, 0)));
+  background: linear-gradient(360deg, rgba(20, 21, 23, 0.25) 2.4%, rgba(20, 21, 23, 0.85) 25.48%, rgba(20, 21, 23, 0) 100%);
+}
 .video-section__poster {
   position: absolute;
   top: 0;
@@ -2082,6 +2090,13 @@ select.select-default {
   .video-section__play-text {
     font-size: 14px;
   }
+}
+.video-section__button {
+  display: block;
+  margin: 40px auto 0;
+  max-width: 326px;
+  width: 100%;
+  text-align: center;
 }
 
 .games-section__list {
