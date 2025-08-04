@@ -6648,4 +6648,52 @@ select.select-default {
   .thanks__desc {
     font-size: 16px;
   }
+}
+
+.up-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 1px solid #0043ce;
+  z-index: 50;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: rgb(5, 84, 248);
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.up-btn.js-active {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+@media (any-hover: hover) {
+  .up-btn:hover:hover {
+    background: rgba(5, 84, 248, 0.2);
+    border-color: #0554f8;
+  }
+}
+.up-btn:active {
+  background: rgba(5, 84, 248, 0.5);
+  border-color: #0554f8;
+}
+.up-btn svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }/*# sourceMappingURL=main.css.map */

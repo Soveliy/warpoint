@@ -1,0 +1,40 @@
+@use "./mixins/disable-mob-hover" as *;
+.up-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 1px solid #0043ce;
+  z-index: 50;
+  transition: 0.3s;
+  background-color: rgba(5, 84, 248, 1);
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  &.js-active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+  @include hover {
+    &:hover {
+      background: rgba(5, 84, 248, 0.2);
+      border-color: #0554f8;
+    }
+  }
+  &:active {
+    background: rgba(5, 84, 248, 0.5);
+    border-color: #0554f8;
+  }
+
+  svg {
+    transform: rotate(90deg);
+  }
+}

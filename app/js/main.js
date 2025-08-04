@@ -16627,6 +16627,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fixed_header_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/fixed_header.js */ "./src/js/components/fixed_header.js");
 /* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
 /* harmony import */ var _components_calendar_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/calendar.js */ "./src/js/components/calendar.js");
+/* harmony import */ var _components_to_up_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/to-up.js */ "./src/js/components/to-up.js");
 // import "./components/hero_slider.js";
 
 
@@ -16640,6 +16641,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import "./components/burger.js";
+
 
 
 
@@ -17302,6 +17304,33 @@ if (!(0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isDesktop)()) 
 
 // Вторая группа табов
 const tabsAuth = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("auth");
+
+/***/ }),
+
+/***/ "./src/js/components/to-up.js":
+/*!************************************!*\
+  !*** ./src/js/components/to-up.js ***!
+  \************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const upBtn = document.querySelector(".up-btn");
+if (upBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      upBtn.classList.add("js-active");
+    } else {
+      upBtn.classList.remove("js-active");
+    }
+  });
+  upBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
 
 /***/ }),
 

@@ -17,4 +17,5 @@ import "./components/location.js";
 import "./components/fixed_header.js";
 import "./components/quiz.js";
 import "./components/calendar.js";
+import "./components/to-up.js";
 // import "./components/animation.js";
