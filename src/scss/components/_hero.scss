@@ -52,6 +52,17 @@
       );
     }
   }
+  &__selects {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 1rem;
+    }
+  }
   &__content {
     position: relative;
     z-index: 100;
@@ -72,7 +83,7 @@
       padding-bottom: 5rem;
     }
     @include mobile {
-      padding: 117px 0 24px;
+      padding: 12.5rem 0 1.5rem;
       min-height: inherit;
       text-wrap: balance;
     }
@@ -119,7 +130,7 @@
   }
   &__button {
     @include mobile {
-      max-width: 350px;
+      max-width: 500px;
       width: 100%;
       margin: 0 auto;
     }

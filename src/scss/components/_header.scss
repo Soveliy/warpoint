@@ -10,7 +10,7 @@
   &--fixed {
     transform: translateY(-65px);
     @include tablet {
-      transform: translateY(-32px);
+      transform: translateY(-40px);
     }
   }
   @include tablet {
