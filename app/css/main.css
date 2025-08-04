@@ -4615,8 +4615,8 @@ select.select-default {
 }
 @media (max-width: 576px) {
   .contacts-grid-item__title {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 .contacts-grid-item__options {
