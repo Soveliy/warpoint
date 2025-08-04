@@ -1,4 +1,5 @@
 // import "./components/hero_slider.js";
+import "./components/preloader.js";
 import "./components/modals.js";
 // import "./components/marquee_slider.js";
 import "./components/mask.js";

@@ -906,7 +906,7 @@ class GraphTabs {
   }
 
   switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
-    newTab.focus();
+    newTab.focus({ preventScroll: true });
     newTab.removeAttribute('tabindex');
     newTab.setAttribute('aria-selected', 'true');
 
@@ -925,6 +925,7 @@ class GraphTabs {
     this.options.isChanged(this);
   }
 }
+
 
 /***/ }),
 
@@ -16610,22 +16611,24 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_modals_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/modals.js */ "./src/js/components/modals.js");
-/* harmony import */ var _components_mask_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/mask.js */ "./src/js/components/mask.js");
-/* harmony import */ var _components_accordeon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordeon.js */ "./src/js/components/accordeon.js");
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu.js */ "./src/js/components/menu.js");
-/* harmony import */ var _components_selects_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/selects.js */ "./src/js/components/selects.js");
-/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
-/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_scrollbar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/scrollbar.js */ "./src/js/components/scrollbar.js");
-/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
-/* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
-/* harmony import */ var _components_location_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/location.js */ "./src/js/components/location.js");
-/* harmony import */ var _components_fixed_header_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/fixed_header.js */ "./src/js/components/fixed_header.js");
-/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
-/* harmony import */ var _components_calendar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/calendar.js */ "./src/js/components/calendar.js");
+/* harmony import */ var _components_preloader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/preloader.js */ "./src/js/components/preloader.js");
+/* harmony import */ var _components_modals_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modals.js */ "./src/js/components/modals.js");
+/* harmony import */ var _components_mask_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mask.js */ "./src/js/components/mask.js");
+/* harmony import */ var _components_accordeon_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordeon.js */ "./src/js/components/accordeon.js");
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu.js */ "./src/js/components/menu.js");
+/* harmony import */ var _components_selects_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/selects.js */ "./src/js/components/selects.js");
+/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
+/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_scrollbar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/scrollbar.js */ "./src/js/components/scrollbar.js");
+/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
+/* harmony import */ var _components_filters_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters.js */ "./src/js/components/filters.js");
+/* harmony import */ var _components_location_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/location.js */ "./src/js/components/location.js");
+/* harmony import */ var _components_fixed_header_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/fixed_header.js */ "./src/js/components/fixed_header.js");
+/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
+/* harmony import */ var _components_calendar_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/calendar.js */ "./src/js/components/calendar.js");
 // import "./components/hero_slider.js";
+
 
 // import "./components/marquee_slider.js";
 
@@ -16644,6 +16647,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import "./components/animation.js";
+
+/***/ }),
+
+/***/ "./src/js/_vars.js":
+/*!*************************!*\
+  !*** ./src/js/_vars.js ***!
+  \*************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  windowEl: window,
+  documentEl: document,
+  htmlEl: document.documentElement,
+  bodyEl: document.body
+});
 
 /***/ }),
 
@@ -16961,6 +16984,35 @@ if (modalHead) {
 
 /***/ }),
 
+/***/ "./src/js/components/preloader.js":
+/*!****************************************!*\
+  !*** ./src/js/components/preloader.js ***!
+  \****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const preloader = document.querySelector(".preloader");
+const $preloaderNum = document.querySelector(".preloader__status-number");
+let preloaderTimeoutDuration = 10;
+let preloaderPercent = 0;
+function updatePreloader() {
+  if (preloaderPercent < 100) {
+    preloaderPercent += 1;
+    $preloaderNum.innerHTML = preloaderPercent;
+    if (preloaderPercent >= 100) {
+      preloader.classList.add("preloader--end");
+      setTimeout(() => {
+        preloader.classList.add("is-hidden");
+      }, 800);
+    }
+    setTimeout(updatePreloader, preloaderTimeoutDuration);
+  }
+}
+updatePreloader();
+
+/***/ }),
+
 /***/ "./src/js/components/quiz.js":
 /*!***********************************!*\
   !*** ./src/js/components/quiz.js ***!
@@ -17248,8 +17300,27 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".video-reviews_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
+/* harmony import */ var _functions_mobile_check_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/mobile-check.js */ "./src/js/functions/mobile-check.js");
 
-const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts");
+
+
+// Инициализация табов
+const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts", {
+  isChanged: instance => {
+    // Дополнительное поведение при смене вкладки, если нужно
+  }
+});
+
+// Если мобильное устройство — активируем вторую вкладку (индекс 1)
+if ((0,_functions_mobile_check_js__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)()) {
+  const secondTabBtn = tabs.tabsBtns[1];
+  const firstTabBtn = tabs.tabsBtns[0];
+  if (secondTabBtn && firstTabBtn) {
+    tabs.switchTabs(secondTabBtn, firstTabBtn);
+  }
+}
+
+// Вторая группа табов
 const tabsAuth = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("auth");
 
 /***/ }),
@@ -17344,6 +17415,34 @@ const rules3 = [{
   }]
 }];
 (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_1__.validateForms)(".quiz__form", rules3, [], afterForm);
+
+/***/ }),
+
+/***/ "./src/js/functions/mobile-check.js":
+/*!******************************************!*\
+  !*** ./src/js/functions/mobile-check.js ***!
+  \******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mobileCheck: () => (/* binding */ mobileCheck)
+/* harmony export */ });
+/* harmony import */ var _vars_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars.js */ "./src/js/_vars.js");
+
+const mobileCheck = () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  if (/android/i.test(userAgent)) {
+    _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
+    return "Android";
+  }
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
+    return "iOS";
+  }
+  return "unknown";
+};
 
 /***/ }),
 

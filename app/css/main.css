@@ -149,6 +149,61 @@ a {
 
 /* stylelint-disable */
 /* stylelint-disable value-keyword-case */
+.preloader.is-hidden {
+  display: none;
+}
+
+.preloader {
+  height: 100dvh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 6000;
+  background-color: #1f1d21;
+  width: 100%;
+  -webkit-transition: 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transition: 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.preloader--end {
+  width: 0;
+}
+
+.preloader--end .preloader__logo,
+.preloader--end .preloader__status {
+  opacity: 0;
+}
+
+.preloader__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.preloader__status {
+  font-family: var(--font-family);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 20vh;
+  line-height: 20vh;
+  letter-spacing: -0.55556vh;
+  color: #fff;
+  opacity: 0.03;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .header {
   position: fixed;
   top: 0.5rem;
