@@ -2121,6 +2121,10 @@ select.select-default {
   height: 100%;
   width: 100%;
 }
+.video-section__poster img {
+  display: block;
+  width: 100%;
+}
 @media (max-width: 1024px) {
   .video-section__play-button svg {
     height: 3rem;
