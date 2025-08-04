@@ -17162,7 +17162,15 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs]);
 const initSliders = () => {
-  const NewsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider", {
+  const banerlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".main-slider", {
+    slidesPerView: 1,
+    spaceBetween: 64,
+    navigation: {
+      nextEl: ".main-slider .slider__arrow--next",
+      prevEl: ".main-slider .slider__arrow--prev"
+    }
+  });
+  const newsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__slider", {
     slidesPerView: 1,
     spaceBetween: 12,
     navigation: {

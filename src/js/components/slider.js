@@ -4,7 +4,17 @@ import { Navigation, Pagination, Thumbs } from "swiper/modules";
 Swiper.use([Navigation, Pagination, Thumbs]);
 
 const initSliders = () => {
-  const NewsSlider = new Swiper(".news__slider", {
+  const banerlider = new Swiper(".main-slider", {
+    slidesPerView: 1,
+    spaceBetween: 64,
+
+    navigation: {
+      nextEl: ".main-slider .slider__arrow--next",
+      prevEl: ".main-slider .slider__arrow--prev",
+    },
+  });
+
+  const newsSlider = new Swiper(".news__slider", {
     slidesPerView: 1,
     spaceBetween: 12,
 
