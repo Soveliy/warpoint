@@ -30440,6 +30440,20 @@ document.querySelectorAll(".games-section-item").forEach(item => {
     }
   });
 });
+const videoPoster = document.querySelector(".video-section__link img");
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(videoPoster, {
+  yPercent: -15,
+  ease: "none"
+}, {
+  yPercent: 15,
+  ease: "none",
+  scrollTrigger: {
+    trigger: videoPoster,
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
 
 /***/ }),
 

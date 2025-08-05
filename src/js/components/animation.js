@@ -15,7 +15,6 @@ gsap.registerPlugin(
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 document.querySelectorAll(".games-section-item").forEach((item) => {
   const title = item.querySelector(".games-section-item__title");
   const subtitle = item.querySelector(".games-section-item__subtitle");
@@ -188,3 +187,23 @@ document.querySelectorAll(".games-section-item").forEach((item) => {
     },
   });
 });
+
+const videoPoster = document.querySelector(".video-section__link img");
+
+gsap.fromTo(
+  videoPoster,
+  {
+    yPercent: -15,
+    ease: "none",
+  },
+  {
+    yPercent: 15,
+    ease: "none",
+    scrollTrigger: {
+      trigger: videoPoster,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  }
+);
