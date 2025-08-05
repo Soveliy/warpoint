@@ -30466,11 +30466,14 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(videoPoster, {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
+/* harmony import */ var _functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/check-viewport.js */ "./src/js/functions/check-viewport.js");
+
 
 
 new air_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"]("#calendar", {
-  position: "right center"
+  position: "right center",
   // inline: true,
+  isMobile: (0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isMobile)()
 });
 
 /***/ }),

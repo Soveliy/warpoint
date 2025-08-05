@@ -27,6 +27,7 @@
     @include tablet {
       padding: 24px 16px;
       width: 100%;
+      overflow: auto;
     }
     &--with-footer {
       padding-bottom: 0;
@@ -136,4 +137,8 @@
 
 .air-datepicker-global-container {
   z-index: 15000;
+}
+
+.air-datepicker--pointer {
+  display: none;
 }

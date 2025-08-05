@@ -1018,6 +1018,11 @@ html.with-fancybox body.hide-scrollbar {
   transform: translateY(-50%);
   fill: #0554f8;
 }
+@media (max-width: 1024px) {
+  .input__icon {
+    right: 0;
+  }
+}
 
 .radio {
   cursor: pointer;
@@ -6132,6 +6137,7 @@ select.select-default {
   .modal__wrap {
     padding: 24px 16px;
     width: 100%;
+    overflow: auto;
   }
 }
 .modal__wrap--with-footer {
@@ -6242,6 +6248,10 @@ select.select-default {
 
 .air-datepicker-global-container {
   z-index: 15000;
+}
+
+.air-datepicker--pointer {
+  display: none;
 }
 
 .auth-service {
@@ -6487,6 +6497,7 @@ select.select-default {
   justify-content: space-between;
   margin-bottom: 1.5rem;
   padding: 1.125rem 0;
+  gap: 0.75rem;
 }
 .quiz-item__body {
   min-height: 29.125rem;
@@ -6528,6 +6539,8 @@ select.select-default {
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .quiz-item__status-title {
   font-family: var(--third-family);
@@ -6693,9 +6706,18 @@ select.select-default {
   background: #282d37;
 }
 
+.air-datepicker-cell.-selected-,
+.air-datepicker-cell.-selected-.-current- {
+  background: #282d37;
+}
+
 .air-datepicker-body--cells.-months- .air-datepicker-cell,
 .air-datepicker-body--cells.-years- .air-datepicker-cell {
   width: 100%;
+}
+
+.air-datepicker-cell.-current- {
+  color: inherit;
 }
 
 .air-datepicker-nav--title {
@@ -6711,6 +6733,11 @@ select.select-default {
 .air-datepicker-cell {
   height: 64px;
   width: 55px;
+}
+
+.air-datepicker-cell.-selected-,
+.air-datepicker-cell.-selected-.-current- {
+  background-color: #0043ce;
 }
 
 .thanks__row {

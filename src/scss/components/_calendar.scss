@@ -44,11 +44,18 @@
 .air-datepicker-nav--action:hover {
   background: #282d37;
 }
+.air-datepicker-cell.-selected-,
+.air-datepicker-cell.-selected-.-current- {
+  background: #282d37;
+}
 .air-datepicker-body--cells.-months-,
 .air-datepicker-body--cells.-years- {
   .air-datepicker-cell {
     width: 100%;
   }
+}
+.air-datepicker-cell.-current- {
+  color: inherit;
 }
 .air-datepicker-nav--title {
   font-family: var(--font-family);
@@ -62,4 +69,9 @@
 .air-datepicker-cell {
   height: 64px;
   width: 55px;
+}
+
+.air-datepicker-cell.-selected-,
+.air-datepicker-cell.-selected-.-current- {
+  background-color: #0043ce;
 }
