@@ -15,49 +15,176 @@ gsap.registerPlugin(
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set(".hero__title, .hero__desc, .hero__slide-wrap, .hero__button", {
-  opacity: 0,
-  y: 60,
-  filter: "blur(10px)",
-});
 
-const headerTl = gsap.timeline();
+document.querySelectorAll(".games-section-item").forEach((item) => {
+  const title = item.querySelector(".games-section-item__title");
+  const subtitle = item.querySelector(".games-section-item__subtitle");
+  const desc = item.querySelector(".games-section-item__desc");
+  const button = item.querySelector(".games-section-item__button");
+  const video = item.querySelector(".games-section-item__video-wrap");
+  const media = item.querySelector(".games-section-item__video-wrap img");
+  const options = item.querySelectorAll(".games-section-item__option");
 
-setTimeout(() => {
-  headerTl
-    .to(".hero__title, .hero__desc, .hero__slide-wrap, .hero__button", {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      duration: 0.6,
-      ease: "expo.out",
-      stagger: 0.12,
+  const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
+
+  tl.from(item, {
+    opacity: 0,
+    y: 60,
+    duration: 0.8,
+    ease: "power4.out",
+  });
+
+  if (isMobile) {
+    tl.from(title, {
+      opacity: 0,
+      x: -40,
+      duration: 0.4,
+      ease: "power3.out",
     })
-    .to(
-      ".hero__button",
+      .from(
+        subtitle,
+        {
+          opacity: 0,
+          x: -30,
+          duration: 0.4,
+          ease: "power3.out",
+        },
+        "-=0.3"
+      )
+      .from(
+        desc,
+        {
+          opacity: 0,
+          x: -20,
+          duration: 0.4,
+          ease: "power3.out",
+        },
+        "-=0.3"
+      )
+      .from(
+        options,
+        {
+          opacity: 0,
+          y: 20,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+        },
+        "-=0.3"
+      )
+      .from(
+        button,
+        {
+          opacity: 0,
+          scale: 0.8,
+          duration: 0.4,
+          ease: "back.out(1.7)",
+        },
+        "-=0.2"
+      );
+  } else {
+    tl.from(
+      options,
       {
-        scale: 1.05,
-        boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-        duration: 0.15,
-        yoyo: true,
-        repeat: 1,
-        ease: "power1.inOut",
+        opacity: 0,
+        y: 20,
+        stagger: 0.1,
+        duration: 0.5,
+        ease: "back.out(1.7)",
       },
       "-=0.4"
     )
-    .to(
-      ".hero__picture",
-      { opacity: 1, duration: 0.7, ease: "back.out(1.7)" },
-      "-=0.3"
-    )
-    .to(
-      ".header",
+      .from(
+        title,
+        {
+          opacity: 0,
+          x: -50,
+          duration: 0.5,
+          ease: "power3.out",
+        },
+        "-=0.3"
+      )
+      .from(
+        subtitle,
+        {
+          opacity: 0,
+          x: -40,
+          duration: 0.4,
+          ease: "power3.out",
+        },
+        "-=0.35"
+      )
+      .from(
+        desc,
+        {
+          opacity: 0,
+          x: -30,
+          duration: 0.5,
+          ease: "power3.out",
+        },
+        "-=0.35"
+      )
+      .from(
+        button,
+        {
+          opacity: 0,
+          scale: 0.8,
+          duration: 0.4,
+          ease: "back.out(1.7)",
+        },
+        "-=0.3"
+      );
+  }
+
+  // Параллакс изображения
+  if (media) {
+    // gsap.to(media, {
+    //   yPercent: -15,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: item,
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true,
+    //   },
+    // });
+    gsap.fromTo(
+      media,
       {
-        y: 0,
-        opacity: 1,
-        duration: 0.7,
-        ease: "expo.out",
+        yPercent: -15,
+        ease: "none",
       },
-      "-=0.4"
+      {
+        yPercent: 15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
     );
-}, 100);
+  }
+
+  // Наклон карточки при скролле
+  gsap.to(item, {
+    rotationX: 5,
+    rotationY: -5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: item,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
