@@ -30324,7 +30324,8 @@ document.querySelectorAll(".games-section-item").forEach(item => {
   const title = item.querySelector(".games-section-item__title");
   const subtitle = item.querySelector(".games-section-item__subtitle");
   const desc = item.querySelector(".games-section-item__desc");
-  const button = item.querySelector(".games-section-item__button");
+  const buttonD = item.querySelector(".games-section-item__button-container--desk");
+  const buttonM = item.querySelector(".games-section-item__button-container--mobile");
   const video = item.querySelector(".games-section-item__video-wrap");
   const media = item.querySelector(".games-section-item__video-wrap img");
   const options = item.querySelectorAll(".games-section-item__option");
@@ -30364,9 +30365,9 @@ document.querySelectorAll(".games-section-item").forEach(item => {
       stagger: 0.1,
       duration: 0.5,
       ease: "back.out(1.7)"
-    }, "-=0.3").from(button, {
+    }, "-=0.3").from(buttonM, {
       opacity: 0,
-      scale: 0.8,
+      x: -30,
       duration: 0.4,
       ease: "back.out(1.7)"
     }, "-=0.2");
@@ -30392,9 +30393,9 @@ document.querySelectorAll(".games-section-item").forEach(item => {
       x: -30,
       duration: 0.5,
       ease: "power3.out"
-    }, "-=0.35").from(button, {
+    }, "-=0.35").from(buttonD, {
       opacity: 0,
-      scale: 0.8,
+      x: -30,
       duration: 0.4,
       ease: "back.out(1.7)"
     }, "-=0.3");

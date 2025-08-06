@@ -187,18 +187,12 @@
       font-size: 16px;
     }
   }
-  &__button {
+  &__button-container {
     margin-top: 40px;
-    max-width: 20.25rem;
-    width: 100%;
     @include tablet {
-      font-size: 14px;
-      padding: 1rem 1.5rem;
-      color: #ececee;
-      line-height: 1;
-      max-width: 500px;
       margin: 1rem auto 0;
-      border-radius: 0.75rem;
+      max-width: 500px;
+      width: 100%;
     }
     &--mobile {
       display: none;
@@ -210,6 +204,20 @@
       @include tablet {
         display: none;
       }
+    }
+  }
+  &__button {
+    max-width: 20.25rem;
+    width: 100%;
+    display: block;
+    @include tablet {
+      font-size: 14px;
+      padding: 1rem 1.5rem;
+      color: #ececee;
+      line-height: 1;
+      max-width: 500px;
+
+      border-radius: 0.75rem;
     }
   }
   &__video-wrap {
