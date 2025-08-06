@@ -58,7 +58,7 @@ const rules2 = [
 ];
 const rules4 = [
   {
-    ruleSelector: "#r-email",
+    ruleSelector: "#r-name",
     rules: [
       {
         rule: "minLength",
