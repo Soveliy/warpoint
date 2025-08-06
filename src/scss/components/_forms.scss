@@ -101,6 +101,9 @@
     font-size: 20px;
     line-height: 120%;
     color: #c4c8cf;
+    @include tablet {
+      font-size: 16px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -112,6 +115,10 @@
       border: 2px solid #c4c8cf;
       box-sizing: border-box;
       border-radius: 50%;
+      @include tablet {
+        height: 20px;
+        width: 20px;
+      }
     }
     &:after {
       content: "";
@@ -126,6 +133,11 @@
       border-radius: 50%;
       opacity: 0;
       transition: 0.3s;
+      @include tablet {
+        height: 10px;
+        width: 10px;
+        left: 5px;
+      }
     }
   }
 }
@@ -135,7 +147,7 @@
     gap: 1.5rem;
     @include small-tablet {
       flex-direction: column;
-      gap: 24px;
+      gap: 1rem;
     }
   }
 }
