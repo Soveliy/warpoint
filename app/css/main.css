@@ -2860,6 +2860,8 @@ select.select-default {
   font-size: 22px;
   line-height: 121%;
   color: #c4c8cf;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 @media (max-width: 768px) {
   .pick-up__title {

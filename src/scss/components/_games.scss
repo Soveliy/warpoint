@@ -216,6 +216,8 @@
     font-size: 22px;
     line-height: 121%;
     color: #c4c8cf;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
     @include small-tablet {
       font-size: 18px;
     }
