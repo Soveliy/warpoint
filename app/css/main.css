@@ -1642,6 +1642,11 @@ select.select-default {
     margin: 0 auto 1rem;
   }
 }
+.hero__selects .select__caption {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .hero__selects .select__icon {
   margin: 0;
 }
