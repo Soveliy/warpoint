@@ -22,9 +22,10 @@
   }
   &__left {
     max-width: 50rem;
-    flex-shrink: 0;
+    min-width: 1px;
     @include tablet {
       width: 100%;
+      margin: 0 auto;
     }
     img {
       display: block;

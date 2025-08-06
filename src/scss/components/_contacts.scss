@@ -428,16 +428,19 @@
 .contacts-grid-item {
   position: relative;
   border-radius: 6px;
-  padding: 40px 16px 16px 32px;
+  padding: 2.5rem 1rem 1rem 2rem;
   background: rgba(28, 30, 34, 0.9);
   box-sizing: border-box;
   @include tablet {
-    padding: 32px 16px;
+    padding: 2rem 1rem;
     border-radius: 8px;
   }
   &--no-padding {
     padding: 16px 12px;
     width: 100%;
+    max-width: 24.5rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
     @include tablet {
       padding: 0;
       position: static;

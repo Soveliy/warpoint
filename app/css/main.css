@@ -4734,20 +4734,25 @@ select.select-default {
 .contacts-grid-item {
   position: relative;
   border-radius: 6px;
-  padding: 40px 16px 16px 32px;
+  padding: 2.5rem 1rem 1rem 2rem;
   background: rgba(28, 30, 34, 0.9);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media (max-width: 1024px) {
   .contacts-grid-item {
-    padding: 32px 16px;
+    padding: 2rem 1rem;
     border-radius: 8px;
   }
 }
 .contacts-grid-item--no-padding {
   padding: 16px 12px;
   width: 100%;
+  max-width: 24.5rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 @media (max-width: 1024px) {
   .contacts-grid-item--no-padding {
@@ -7229,12 +7234,12 @@ select.select-default {
 }
 .contact-detail__left {
   max-width: 50rem;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  min-width: 1px;
 }
 @media (max-width: 1024px) {
   .contact-detail__left {
     width: 100%;
+    margin: 0 auto;
   }
 }
 .contact-detail__left img {
