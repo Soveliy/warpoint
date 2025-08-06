@@ -4137,19 +4137,19 @@ select.select-default {
 }
 
 .qusetion-form {
-  padding: 64px 40px;
+  padding: 4rem 2.5rem;
   background: #1c1e22;
   border-radius: 18px;
 }
 @media (max-width: 1400px) {
   .qusetion-form {
-    padding: 40px 24px;
+    padding: 2.5rem 1.5rem;
   }
 }
 @media (max-width: 1024px) {
   .qusetion-form {
-    padding: 40px 16px;
-    border-radius: 8px;
+    padding: 2.5rem z;
+    border-radius: 0.5rem;
   }
 }
 .qusetion-form__title {
@@ -4164,7 +4164,7 @@ select.select-default {
 }
 @media (max-width: 768px) {
   .qusetion-form__title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .qusetion-form__subtitle {
@@ -4179,7 +4179,7 @@ select.select-default {
 }
 @media (max-width: 768px) {
   .qusetion-form__subtitle {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 }
 .qusetion-form__items {
@@ -4192,14 +4192,20 @@ select.select-default {
   flex-direction: column;
 }
 .qusetion-form__input + .qusetion-form__input {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 .qusetion-form__checkbox {
-  margin-top: 24px;
+  margin-top: 1.5rem;
   display: block;
 }
 .qusetion-form__button {
-  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .qusetion-form__button {
+    margin-top: 2.25rem;
+    padding: 1.25rem 1.5rem;
+  }
 }
 
 .contacts {
