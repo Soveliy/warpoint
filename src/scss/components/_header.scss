@@ -2,20 +2,20 @@
 @use "./mixins/breakpoint" as *;
 .header {
   position: fixed;
-  top: 0.5rem;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 5000;
   transition: 0.3s;
   &--fixed {
-    transform: translateY(-65px);
+    transform: translateY(-4.5rem);
     .main-menu {
-      margin-top: 3.5625rem;
+      margin-top: 4.5rem;
     }
     @include tablet {
-      transform: translateY(-40px);
+      transform: translateY(-3rem);
       .main-menu {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
       }
     }
   }
@@ -96,8 +96,9 @@
 }
 
 .header-top {
+  padding: 1.25rem 0;
   @include tablet {
-    padding: 4px 24px;
+    padding: 0.625rem 1.5rem;
   }
   &__row {
     display: flex;
@@ -138,11 +139,9 @@
 }
 .header-nav {
   padding: 0.75rem 1.5rem;
-  margin-top: 1.5rem;
   background-color: #141517;
   border-radius: 12px;
   @include tablet {
-    margin-top: 4px;
     padding: 10px 24px;
     border-radius: 8px;
   }

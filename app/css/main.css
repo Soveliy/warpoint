@@ -210,7 +210,7 @@ html.with-fancybox body.hide-scrollbar {
 
 .header {
   position: fixed;
-  top: 0.5rem;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 5000;
@@ -218,21 +218,21 @@ html.with-fancybox body.hide-scrollbar {
   transition: 0.3s;
 }
 .header--fixed {
-  -webkit-transform: translateY(-65px);
-  -ms-transform: translateY(-65px);
-  transform: translateY(-65px);
+  -webkit-transform: translateY(-4.5rem);
+  -ms-transform: translateY(-4.5rem);
+  transform: translateY(-4.5rem);
 }
 .header--fixed .main-menu {
-  margin-top: 3.5625rem;
+  margin-top: 4.5rem;
 }
 @media (max-width: 1024px) {
   .header--fixed {
-    -webkit-transform: translateY(-40px);
-    -ms-transform: translateY(-40px);
-    transform: translateY(-40px);
+    -webkit-transform: translateY(-3rem);
+    -ms-transform: translateY(-3rem);
+    transform: translateY(-3rem);
   }
   .header--fixed .main-menu {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
 }
 @media (max-width: 1024px) {
@@ -336,9 +336,12 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
+.header-top {
+  padding: 1.25rem 0;
+}
 @media (max-width: 1024px) {
   .header-top {
-    padding: 4px 24px;
+    padding: 0.625rem 1.5rem;
   }
 }
 .header-top__row {
@@ -402,13 +405,11 @@ html.with-fancybox body.hide-scrollbar {
 
 .header-nav {
   padding: 0.75rem 1.5rem;
-  margin-top: 1.5rem;
   background-color: #141517;
   border-radius: 12px;
 }
 @media (max-width: 1024px) {
   .header-nav {
-    margin-top: 4px;
     padding: 10px 24px;
     border-radius: 8px;
   }
