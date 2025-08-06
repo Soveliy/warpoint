@@ -3084,11 +3084,12 @@ select.select-default {
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 1rem;
-  margin: 24px 0 29px;
+  margin: 1.5rem 0 1.8125rem;
 }
 @media (max-width: 1024px) {
   .tarifs-item__prices {
-    margin: 10px 0 40px;
+    min-height: 6.5rem;
+    margin: 0.625rem 0 2.5rem;
   }
 }
 .tarifs-item__price-item {
