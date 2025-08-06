@@ -273,8 +273,8 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width: 1024px) {
   .header__auth svg {
-    height: 16px;
-    width: 14px;
+    height: 18px;
+    width: 18px;
   }
 }
 @media (max-width: 1024px) {
@@ -1414,6 +1414,24 @@ select.select-default {
   align-items: center;
   gap: 1rem;
 }
+@media (max-width: 1024px) {
+  .social__list {
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 1024px) {
+  .social__item--desk {
+    display: none;
+  }
+}
+.social__item--mob {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .social__item--mob {
+    display: block;
+  }
+}
 .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1432,6 +1450,11 @@ select.select-default {
   fill: var(--light-grey);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media (max-width: 1024px) {
+  .social__icon {
+    fill: #8f96a3;
+  }
 }
 
 .section--default {
@@ -1595,6 +1618,9 @@ select.select-default {
     margin: 0 auto 1rem;
   }
 }
+.hero__selects .select__icon {
+  margin: 0;
+}
 .hero__content {
   position: relative;
   z-index: 100;
@@ -1671,6 +1697,11 @@ select.select-default {
   .hero__desc {
     font-size: 16px;
     margin: 1rem 0 10rem;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__button {
+    padding: 1.25rem 1.5rem;
   }
 }
 @media (max-width: 576px) {
