@@ -678,6 +678,12 @@ html.with-fancybox body.hide-scrollbar {
   transition: 0.3s;
   z-index: 1000;
 }
+@media (max-width: 1024px) {
+  .main-menu {
+    width: 100%;
+    max-width: 576px;
+  }
+}
 .main-menu.js-active {
   opacity: 1;
   -webkit-transform: none;
