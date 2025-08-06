@@ -1,15 +1,21 @@
+@use "./mixins/disable-mob-hover" as *;
+
 @use "./mixins/breakpoint" as *;
 .modal {
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     overflow: auto;
     background-color: transparent;
     pointer-events: none;
 
     height: 100%;
     width: 100%;
+    @include tablet {
+      pointer-events: all;
+    }
     &--quiz-form {
       display: none;
     }
@@ -42,8 +48,8 @@
       max-width: 52rem;
     }
     &--contacts-detail {
-      max-width: 70rem;
-      padding: 6.5rem 1.5rem 2rem 1.5rem;
+      max-width: 78.125rem;
+      padding: 16px 16px 24px;
       @include tablet {
         padding: 2rem 1rem;
       }
@@ -88,6 +94,32 @@
     cursor: pointer;
     right: 24px;
     top: 20px;
+    transition: 0.3s;
+    svg {
+      transition: 0.3s;
+    }
+    @include hover {
+      &:hover {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+    &--outside {
+      top: 0;
+      right: -34px;
+      border-radius: 50%;
+
+      border: 0.7px solid rgba(158, 158, 158, 0.3);
+      @include hover {
+        &:hover {
+          border-color: #0554f8;
+        }
+      }
+      @include tablet {
+        display: none;
+      }
+    }
     @include tablet {
       right: 5px;
       top: 5px;
@@ -95,9 +127,40 @@
       width: 1.5rem;
     }
   }
+  &__swipe {
+    position: relative;
+    height: 25px;
+    padding-top: 4px;
+    margin-top: -2rem;
+    &::after {
+      content: "";
+      display: block;
+      border-radius: 25px;
+      width: 48px;
+      height: 5px;
+      background: #30343b;
+      margin: 0 auto;
+    }
+  }
 
   &__header {
     margin-bottom: 2.5rem;
+  }
+  &__footer {
+    display: none;
+    @include tablet {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      padding: 12px 24px;
+      background: #25272d;
+    }
+  }
+  &__footer-button {
+    width: 100%;
   }
 }
 
@@ -141,4 +204,8 @@
 
 .air-datepicker--pointer {
   display: none;
+}
+
+#reservation {
+  z-index: 11000;
 }

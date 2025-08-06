@@ -49,10 +49,21 @@
     </ul>
     <svg class="about-us__path about-us__path--desk" width="1836" height="1589" viewBox="0 0 1836 1589" fill="none"
       xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Маска будет "рисовать" путь, а под ней остаётся пунктир -->
+        <mask id="about-path-mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+          <path id="revealPath"
+            d="M856.721 1C1631.63 116.028 1889.54 202.853 1825.68 491.619C1720.15 968.735 -72.4054 577.725 3.33327 1194.29C66.0417 1704.78 1025.5 1586.89 1195.54 1548.88"
+            stroke="white" stroke-width="4" stroke-linecap="round" fill="none" />
+        </mask>
+      </defs>
+
+      <!-- Видимый пунктирный путь, который будет открываться маской -->
       <path
         d="M856.721 1C1631.63 116.028 1889.54 202.853 1825.68 491.619C1720.15 968.735 -72.4054 577.725 3.33327 1194.29C66.0417 1704.78 1025.5 1586.89 1195.54 1548.88"
-        stroke="white" stroke-opacity="0.1" stroke-dasharray="12 12" />
+        stroke="white" stroke-opacity="0.1" stroke-width="2" stroke-dasharray="12 12" mask="url(#about-path-mask)" />
     </svg>
+
     <svg class="about-us__path about-us__path--mob" width="371" height="1027" viewBox="0 0 371 1027" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path

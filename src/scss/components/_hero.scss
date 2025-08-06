@@ -59,7 +59,7 @@
       flex-direction: column;
       gap: 1rem;
       width: 100%;
-      max-width: 500px;
+      // max-width: 500px;
       margin: 0 auto 1rem;
     }
   }
@@ -112,25 +112,22 @@
     }
   }
   &__desc {
-    margin: 24px 0 104px 0;
+    margin: 1.5rem 0 6.5rem 0;
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 121%;
     text-align: center;
     color: #c4c8cf;
     text-wrap: balance;
     @include tablet {
-      margin: 16px 0 24px;
       font-size: 16px;
-    }
-    @include mobile {
-      margin: 16px 0 246px;
+      margin: 1rem 0 10rem;
     }
   }
   &__button {
     @include mobile {
-      max-width: 500px;
+      max-width: 31.25rem;
       width: 100%;
       margin: 0 auto;
     }

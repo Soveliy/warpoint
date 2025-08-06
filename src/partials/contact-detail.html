@@ -2,13 +2,89 @@
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container modal__container--contacts-detail" role="dialog" aria-modal="true">
       <div class="modal__wrap modal__wrap--contacts-detail">
-        <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+        <button class="modal__close modal__close--outside btn-reset" aria-label="Закрыть окно" data-micromodal-close>
           <svg class="modal__close-icon" data-micromodal-close>
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>
+        <div class="modal__swipe" data-micromodal-close>
+
+        </div>
         <div class="contact-detail">
           <div class="contact-detail__row">
+            <div class="contacts-grid-item__body contacts-grid-item__body--mobile">
+              <div class="contacts-grid-item__options contacts-grid-item__options--desktop">
+                <div class="contacts-grid-item__option contacts-grid-item__option--adress">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#marker"></use>
+                  </svg>
+                  Ходынский бульвар&nbsp;4
+                </div>
+                <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#metro"></use>
+                  </svg>
+                  ЦСКА
+                </div>
+                <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  +7&nbsp;917&nbsp;111-11-11
+                </a>
+                <a href="mailto:ekb4@warpoint.ru" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#mail"></use>
+                  </svg>
+                  ekb4@warpoint.ru
+                </a>
+
+                <div class="contacts-grid-item__option contacts-grid-item__option--parking">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#parking"></use>
+                  </svg>
+                  Бесплатная парковка 3 часа
+                </div>
+
+              </div>
+              <div class="contacts-grid-item__buttons">
+                <a href="#" class="button contacts-grid-item__button button--rounded button--lit">проложить
+                  маршрут</a>
+                <a href="#" class="button button--rounded button--lit">3D-тур</a>
+              </div>
+              <div class="contacts-grid-item__schedule">
+
+                <div class="contacts-grid-item__schedule-title">
+                  время работы:
+                </div>
+
+                <div class="contacts-grid-item__schedule-item">
+                  <span>ПН-ЧТ</span>
+                  12:00&nbsp;— 22:00
+                </div>
+                <div class="contacts-grid-item__schedule-item">
+                  <span>ПТ-ВС</span>
+                  12:00&nbsp;— 23:00
+                </div>
+                <div class="contacts-grid-item__reviews">
+                  <div class="contacts-grid-item__schedule-title">
+                    Отзывы:
+                  </div>
+                  <div class="contacts-grid-item__reviews-grid">
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/yandex.png" alt="">
+                    </a>
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/google.svg" alt="">
+                    </a>
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/2gis.png" alt="">
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
             <div class="contact-detail__left">
               <div class="contact-detail__top-slider">
                 <div class="contact-detail__main-slider">
@@ -71,12 +147,12 @@
                   </div>
 
                 </div>
-                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--lit slider__arrow--prev">
+                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--big slider__arrow--prev">
                   <svg>
                     <use xlink:href="img/sprite.svg#chevron-left"></use>
                   </svg>
                 </div>
-                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--lit slider__arrow--next">
+                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--big slider__arrow--next">
                   <svg>
                     <use xlink:href="img/sprite.svg#chevron-left"></use>
                   </svg>
@@ -141,51 +217,119 @@
               <div class="contacts-grid-item__title">
                 ТРЦ «АВИАпарк»
               </div>
-
-              <div class="contacts-grid-item__options">
-                <div class="contacts-grid-item__option contacts-grid-item__option--adress">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#marker"></use>
-                  </svg>
-                  Ходынский бульвар&nbsp;4
+              <div class="contacts-grid-item__info contacts-grid-item__info--mob">
+                <div class="contacts-grid-item__type contacts-grid-item__type--park">
+                  park
                 </div>
-                <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                <div class="contacts-grid-item__rating">
                   <svg>
-                    <use xlink:href="img/sprite.svg#metro"></use>
+                    <use xlink:href="img/sprite.svg#star"></use>
                   </svg>
-                  ЦСКА
+                  5.0
                 </div>
-                <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#marker"></use>
-                  </svg>
-                  +7&nbsp;917&nbsp;111-11-11
-                </a>
-                <div class="contacts-grid-item__option contacts-grid-item__option--parking">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#parking"></use>
-                  </svg>
-                  Бесплатная парковка 3 часа
-                </div>
-
               </div>
-              <div class="contacts-grid-item__schedule">
-                <div class="contacts-grid-item__schedule-title">
-                  время работы:
-                </div>
-
-                <div class="contacts-grid-item__schedule-item">
-                  <span>ПН-ЧТ</span>
-                  12:00&nbsp;— 22:00
-                </div>
-                <div class="contacts-grid-item__schedule-item">
-                  <span>ПТ-ВС</span>
-                  12:00&nbsp;— 23:00
-                </div>
-
+              <div class="contacts-grid-item__size">
+                <span>S:</span>700 м²
               </div>
+              <div class="contacts-grid-item__zones">
+                <span class="contacts-grid-item__zones-title">Игровые зоны:</span>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-arena</span>
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-room</span>
+                  х2
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-EXTREME</span>
+
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>RACING ZONE</span>
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>LOUNGE ZONE</span>
+                </div>
+              </div>
+              <div class="contacts-grid-item__body contacts-grid-item__body--desktop">
+                <div class="contacts-grid-item__options contacts-grid-item__options--desktop">
+                  <div class="contacts-grid-item__option contacts-grid-item__option--adress">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#marker"></use>
+                    </svg>
+                    Ходынский бульвар&nbsp;4
+                  </div>
+                  <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#metro"></use>
+                    </svg>
+                    ЦСКА
+                  </div>
+                  <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                    +7&nbsp;917&nbsp;111-11-11
+                  </a>
+                  <a href="mailto:ekb4@warpoint.ru"
+                    class="contacts-grid-item__option contacts-grid-item__option--phone">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg>
+                    ekb4@warpoint.ru
+                  </a>
+
+                  <div class="contacts-grid-item__option contacts-grid-item__option--parking">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#parking"></use>
+                    </svg>
+                    Бесплатная парковка 3 часа
+                  </div>
+
+                </div>
+                <div class="contacts-grid-item__buttons">
+                  <a href="#" class="button contacts-grid-item__button button--rounded button--lit">проложить
+                    маршрут</a>
+                  <a href="#" class="button button--rounded button--lit">3D-тур</a>
+                </div>
+                <div class="contacts-grid-item__schedule">
+
+                  <div class="contacts-grid-item__schedule-title">
+                    время работы:
+                  </div>
+
+                  <div class="contacts-grid-item__schedule-item">
+                    <span>ПН-ЧТ</span>
+                    12:00&nbsp;— 22:00
+                  </div>
+                  <div class="contacts-grid-item__schedule-item">
+                    <span>ПТ-ВС</span>
+                    12:00&nbsp;— 23:00
+                  </div>
+                  <div class="contacts-grid-item__reviews">
+                    <div class="contacts-grid-item__schedule-title">
+                      Отзывы:
+                    </div>
+                    <div class="contacts-grid-item__reviews-grid">
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/yandex.png" alt="">
+                      </a>
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/google.svg" alt="">
+                      </a>
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/2gis.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button data-micromodal-trigger="reservation"
+                  class="button contacts-grid-item__button button--blue button--lit">забронировать игру</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -207,6 +351,12 @@
 
 
     </div>
+    <div class="modal__footer">
+      <button data-micromodal-trigger="reservation" class="button modal__footer-button button--blue button--lit">
+        забронировать игру
+      </button>
+    </div>
+
   </div>
 </div>
 
@@ -214,13 +364,89 @@
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container modal__container--contacts-detail" role="dialog" aria-modal="true">
       <div class="modal__wrap modal__wrap--contacts-detail">
-        <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+        <button class="modal__close modal__close--outside btn-reset" aria-label="Закрыть окно" data-micromodal-close>
           <svg class="modal__close-icon" data-micromodal-close>
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>
+        <div class="modal__head" data-micromodal-close>
+
+        </div>
         <div class="contact-detail">
           <div class="contact-detail__row">
+            <div class="contacts-grid-item__body contacts-grid-item__body--mobile">
+              <div class="contacts-grid-item__options contacts-grid-item__options--desktop">
+                <div class="contacts-grid-item__option contacts-grid-item__option--adress">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#marker"></use>
+                  </svg>
+                  Ходынский бульвар&nbsp;4
+                </div>
+                <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#metro"></use>
+                  </svg>
+                  ЦСКА
+                </div>
+                <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  +7&nbsp;917&nbsp;111-11-11
+                </a>
+                <a href="mailto:ekb4@warpoint.ru" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#mail"></use>
+                  </svg>
+                  ekb4@warpoint.ru
+                </a>
+
+                <div class="contacts-grid-item__option contacts-grid-item__option--parking">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#parking"></use>
+                  </svg>
+                  Бесплатная парковка 3 часа
+                </div>
+
+              </div>
+              <div class="contacts-grid-item__buttons">
+                <a href="#" class="button contacts-grid-item__button button--rounded button--lit">проложить
+                  маршрут</a>
+                <a href="#" class="button button--rounded button--lit">3D-тур</a>
+              </div>
+              <div class="contacts-grid-item__schedule">
+
+                <div class="contacts-grid-item__schedule-title">
+                  время работы:
+                </div>
+
+                <div class="contacts-grid-item__schedule-item">
+                  <span>ПН-ЧТ</span>
+                  12:00&nbsp;— 22:00
+                </div>
+                <div class="contacts-grid-item__schedule-item">
+                  <span>ПТ-ВС</span>
+                  12:00&nbsp;— 23:00
+                </div>
+                <div class="contacts-grid-item__reviews">
+                  <div class="contacts-grid-item__schedule-title">
+                    Отзывы:
+                  </div>
+                  <div class="contacts-grid-item__reviews-grid">
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/yandex.png" alt="">
+                    </a>
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/google.svg" alt="">
+                    </a>
+                    <a href="" class="contacts-grid-item__reviews-link">
+                      <img src="img/2gis.png" alt="">
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
             <div class="contact-detail__left">
               <div class="contact-detail__top-slider">
                 <div class="contact-detail__main-slider">
@@ -283,12 +509,12 @@
                   </div>
 
                 </div>
-                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--lit slider__arrow--prev">
+                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--big slider__arrow--prev">
                   <svg>
                     <use xlink:href="img/sprite.svg#chevron-left"></use>
                   </svg>
                 </div>
-                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--lit slider__arrow--next">
+                <div class="swiper-arrow slider__arrow slider__arrow--center slider__arrow--big slider__arrow--next">
                   <svg>
                     <use xlink:href="img/sprite.svg#chevron-left"></use>
                   </svg>
@@ -353,51 +579,119 @@
               <div class="contacts-grid-item__title">
                 ТРЦ «АВИАпарк»
               </div>
-
-              <div class="contacts-grid-item__options">
-                <div class="contacts-grid-item__option contacts-grid-item__option--adress">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#marker"></use>
-                  </svg>
-                  Ходынский бульвар&nbsp;4
+              <div class="contacts-grid-item__info contacts-grid-item__info--mob">
+                <div class="contacts-grid-item__type contacts-grid-item__type--park">
+                  park
                 </div>
-                <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                <div class="contacts-grid-item__rating">
                   <svg>
-                    <use xlink:href="img/sprite.svg#metro"></use>
+                    <use xlink:href="img/sprite.svg#star"></use>
                   </svg>
-                  ЦСКА
+                  5.0
                 </div>
-                <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#marker"></use>
-                  </svg>
-                  +7&nbsp;917&nbsp;111-11-11
-                </a>
-                <div class="contacts-grid-item__option contacts-grid-item__option--parking">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#parking"></use>
-                  </svg>
-                  Бесплатная парковка 3 часа
-                </div>
-
               </div>
-              <div class="contacts-grid-item__schedule">
-                <div class="contacts-grid-item__schedule-title">
-                  время работы:
-                </div>
-
-                <div class="contacts-grid-item__schedule-item">
-                  <span>ПН-ЧТ</span>
-                  12:00&nbsp;— 22:00
-                </div>
-                <div class="contacts-grid-item__schedule-item">
-                  <span>ПТ-ВС</span>
-                  12:00&nbsp;— 23:00
-                </div>
-
+              <div class="contacts-grid-item__size">
+                <span>S:</span>700 м²
               </div>
+              <div class="contacts-grid-item__zones">
+                <span class="contacts-grid-item__zones-title">Игровые зоны:</span>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-arena</span>
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-room</span>
+                  х2
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>vr-EXTREME</span>
+
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>RACING ZONE</span>
+                </div>
+                <div class="contacts-grid-item__zones-item">
+                  <span>LOUNGE ZONE</span>
+                </div>
+              </div>
+              <div class="contacts-grid-item__body contacts-grid-item__body--desktop">
+                <div class="contacts-grid-item__options contacts-grid-item__options--desktop">
+                  <div class="contacts-grid-item__option contacts-grid-item__option--adress">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#marker"></use>
+                    </svg>
+                    Ходынский бульвар&nbsp;4
+                  </div>
+                  <div class="contacts-grid-item__option contacts-grid-item__option--metro">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#metro"></use>
+                    </svg>
+                    ЦСКА
+                  </div>
+                  <a href="tel:+79171111111" class="contacts-grid-item__option contacts-grid-item__option--phone">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                    +7&nbsp;917&nbsp;111-11-11
+                  </a>
+                  <a href="mailto:ekb4@warpoint.ru"
+                    class="contacts-grid-item__option contacts-grid-item__option--phone">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg>
+                    ekb4@warpoint.ru
+                  </a>
+
+                  <div class="contacts-grid-item__option contacts-grid-item__option--parking">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#parking"></use>
+                    </svg>
+                    Бесплатная парковка 3 часа
+                  </div>
+
+                </div>
+                <div class="contacts-grid-item__buttons">
+                  <a href="#" class="button contacts-grid-item__button button--rounded button--lit">проложить
+                    маршрут</a>
+                  <a href="#" class="button button--rounded button--lit">3D-тур</a>
+                </div>
+                <div class="contacts-grid-item__schedule">
+
+                  <div class="contacts-grid-item__schedule-title">
+                    время работы:
+                  </div>
+
+                  <div class="contacts-grid-item__schedule-item">
+                    <span>ПН-ЧТ</span>
+                    12:00&nbsp;— 22:00
+                  </div>
+                  <div class="contacts-grid-item__schedule-item">
+                    <span>ПТ-ВС</span>
+                    12:00&nbsp;— 23:00
+                  </div>
+                  <div class="contacts-grid-item__reviews">
+                    <div class="contacts-grid-item__schedule-title">
+                      Отзывы:
+                    </div>
+                    <div class="contacts-grid-item__reviews-grid">
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/yandex.png" alt="">
+                      </a>
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/google.svg" alt="">
+                      </a>
+                      <a href="" class="contacts-grid-item__reviews-link">
+                        <img src="img/2gis.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
               <div class="contacts-grid-item__footer">
-                <button class="button contacts-grid-item__button button--blue button--lit">подробнее</button>
+                <button data-micromodal-trigger="reservation"
+                  class="button contacts-grid-item__button button--blue button--lit">забронировать игру</button>
                 <div class="contacts-grid-item__info">
                   <div class="contacts-grid-item__type contacts-grid-item__type--park">
                     park
@@ -419,5 +713,11 @@
 
 
     </div>
+    <div class="modal__footer">
+      <button data-micromodal-trigger="reservation" class="button modal__footer-button button--blue button--lit">
+        забронировать игру
+      </button>
+    </div>
+
   </div>
 </div>

@@ -21,9 +21,6 @@
   }
   @include tablet {
     top: 0;
-    .select__caption {
-      border: none;
-    }
   }
   .container {
     @include tablet {

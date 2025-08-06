@@ -1,4 +1,6 @@
 @use "./mixins/breakpoint" as *;
+@use "./mixins/disable-mob-hover" as *;
+
 .contacts {
   padding: 200px 0 0;
   background: #101114;
@@ -263,6 +265,7 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 5px;
+
     @include mobile {
       gap: 2px;
     }
@@ -433,8 +436,29 @@
     border-radius: 8px;
   }
   &--no-padding {
-    padding: 0;
+    padding: 16px 12px;
     width: 100%;
+    @include tablet {
+      padding: 0;
+      position: static;
+    }
+    .contacts-grid-item__option + .contacts-grid-item__option {
+      margin-top: 7px;
+    }
+    .contacts-grid-item__options {
+      min-height: inherit;
+    }
+    @include tablet {
+      .contacts-grid-item__footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #25272d;
+        border-radius: 0 0 24px 24px;
+        padding: 12px 24px;
+      }
+    }
   }
   &__sticker {
     position: absolute;
@@ -461,6 +485,9 @@
       margin-left: auto;
       width: max-content;
       margin-bottom: 4px;
+      @include tablet {
+        margin-left: 0;
+      }
     }
   }
   &__title {
@@ -479,6 +506,21 @@
   &__options {
     margin: 16px 0;
     min-height: 177px;
+  }
+  &__body {
+    width: 100%;
+    &--desktop {
+      @include tablet {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @include tablet {
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
   }
   &__option {
     display: flex;
@@ -505,31 +547,139 @@
     }
   }
   &__schedule {
+    position: relative;
     padding: 16px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     min-height: 210px;
     box-sizing: border-box;
   }
-  &__schedule-title {
+  &__reviews {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    @include tablet {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: static;
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 16px;
     margin-bottom: 1rem;
+    .button {
+      text-align: center;
+      &:not(.contacts-grid-item__button) {
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__size {
+    margin-bottom: 1rem;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 121%;
+    color: #8f96a3;
+    @include tablet {
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    span {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 133%;
+      text-transform: uppercase;
+      color: #5e6573;
+    }
+  }
+  &__zones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  &__zones-title {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
     color: #5e6573;
   }
+  &__zones-item {
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 12px;
+    color: #5e6573;
+    span {
+      display: block;
+      padding: 2px 4px;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 97%;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #719fff;
+      border-radius: 3px;
+      background: #30343b;
+    }
+  }
+  &__reviews-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  &__reviews-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        border-color: #0554f8;
+      }
+    }
+    img {
+      max-width: 1.5rem;
+    }
+  }
+  &__schedule-title {
+    margin-bottom: 1rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: #5e6573;
+  }
   &__schedule-item {
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 121%;
     text-transform: uppercase;
     color: #c4c8cf;
     span {
       text-transform: uppercase;
-      min-width: 64px;
-      margin-right: 16px;
+      min-width: 4rem;
+      margin-right: 1rem;
     }
     & + & {
       margin-top: 4px;
@@ -546,6 +696,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    &--mob {
+      display: none;
+      @include tablet {
+        gap: 5px;
+        position: absolute;
+        right: 24px;
+        top: 32px;
+        display: flex;
+      }
+    }
   }
   &__button {
     width: 100%;
@@ -574,6 +734,7 @@
     text-transform: uppercase;
     gap: 8px;
     color: #ececee;
+
     svg {
       height: 24px;
       width: 24px;

@@ -30399,19 +30399,7 @@ document.querySelectorAll(".games-section-item").forEach(item => {
       ease: "back.out(1.7)"
     }, "-=0.3");
   }
-
-  // Параллакс изображения
   if (media) {
-    // gsap.to(media, {
-    //   yPercent: -15,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: item,
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     scrub: true,
-    //   },
-    // });
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(media, {
       yPercent: -15,
       ease: "none"
@@ -30426,8 +30414,6 @@ document.querySelectorAll(".games-section-item").forEach(item => {
       }
     });
   }
-
-  // Наклон карточки при скролле
   gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(item, {
     rotationX: 5,
     rotationY: -5,
@@ -30453,6 +30439,82 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(videoPoster, {
     end: "bottom top",
     scrub: true
   }
+});
+const path = document.querySelector(".about-us__path--desk path");
+const pathLength = path.getTotalLength();
+
+// Настраиваем изначальное состояние
+path.style.strokeDasharray = pathLength;
+path.style.strokeDashoffset = pathLength;
+
+// Анимация при скролле
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(path, {
+  strokeDashoffset: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".about-us__path--desk",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true
+  }
+});
+document.querySelectorAll(".about-us-item").forEach(item => {
+  const picture = item.querySelector(".about-us-item__picture");
+  const pictureParallax = item.querySelector(".about-us-item__picture img");
+  const title = item.querySelector(".about-us-item__title");
+  const desc = item.querySelector(".about-us-item__desc");
+  const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+  const tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+  tl.from(item, {
+    opacity: 0,
+    y: 60,
+    duration: 0.8,
+    ease: "power4.out"
+  });
+  if (isMobile) {
+    tl.from(title, {
+      opacity: 0,
+      x: -40,
+      duration: 0.4,
+      ease: "power3.out"
+    }, "-=0.3").from(desc, {
+      opacity: 0,
+      x: -30,
+      duration: 0.4,
+      ease: "power3.out"
+    }, "-=0.3");
+  } else {
+    tl.from(title, {
+      opacity: 0,
+      x: -50,
+      duration: 0.5,
+      ease: "power3.out"
+    }, "-=0.4").from(desc, {
+      opacity: 0,
+      x: -40,
+      duration: 0.5,
+      ease: "power3.out"
+    }, "-=0.3");
+  }
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(pictureParallax, {
+    yPercent: -15,
+    ease: "none"
+  }, {
+    yPercent: 15,
+    ease: "none",
+    scrollTrigger: {
+      trigger: pictureParallax,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
 });
 
 /***/ }),
@@ -31070,20 +31132,9 @@ const initSliders = () => {
     const thumbsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](previewsSlider, {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: 3,
+      slidesPerView: 6,
       freeMode: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        600: {
-          slidesPerView: 4
-        },
-        986: {
-          slidesPerView: 5
-        },
-        1200: {
-          slidesPerView: 6
-        }
-      }
+      watchSlidesProgress: true
     });
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mainSlider, {
       loop: true,
@@ -31215,6 +31266,26 @@ const rules2 = [{
     errorMessage: "поле обязательно для заполнения"
   }]
 }];
+const rules4 = [{
+  ruleSelector: "#r-email",
+  rules: [{
+    rule: "minLength",
+    value: 3
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "поле обязательно для заполнения"
+  }]
+}, {
+  ruleSelector: "#r-phone",
+  tel: true,
+  telError: "поле обязательно для заполнения",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "поле обязательно для заполнения"
+  }]
+}];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
   micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close("quiz");
@@ -31258,6 +31329,7 @@ const rules3 = [{
   }]
 }];
 (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_1__.validateForms)(".quiz__form", rules3, [], afterForm);
+(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_1__.validateForms)(".reservation__form", rules4, [], afterForm);
 
 /***/ }),
 
@@ -31324,10 +31396,14 @@ const validateForms = function (selector, rules) {
     console.error("Вы не передали правила валидации!");
     return false;
   }
-  if (telSelector) {
-    const phoneMask = new simple_phone_mask__WEBPACK_IMPORTED_MODULE_1__["default"]('input[type="tel"]', {
+  if (telSelector && !telSelector.dataset.spmInitialized) {
+    telSelector.dataset.spmInitialized = "true"; // Пометка, чтобы не инициализировать повторно
+
+    new simple_phone_mask__WEBPACK_IMPORTED_MODULE_1__["default"](`${selector} input[type="tel"]`, {
       countryCode: "RU"
     });
+
+    // Добавим правило валидации на длину номера (11 цифр для RU)
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({

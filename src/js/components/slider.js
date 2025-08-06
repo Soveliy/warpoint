@@ -147,14 +147,9 @@ const initSliders = () => {
     const thumbsSwiper = new Swiper(previewsSlider, {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: 3,
+      slidesPerView: 6,
       freeMode: true,
       watchSlidesProgress: true,
-      breakpoints: {
-        600: { slidesPerView: 4 },
-        986: { slidesPerView: 5 },
-        1200: { slidesPerView: 6 },
-      },
     });
 
     new Swiper(mainSlider, {

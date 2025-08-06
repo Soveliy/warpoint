@@ -56,7 +56,34 @@ const rules2 = [
     ],
   },
 ];
-
+const rules4 = [
+  {
+    ruleSelector: "#r-email",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "поле обязательно для заполнения",
+      },
+    ],
+  },
+  {
+    ruleSelector: "#r-phone",
+    tel: true,
+    telError: "поле обязательно для заполнения",
+    rules: [
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "поле обязательно для заполнения",
+      },
+    ],
+  },
+];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
   MicroModal.close("quiz");
@@ -115,3 +142,4 @@ const rules3 = [
   },
 ];
 validateForms(".quiz__form", rules3, [], afterForm);
+validateForms(".reservation__form", rules4, [], afterForm);

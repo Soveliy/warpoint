@@ -1,18 +1,27 @@
 @use "./mixins/breakpoint" as *;
 .contact-detail {
+  @include tablet {
+    padding-bottom: 4rem;
+  }
+  .slider__arrow--next {
+    right: 20px;
+  }
+  .slider__arrow--prev {
+    left: 20px;
+  }
   &__row {
     display: flex;
-    align-items: center;
-    gap: 4rem;
+    align-items: flex-start;
+    gap: 1.5rem;
     @include tablet {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     @include small-tablet {
-      gap: 2rem;
+      gap: 1rem;
     }
   }
   &__left {
-    max-width: 40rem;
+    max-width: 50rem;
     flex-shrink: 0;
     @include tablet {
       width: 100%;
@@ -26,13 +35,19 @@
   }
   &__top-slider {
     position: relative;
-    padding: 0 3.75rem;
     @include tablet {
       padding: 0;
     }
     a {
       display: block;
-      height: 23.5rem;
+      height: 580px;
+      img {
+        display: block;
+        border-radius: 8px;
+      }
+      @include tablet {
+        height: 353px;
+      }
     }
   }
   &__main-slider,
@@ -41,12 +56,26 @@
     overflow: hidden;
   }
   &__previews-slider {
-    margin: 2rem 3.75rem 0;
+    max-width: 480px;
+    margin: 2rem auto 0;
     @include tablet {
-      margin: 1.5rem 0 0;
+      margin: 1rem auto 0;
     }
+
     .swiper-slide {
-      height: 2rem;
+      height: 2.875rem;
+      padding: 3px;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 4px;
+      &.swiper-slide-thumb-active {
+        border-color: #0043ce;
+      }
+      @include mobile {
+        height: 43px;
+      }
       img {
         display: block;
         height: 100%;

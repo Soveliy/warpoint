@@ -15,11 +15,14 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
     return false;
   }
 
-  if (telSelector) {
-    const phoneMask = new SimplePhoneMask('input[type="tel"]', {
+  if (telSelector && !telSelector.dataset.spmInitialized) {
+    telSelector.dataset.spmInitialized = "true"; // Пометка, чтобы не инициализировать повторно
+
+    new SimplePhoneMask(`${selector} input[type="tel"]`, {
       countryCode: "RU",
     });
 
+    // Добавим правило валидации на длину номера (11 цифр для RU)
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
