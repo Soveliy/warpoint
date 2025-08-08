@@ -5794,7 +5794,17 @@ select.select-default {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  max-height: 624px;
+  height: 39rem;
+}
+@media (max-width: 1250px) {
+  .location-content {
+    height: 29.125rem;
+  }
+}
+@media (max-width: 1024px) {
+  .location-content {
+    height: auto;
+  }
 }
 .location-content.js-active {
   display: block;

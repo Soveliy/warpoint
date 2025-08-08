@@ -228,7 +228,13 @@
   pointer-events: none;
   transition: 0.3s;
   display: none;
-  max-height: 624px;
+  height: 39rem;
+  @media (max-width: 1250px) {
+    height: 29.125rem;
+  }
+  @include tablet {
+    height: auto;
+  }
   &.js-active {
     display: block;
     pointer-events: all;
