@@ -13,6 +13,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
+    @include tablet {
+      gap: 32px;
+    }
   }
   &__tabs {
     margin-bottom: 70px;

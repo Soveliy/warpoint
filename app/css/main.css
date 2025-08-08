@@ -2952,6 +2952,11 @@ select.select-default {
   justify-content: center;
   gap: 24px;
 }
+@media (max-width: 1024px) {
+  .tarifs__grid {
+    gap: 32px;
+  }
+}
 .tarifs__tabs {
   margin-bottom: 70px;
 }
