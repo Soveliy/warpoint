@@ -1205,111 +1205,1476 @@
         <option value="улица Гагарина 7">улица Гагарина 7</option>
       </select>
     </div>
-    <div class="tarifs__tabs tabs">
-      <ul class="tabs__list tabs__list--center">
-        <li class="tabs__item tabs__item--active">vr-arena</li>
-        <li class="tabs__item">vr-room</li>
-        <li class="tabs__item">vr-extreme</li>
-        <li class="tabs__item">racing zone</li>
-        <li class="tabs__item">комбо-билеты</li>
-        <li class="tabs__item">дни рождения</li>
-        <li class="tabs__item">корпоративы</li>
-        <li class="tabs__item">выпускные</li>
-      </ul>
-    </div>
-    <div class="tarifs__grid">
-      <div class="tarifs-item">
-        <div class="tarifs-item__head">
-          <div class="tarifs-item__left">
-            <div class="tarifs-item__title">открытая игра</div>
-            <div class="tarifs-item__type">оплата за игрока</div>
-          </div>
-          <div class="tarifs-item__info">
-            <div class="tarifs-item__info-value">45 мин</div>
-            <div class="tarifs-item__info-value">1-10 чел</div>
-          </div>
-
-        </div>
-        <div class="tarifs-item__prices">
-
-          <div class="tarifs-item__price-item">
-            <div class="tarifs-item__price-pretitle">
-              промо-игра
-            </div>
-            <div class="tarifs-item__value tarifs-item__value--green">
-              800 <span>₽</span>
-            </div>
-          </div>
-          <div class="tarifs-item__price-item">
-            <div class="tarifs-item__price-pretitle">
-              пн—чт
-            </div>
-            <div class="tarifs-item__value tarifs-item__value--blue">
-              1000 <span>₽</span>
-            </div>
-          </div>
-          <div class="tarifs-item__price-item">
-            <div class="tarifs-item__price-pretitle">
-              пт—вс
-            </div>
-            <div class="tarifs-item__value tarifs-item__value--red">
-              1 500 <span>₽</span>
-            </div>
-          </div>
-        </div>
-        <div class="tarifs-item__footer">
-          <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
-          <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
-        </div>
-        <picture class="tarifs-item__picture">
-          <source srcset="img/tarifs/1.webp" type="image/webp">
-          <img loading="lazy" src="img/tarifs.png" class="image" width="300" height="200" alt="">
-        </picture>
+    <div class="tabs" data-tabs="tarifs">
+      <div class="tarifs__tabs">
+        <ul class="tabs__list tabs__list--center tabs__nav">
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">vr-arena</button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">vr-room</button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">vr-extreme</button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">racing
+              zone
+            </button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">
+              комбо-билеты
+            </button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">
+              дни рождения
+            </button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">
+              корпоративы
+            </button>
+          </li>
+          <li class="tabs__item tabs__nav-item">
+            <button class="btn-reset tabs__nav-btn" type="button">
+              выпускные
+            </button>
+          </li>
+          <!-- <li class="tabs__item tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">racing zone</button></li>
+          <li class="tabs__item tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">комбо-билеты</button></li>
+          <li class="tabs__item tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">дни рождения</button></li>
+          <li class="tabs__item tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">корпоративы</button></li>
+          <li class="tabs__item tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">выпускные</button></li> -->
+        </ul>
       </div>
-      <div class="tarifs-item">
-        <div class="tarifs-item__head">
-          <div class="tarifs-item__left">
-            <div class="tarifs-item__title">открытая игра</div>
-            <div class="tarifs-item__type">оплата за игрока</div>
-          </div>
-          <div class="tarifs-item__info">
-            <div class="tarifs-item__info-value">45 мин</div>
-            <div class="tarifs-item__info-value">1-10 чел</div>
-          </div>
+      <div class="tabs__content">
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">открытая игра</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">45 мин</div>
+                  <div class="tarifs-item__info-value">1-10 чел</div>
+                </div>
 
-        </div>
-        <div class="tarifs-item__prices">
-          <div class="tarifs-item__price-item">
-            <div class="tarifs-item__price-pretitle">
-              пн—чт
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    промо-игра
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--green">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    1000 <span>₽</span>
+                  </div>
+                </div>
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    1 500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/1.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs.png" class="image" width="300" height="200" alt="">
+              </picture>
             </div>
-            <div class="tarifs-item__value tarifs-item__value--blue">
-              12 000
-              <span>₽</span>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">открытая игра</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">45 мин</div>
+                  <div class="tarifs-item__info-value">до 10 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    12 000
+                    <span>₽</span>
+                  </div>
+                </div>
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    15 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/2.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/2.png" class="image" width="300" height="200" alt="">
+              </picture>
             </div>
           </div>
-          <div class="tarifs-item__price-item">
-            <div class="tarifs-item__price-pretitle">
-              пт—вс
+        </div>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">OCULUS QUEST 3</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">30 мин</div>
+                  <div class="tarifs-item__info-value">1-4 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--green">
+                    1000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    1 400 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
             </div>
-            <div class="tarifs-item__value tarifs-item__value--red">
-              15 000 <span>₽</span>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">OCULUS QUEST 3</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">60 мин</div>
+                  <div class="tarifs-item__info-value">1-4 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    промо-игра
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--green">
+                    1200
+                    <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    2 000 <span>₽</span>
+                  </div>
+                </div>
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    2 500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
             </div>
           </div>
         </div>
-        <div class="tarifs-item__footer">
-          <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
-          <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR EGGS</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    600 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">MOTO VR</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">SPACE RIFT (3x)</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    600 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">STEREOLIFE RIZER</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR HELICOPTER</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">INFINITY VR</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    1500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR AGENT</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">АЭРОХОККЕЙ</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    300 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+          </div>
         </div>
-        <picture class="tarifs-item__picture">
-          <source srcset="img/tarifs/2.webp" type="image/webp">
-          <img loading="lazy" src="img/tarifs/2.png" class="image" width="300" height="200" alt="">
-        </picture>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">АВТОСИМУЛЯТОР</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">30 мин</div>
+                  <div class="tarifs-item__info-value">1-4 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    1000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+
+          </div>
+        </div>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR EGGS</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    600 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">MOTO VR</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">SPACE RIFT (3x)</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    600 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">STEREOLIFE RIZER</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR HELICOPTER</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">INFINITY VR</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    1500 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR AGENT</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-3 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    800 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default1.webp" type="image/webp">
+                <img loading="lazy" src="img/default1.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">АЭРОХОККЕЙ</div>
+                  <div class="tarifs-item__type">оплата за игрока</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__note">*Не бронируется</div>
+                  <div class="tarifs-item__info-value">1 сеанс</div>
+                  <div class="tarifs-item__info-value">1-2 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    300 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/default2.webp" type="image/webp">
+                <img loading="lazy" src="img/default2.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">VR-Zone</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 8 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    10 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    13 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/3.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/3.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">Lite</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 10 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    12 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    15 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/4.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/4.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    Standard
+                    <div class="tarifs-item__sticker tarifs-item__sticker--hit">
+                      Хит
+                    </div>
+                  </div>
+                  <div class="tarifs-item__type">оплата за компанию</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">2 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 12 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    18 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    24 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/5.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/5.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    Max
+                  </div>
+                  <div class="tarifs-item__type">Пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">3 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 15 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    22 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    28 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/6.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/6.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    Max+
+                  </div>
+                  <div class="tarifs-item__type">Пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">3 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 20 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    18 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    24 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/7.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/7.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    VIP
+
+                    <img src="img/crown.svg" alt="">
+                  </div>
+                  <div class="tarifs-item__type">Пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">4 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 20 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item tarifs-item__price-item--narrow">
+
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    стоимость по запросу
+                  </div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/8.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/8.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">START</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 10 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    10 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    13 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/9.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/9.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">MEDIUM</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 12 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    12 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    15 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/10.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/10.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    BIG
+
+                  </div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">3 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 20 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    18 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    24 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/11.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/11.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+
+          </div>
+        </div>
+        <div class="tabs__panel">
+          <div class="tarifs__grid">
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">START</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 10 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    10 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    13 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/9.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/9.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">MEDIUM</div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">1 час 45 мин</div>
+                  <div class="tarifs-item__info-value">до 12 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    12 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    15 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/10.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/10.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+            <div class="tarifs-item">
+              <div class="tarifs-item__head">
+                <div class="tarifs-item__left">
+                  <div class="tarifs-item__title">
+                    BIG
+
+                  </div>
+                  <div class="tarifs-item__type">пакетное предложение</div>
+                </div>
+                <div class="tarifs-item__info">
+                  <div class="tarifs-item__info-value">3 часа 45 мин</div>
+                  <div class="tarifs-item__info-value">до 20 чел</div>
+                </div>
+
+              </div>
+              <div class="tarifs-item__prices">
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пн—чт
+                  </div>
+                  <div class="tarifs-item__value tarifs-item__value--blue">
+                    18 000 <span>₽</span>
+                  </div>
+                </div>
+
+                <div class="tarifs-item__price-item">
+                  <div class="tarifs-item__price-pretitle">
+                    пт—вс
+                    <div class="tarifs-item__allert">
+                      <div class="tarifs-item__allert-button">
+                        <svg class="">
+                          <use xlink:href="img/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <div class="tarifs-item__allert-content">
+                        с пятницы по воскресенье,
+                        также в праздничные и выходные дни
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tarifs-item__value tarifs-item__value--red">
+                    24 000 <span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tarifs-item__footer">
+                <button class="tarifs-item__button button button--lit button--rounded">подробнее</button>
+                <button class="tarifs-item__button button button--lit button--blue">оставить заявку</button>
+              </div>
+              <picture class="tarifs-item__picture">
+                <source srcset="img/tarifs/11.webp" type="image/webp">
+                <img loading="lazy" src="img/tarifs/11.png" class="image" width="300" height="200" alt="">
+              </picture>
+            </div>
+
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
-
       <section class="formats section section--dark section--default">
   <div class="container">
     <div class="section-head">

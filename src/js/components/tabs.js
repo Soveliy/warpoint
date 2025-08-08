@@ -2,11 +2,7 @@ import GraphTabs from "graph-tabs";
 import { isDesktop } from "../functions/check-viewport.js";
 
 // Инициализация табов
-const tabs = new GraphTabs("contacts", {
-  isChanged: (instance) => {
-    // Дополнительное поведение при смене вкладки, если нужно
-  },
-});
+const tabs = new GraphTabs("contacts");
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
 if (!isDesktop()) {
@@ -19,3 +15,5 @@ if (!isDesktop()) {
 
 // Вторая группа табов
 const tabsAuth = new GraphTabs("auth");
+
+const tabsTarifs = new GraphTabs("tarifs");

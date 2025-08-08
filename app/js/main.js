@@ -30586,7 +30586,7 @@ if (filterButton && filterBody) {
 __webpack_require__.r(__webpack_exports__);
 const header = document.querySelector(".header");
 document.addEventListener("scroll", () => {
-  if (pageYOffset > 100 && header) {
+  if (pageYOffset > 1 && header) {
     header.classList.add("header--fixed");
   } else {
     header.classList.remove("header--fixed");
@@ -31168,11 +31168,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Инициализация табов
-const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts", {
-  isChanged: instance => {
-    // Дополнительное поведение при смене вкладки, если нужно
-  }
-});
+const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts");
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
 if (!(0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isDesktop)()) {
@@ -31185,6 +31181,7 @@ if (!(0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isDesktop)()) 
 
 // Вторая группа табов
 const tabsAuth = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("auth");
+const tabsTarifs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("tarifs");
 
 /***/ }),
 

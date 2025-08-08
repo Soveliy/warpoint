@@ -1,13 +1,18 @@
 @use "./mixins/breakpoint" as *;
+@use "./mixins/disable-mob-hover" as *;
 .tarifs {
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 24px;
+    // @include big-desktop {
+    //   grid-template-columns: 1fr;
+    //   gap: 32px;
+    // }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
-    @include big-desktop {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
   }
   &__tabs {
     margin-bottom: 70px;
@@ -45,9 +50,15 @@
   padding: 24px 32px;
   background: #1c1e22;
   border-radius: 12px;
+  width: calc(50% - 12px);
   @include tablet {
     overflow: hidden;
     padding: 12px 16px;
+    max-width: 500px;
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
   }
   &__head {
     position: relative;
@@ -65,6 +76,9 @@
   &__info {
     display: flex;
     gap: 1rem;
+    @include tablet {
+      gap: 6px;
+    }
   }
   &__info-value {
     padding: 12px 10px;
@@ -78,11 +92,17 @@
     text-transform: uppercase;
     color: #fff;
     border-radius: 4px;
+    background-color: #1c1e22;
     @include tablet {
       font-size: 12px;
+      padding: 5px 7px;
+      font-size: 9px;
     }
   }
   &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 24px;
@@ -107,6 +127,30 @@
       // font-size: 9px;
     }
   }
+  &__note {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    color: #5e6573;
+    @include tablet {
+      font-size: 8px;
+    }
+  }
+  &__sticker {
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    &--hit {
+      background: #da1e28;
+    }
+  }
   &__prices {
     position: relative;
     z-index: 10;
@@ -115,12 +159,14 @@
     align-items: flex-start;
     gap: 1rem;
     margin: 1.5rem 0 1.8125rem;
+    min-height: 12.5rem;
     @include tablet {
       min-height: 6.5rem;
       margin: 0.625rem 0 2.5rem;
     }
   }
   &__price-item {
+    position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 3px;
     padding: 8px 12px;
@@ -136,6 +182,10 @@
     }
   }
   &__price-pretitle {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    align-items: center;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
@@ -143,7 +193,8 @@
     text-transform: uppercase;
     color: #5e6573;
     @include tablet {
-      font-size: 12px;
+      font-size: 10px;
+      min-width: 60px;
     }
   }
   &__value {
@@ -208,6 +259,7 @@
     }
   }
   &__picture {
+    display: flex;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -226,6 +278,71 @@
         height: 100%;
         max-width: 100%;
       }
+    }
+  }
+  &__allert {
+    position: relative;
+    // position: absolute;
+    // right: 12px;
+    // top: 8px;
+    margin-left: auto;
+    &:hover {
+      .tarifs-item__allert-content {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+  &__allert-button {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #ececee;
+    }
+  }
+  &__allert-content {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    top: 100%;
+    margin-top: 4px;
+    left: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #3c4049;
+    border-radius: 2px;
+    padding: 4px 8px;
+    width: 13.75rem;
+
+    background: #ececee;
+    text-wrap: balance;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      height: 10px;
+      width: 100%;
     }
   }
 }
