@@ -54,6 +54,9 @@
   background: #1c1e22;
   border-radius: 12px;
   width: calc(50% - 12px);
+  @media (max-width: 1250px) {
+    width: 650px;
+  }
   @include tablet {
     overflow: hidden;
     padding: 12px 16px;

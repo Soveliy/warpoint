@@ -111,14 +111,20 @@
       border-radius: 50%;
 
       border: 0.7px solid rgba(158, 158, 158, 0.3);
+      @media (max-width: 1366px) {
+        right: 1.5rem;
+        top: 1.25rem;
+        border: none;
+        z-index: 50;
+      }
       @include hover {
         &:hover {
           border-color: #0554f8;
         }
       }
-      @include tablet {
-        display: none;
-      }
+      // @include tablet {
+      //   display: none;
+      // }
     }
     @include tablet {
       right: 5px;
@@ -127,21 +133,21 @@
       width: 1.5rem;
     }
   }
-  &__swipe {
-    position: relative;
-    height: 25px;
-    padding-top: 4px;
-    margin-top: -2rem;
-    &::after {
-      content: "";
-      display: block;
-      border-radius: 25px;
-      width: 48px;
-      height: 5px;
-      background: #30343b;
-      margin: 0 auto;
-    }
-  }
+  // &__swipe {
+  //   position: relative;
+  //   height: 25px;
+  //   padding-top: 4px;
+  //   margin-top: -2rem;
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     border-radius: 25px;
+  //     width: 48px;
+  //     height: 5px;
+  //     background: #30343b;
+  //     margin: 0 auto;
+  //   }
+  // }
 
   &__header {
     margin-bottom: 2.5rem;

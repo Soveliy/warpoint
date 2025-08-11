@@ -17,7 +17,7 @@
     }
   }
   &__close {
-    position: static;
+    // position: static;
     height: 24px;
     width: 24px;
     svg {
@@ -26,17 +26,17 @@
       width: 100%;
       fill: rgb(94, 101, 115);
     }
-    @include tablet {
-      margin-bottom: 26px;
-      border-radius: 25px;
-      width: 48px;
-      height: 5px;
-      background: #30343b;
+    // @include tablet {
+    //   margin-bottom: 26px;
+    //   border-radius: 25px;
+    //   width: 48px;
+    //   height: 5px;
+    //   background: #30343b;
 
-      svg {
-        display: none;
-      }
-    }
+    //   svg {
+    //     display: none;
+    //   }
+    // }
   }
   &__header {
     display: flex;
@@ -229,8 +229,12 @@
   transition: 0.3s;
   display: none;
   height: 39rem;
+
   @media (max-width: 1250px) {
     height: 29.125rem;
+  }
+  @media (max-height: 600px) {
+    height: 20rem;
   }
   @include tablet {
     height: auto;

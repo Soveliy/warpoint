@@ -77,6 +77,12 @@
     height: 48px;
     box-sizing: border-box;
     flex-shrink: 0;
+    transition: 0.3s;
+    @include hover {
+      &:hover {
+        background-color: #0043ce;
+      }
+    }
     @include tablet {
       width: 48px;
       height: 36px;

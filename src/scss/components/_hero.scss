@@ -85,12 +85,13 @@
     padding: 12rem 0 9rem;
 
     @include tablet {
-      min-height: inherit;
+      // min-height: inherit;
       padding-bottom: 5rem;
+      min-height: 90dvh;
     }
     @include mobile {
       padding: 12.5rem 0 1.5rem;
-      min-height: inherit;
+      // min-height: inherit;
       text-wrap: balance;
     }
   }

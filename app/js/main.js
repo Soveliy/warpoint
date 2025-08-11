@@ -31171,7 +31171,7 @@ __webpack_require__.r(__webpack_exports__);
 const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]("contacts");
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
-if (!(0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isDesktop)()) {
+if (window.innerWidth <= 1280) {
   const secondTabBtn = tabs.tabsBtns[1];
   const firstTabBtn = tabs.tabsBtns[0];
   if (secondTabBtn && firstTabBtn) {

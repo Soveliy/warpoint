@@ -77,6 +77,11 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    &.js-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
     @include tablet {
       display: flex;
     }

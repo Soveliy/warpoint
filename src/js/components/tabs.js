@@ -5,7 +5,7 @@ import { isDesktop } from "../functions/check-viewport.js";
 const tabs = new GraphTabs("contacts");
 
 // Если мобильное устройство — активируем вторую вкладку (индекс 1)
-if (!isDesktop()) {
+if (window.innerWidth <= 1280) {
   const secondTabBtn = tabs.tabsBtns[1];
   const firstTabBtn = tabs.tabsBtns[0];
   if (secondTabBtn && firstTabBtn) {

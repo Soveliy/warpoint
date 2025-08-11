@@ -6862,7 +6862,9 @@
     }));
     map.addChild(new YMapDefaultFeaturesLayer());
     map.addChild(new YMapControls({ position: 'right' }).addChild(new YMapZoomControl({ easing: 'linear' })));
-
+     map.update({
+    behaviors: ['drag'] // Указываем только нужные поведения
+  });
 
     contactsItems.forEach((item, idx) => {
       const coords = item.dataset.coords.split(',').map(Number);

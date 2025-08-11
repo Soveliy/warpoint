@@ -54,10 +54,8 @@
       font-size: 13px;
     }
     &.button--rounded {
-      @include tablet {
-        background-color: #0043ce;
-        border-color: #0043ce;
-      }
+      background-color: #0043ce;
+      border-color: #0043ce;
     }
   }
 }
@@ -80,8 +78,15 @@
     margin-bottom: 1rem;
 
     box-sizing: border-box;
+
     @include tablet {
       height: 20.5rem;
+    }
+    @media (max-height: 800px) {
+      height: 13rem;
+    }
+    @include mobile {
+      height: 20rem;
     }
   }
   &__footer {
@@ -182,8 +187,8 @@
     display: block;
     &::after {
       position: absolute;
-      top: -9px;
-      left: -13px;
+      // top: -9px;
+      // left: -13px;
       content: "";
       height: 1.75rem;
       width: 1.75rem;
@@ -191,6 +196,14 @@
       background-size: contain;
       opacity: 0;
       transition: 0.3s;
+      right: 16px;
+      top: 7.8125rem;
+      @media (max-width: 1250px) {
+        top: 6.3125rem;
+      }
+      @include tablet {
+        top: 4.6125rem;
+      }
     }
   }
   &__label-name {

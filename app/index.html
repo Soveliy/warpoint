@@ -10383,7 +10383,9 @@
     }));
     map.addChild(new YMapDefaultFeaturesLayer());
     map.addChild(new YMapControls({ position: 'right' }).addChild(new YMapZoomControl({ easing: 'linear' })));
-
+     map.update({
+    behaviors: ['drag'] // Указываем только нужные поведения
+  });
 
     contactsItems.forEach((item, idx) => {
       const coords = item.dataset.coords.split(',').map(Number);
@@ -11223,6 +11225,7 @@
   </div>
 
 </section>
+
       <section class="section section--default section--dark social-section">
   <div class="container">
     <div class="section-head section-head--big-margin">
@@ -11417,8 +11420,8 @@
         <div class="location__title">
           Выберите страну, город и локацию
         </div>
-        <button class="location__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
-          <svg class="location__close-icon" data-micromodal-close>
+        <button class="modal__close btn-reset" aria-label="Закрыть окно" data-micromodal-close>
+          <svg class="modal__close-icon" data-micromodal-close>
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>
@@ -11933,7 +11936,7 @@
           <div class="quiz__header">
             <div class="quiz__header-content">
               <div class="quiz__title">
-                Рассчитайте стоимость мероприятия
+                Рассчитать стоимость мероприятия
               </div>
               <div class="quiz__subtitle">
                 Ответьте на несколько вопросов и получите спецпредложение
@@ -12305,22 +12308,31 @@
             <div class="quiz__form-checkboxes radio-group">
               <label class="input__label">как удобнее получить информацию</label>
               <div class="radio-group__row">
-                <label class="radio">
+                <label class="radio radio--with-icon">
                   <input type="radio" name="mess">
                   <span class="radio__wrap">
                     Whatsapp
+                    <svg class="radio__icon">
+                      <use xlink:href="img/sprite.svg#wa"></use>
+                    </svg>
                   </span>
                 </label>
-                <label class="radio">
+                <label class="radio radio--with-icon">
                   <input type="radio" name="mess">
                   <span class="radio__wrap">
                     Telegram
+                    <svg class="radio__icon">
+                      <use xlink:href="img/sprite.svg#tg"></use>
+                    </svg>
                   </span>
                 </label>
-                <label class="radio">
+                <label class="radio radio--with-icon">
                   <input type="radio" name="mess">
                   <span class="radio__wrap">
                     Email
+                    <svg class="radio__icon">
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg>
                   </span>
                 </label>
               </div>
