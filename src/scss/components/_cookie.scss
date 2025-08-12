@@ -1,0 +1,65 @@
+@use "./mixins/breakpoint" as *;
+@use "./mixins/disable-mob-hover" as *;
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  z-index: 500;
+  transition: 0.3s;
+  &.js-hidden {
+    transform: translateY(3.125rem);
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  &__offer {
+    position: relative;
+    padding: 0.5rem 2.5rem;
+    box-sizing: border-box;
+    background: #44a248;
+  }
+  &__close {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    @include hover {
+      &:hover svg {
+        fill: #fff;
+      }
+    }
+    svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+      fill: #25272d;
+      transition: 0.3s;
+    }
+  }
+  &__container {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+    background: rgba(28, 30, 34, 0.95);
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 121%;
+    color: #c4c8cf;
+    @include tablet {
+      text-align: left;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

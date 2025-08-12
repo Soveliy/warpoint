@@ -1,7 +1,8 @@
 @use "./mixins/disable-mob-hover" as *;
+@use "./mixins/breakpoint" as *;
 .up-btn {
   position: fixed;
-  bottom: 24px;
+  bottom: 135px;
   right: 24px;
   display: flex;
   align-items: center;
@@ -22,6 +23,9 @@
     opacity: 1;
     pointer-events: all;
     visibility: visible;
+  }
+  @include tablet {
+    bottom: 24px;
   }
   @include hover {
     &:hover {

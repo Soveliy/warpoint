@@ -1,5 +1,4 @@
 @use "./mixins/disable-mob-hover" as *;
-
 @use "./mixins/breakpoint" as *;
 .modal {
   &__container {
@@ -9,12 +8,13 @@
     position: relative;
     overflow: auto;
     background-color: transparent;
-    pointer-events: none;
+    padding: 1rem;
 
     height: 100%;
     width: 100%;
     @include tablet {
       pointer-events: all;
+      padding: 0;
     }
     &--quiz-form {
       display: none;
@@ -31,7 +31,7 @@
     margin: auto;
     padding: 2.5rem;
     @include tablet {
-      padding: 24px 16px;
+      padding: 2rem 1rem;
       width: 100%;
       overflow: auto;
     }
@@ -53,6 +53,9 @@
       @include tablet {
         padding: 2rem 1rem;
       }
+    }
+    &--detail {
+      max-width: 728px;
     }
   }
   &__title {
