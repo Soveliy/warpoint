@@ -5,5 +5,6 @@ import { isMobile } from "../functions/check-viewport.js";
 new AirDatepicker("#calendar", {
   position: "right center",
   // inline: true,
+  autoClose: true,
   isMobile: isMobile(),
 });

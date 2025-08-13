@@ -2,6 +2,7 @@
 @use "./mixins/breakpoint" as *;
 .location {
   &__container {
+    position: relative;
     max-width: 1344px;
     width: 100%;
     background: #1c1e22;

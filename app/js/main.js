@@ -30536,6 +30536,7 @@ __webpack_require__.r(__webpack_exports__);
 new air_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"]("#calendar", {
   position: "right center",
   // inline: true,
+  autoClose: true,
   isMobile: (0,_functions_check_viewport_js__WEBPACK_IMPORTED_MODULE_1__.isMobile)()
 });
 

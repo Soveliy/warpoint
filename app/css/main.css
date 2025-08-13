@@ -5567,6 +5567,7 @@ select.select-default {
 }
 
 .location__container {
+  position: relative;
   max-width: 1344px;
   width: 100%;
   background: #1c1e22;
@@ -6756,8 +6757,8 @@ select.select-default {
 }
 @media (max-width: 1024px) {
   .modal__close {
-    right: 5px;
-    top: 5px;
+    right: 1rem;
+    top: 0.75rem;
     height: 1.5rem;
     width: 1.5rem;
   }
